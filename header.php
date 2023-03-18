@@ -29,7 +29,7 @@
             ?>
 	</title>
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+	
 	
 	  <!-- bootstrap -->
 	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/styles/bootstrap.min.css" />
@@ -45,6 +45,7 @@
 
 	 <!-- <link rel="stylesheet" href="style.css" /> -->
 	 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/output/style.css" />
+	 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 
 
