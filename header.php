@@ -32,10 +32,10 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
 	  <!-- bootstrap -->
-	  <link rel="stylesheet" href="./assets/styles/bootstrap.min.css" />
+	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/styles/bootstrap.min.css" />
     <!-- slickSlider  -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" 
       rel="stylesheet"
     />
     <link
@@ -44,7 +44,7 @@
     />
 
 	 <!-- <link rel="stylesheet" href="style.css" /> -->
-	 <link rel="stylesheet" href="./output/style.css" />
+	 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/output/style.css" />
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 
 
