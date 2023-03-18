@@ -30,8 +30,24 @@
 	</title>
     <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	
+	  <!-- bootstrap -->
+	  <link rel="stylesheet" href="./assets/styles/bootstrap.min.css" />
+    <!-- slickSlider  -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      rel="stylesheet"
+    />
+
+	 <!-- <link rel="stylesheet" href="style.css" /> -->
+	 <link rel="stylesheet" href="./output/style.css" />
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
+
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

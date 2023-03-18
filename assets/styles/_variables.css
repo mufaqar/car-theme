@@ -1,0 +1,16 @@
+:root {
+     /* colors  */
+     --pure : #fff;
+     --main: #1B3159;
+     --secondary :#E1C591;
+     --light-gray: #F7F7F7;
+     --light-dark: #363636;
+     --border-clr: #EEEEEE;
+     --gray: #E3E6EB;
+     --darkgray: #606060;
+
+     /* fonts  */
+     --axiforma-regular: axiformaRegular;
+     --axiforma-bold: axiforma;
+     --oswald: oswald;
+}
