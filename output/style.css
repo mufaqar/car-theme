@@ -1,9 +1,8 @@
 /* import style external files files  */
-@import '../assets/styles/_fonts.css';
-@import '../assets/styles/_variables.css';
-@import './assets/styles/_fonts.css';
-@import './assets/styles/_variables.css';
-
+@import "../assets/styles/_fonts.css";
+@import "../assets/styles/_variables.css";
+@import "./assets/styles/_fonts.css";
+@import "./assets/styles/_variables.css";
 * {
   margin: 0;
   padding: 0;
@@ -56,14 +55,12 @@ button {
   color: var(--main) !important;
 }
 
-.main-heding,
-main ._content h1 {
-  font-size: 60px;
+.main-heding, main ._content h1 {
+  font-size: 3.75rem;
   font-weight: 700;
 }
 
-h6,
-main ._content h6 {
+h6, main ._content h6 {
   color: var(--pure) !important;
   font-size: 24px !important;
   letter-spacing: 0.6px;
@@ -133,7 +130,7 @@ header nav .header_dropdown img {
 
 main {
   height: calc(100vh - 76px);
-  background-image: url('../assets/images/main.png');
+  background-image: url("../assets/images/main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -180,6 +177,11 @@ main .main-slider .item_wrapper .item {
   flex-direction: column !important;
   align-items: center !important;
   gap: 5px !important;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+main .main-slider .item_wrapper .item:hover {
+  scale: 0.95;
 }
 main .main-slider .item_wrapper .item img {
   width: 61px;
@@ -190,7 +192,7 @@ main .main-slider .item_wrapper .item span {
   font-family: oswald;
 }
 main ._content {
-  position: absolute;
+  height: calc(100% - 367px);
   width: 100%;
   padding: 0 1rem;
   display: flex;
@@ -210,6 +212,9 @@ main .filter {
   background: rgba(27, 49, 89, 0.8470588235);
   padding: 3rem;
   color: var(--pure) !important;
+}
+main .filter .slick-list {
+  margin-left: -2.5px !important;
 }
 main .filter form > div {
   display: grid;
@@ -241,7 +246,7 @@ main .filter form > div .input input::placeholder {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
-main .filter form > div input[type='button'] {
+main .filter form > div input[type=button] {
   font-size: 20px;
   margin-top: 1.6rem;
   font-weight: 700;
@@ -301,9 +306,9 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .card-body {
 }
 section .__slider .full-slider .slider-card-wrapper .slider-card img {
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center;
-  object-position: center;
+     object-position: center;
   width: 100% !important;
 }
 section .__slider .full-slider .slider-card-wrapper .slider-card .properties {
@@ -311,13 +316,7 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .properties {
   color: var(--darkgray);
   font-size: 14px;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .properties
-  > div {
+section .__slider .full-slider .slider-card-wrapper .slider-card .properties > div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -328,23 +327,10 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .properties p {
   gap: 4px;
   font-family: var(--axiforma-regular) !important;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .properties
-  p
-  span {
+section .__slider .full-slider .slider-card-wrapper .slider-card .properties p span {
   font-family: var(--axiforma-regular) !important;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .properties
-  img {
+section .__slider .full-slider .slider-card-wrapper .slider-card .properties img {
   width: 20px !important;
   height: 20px;
 }
@@ -353,23 +339,10 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer {
   margin-top: 1rem;
   gap: 1rem;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .card-footer
-  a {
+section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a {
   flex: 1;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .card-footer
-  a
-  button {
+section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a button {
   font-family: var(--axiforma-regular);
   font-weight: 400;
   font-size: 12px;
@@ -379,15 +352,7 @@ section
   color: var(--main);
   height: 100%;
 }
-section
-  .__slider
-  .full-slider
-  .slider-card-wrapper
-  .slider-card
-  .card-footer
-  a
-  button
-  svg {
+section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a button svg {
   width: 12px;
   margin-top: -3px;
 }
@@ -401,7 +366,7 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
 }
 
 .home-banner {
-  background-image: url('../assets/images/banner.png');
+  background-image: url("../assets/images/banner.png");
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -417,9 +382,7 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
   max-width: 460px;
   font-weight: 700;
 }
-.home-banner h6,
-.home-banner main ._content h6,
-main ._content .home-banner h6 {
+.home-banner h6, .home-banner main ._content h6, main ._content .home-banner h6 {
   color: var(--secondary) !important;
   font-weight: 700 !important;
   font-size: 18px !important;
@@ -442,6 +405,9 @@ main ._content .home-banner h6 {
 section.car-type {
   background: var(--light-gray);
 }
+section.car-type .__slider.mt-5 {
+  padding-bottom: 3rem;
+}
 section.car-type .car-type-slider {
   margin-left: -20px !important;
 }
@@ -458,9 +424,18 @@ section.car-type .slider-card-wrapper p {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 !important;
+  }
+  .call-to-action {
+    margin-top: 3rem !important;
+  }
   .call-to-action .call_button {
     flex-direction: column !important;
     padding: 0 2rem;
+  }
+  .home-banner {
+    margin-top: 4rem;
   }
   main {
     height: 100%;
@@ -505,8 +480,7 @@ section.car-type .slider-card-wrapper p {
   .ml-8-per {
     padding-left: 0 !important;
   }
-  .main-heding,
-  main ._content h1 {
+  .main-heding, main ._content h1 {
     font-size: 48px !important;
   }
   .home-banner p {
@@ -562,7 +536,7 @@ section.car-type .slider-card-wrapper p {
 .call-to-action {
   padding: 5rem 0;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
   background: var(--light-gray);
   color: var(--main) !important;
 }
@@ -630,6 +604,10 @@ footer .copyright {
   padding: 2rem 0;
   padding-bottom: 1rem;
   border-top: 2px solid var(--border-clr);
+}
+footer .copyright .extra-links {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 footer .copyright .extra-links li {
   margin-left: 12px;
@@ -704,4 +682,4 @@ footer .copyright .extra-links li a:hover {
     width: 100% !important;
     margin: 0 auto;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
