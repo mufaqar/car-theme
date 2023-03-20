@@ -1,40 +1,40 @@
 @font-face {
-     font-family: axiforma;
-     src: url('../fonts/Axiforma-Bold.otf');
-     font-weight: 700;
+  font-family: axiforma;
+  src: url('../fonts/Axiforma-Bold.otf');
+  font-weight: 700;
 }
 @font-face {
-     font-family: axiformaRegular;
-     src: url('../fonts/Axiforma-Regular.ttf');
-     font-weight: 400;
+  font-family: axiformaRegular;
+  src: url('../fonts/Axiforma-Regular.ttf');
+  font-weight: 400;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-Bold.ttf');
-     font-weight: 700;
+  font-family: oswald;
+  src: url('../fonts/Oswald-Bold.ttf');
+  font-weight: 700;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-ExtraLight.ttf');
-     font-weight: 200;
+  font-family: oswald;
+  src: url('../fonts/Oswald-ExtraLight.ttf');
+  font-weight: 200;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-Light.ttf');
-     font-weight: 300;
+  font-family: oswald;
+  src: url('../fonts/Oswald-Light.ttf');
+  font-weight: 300;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-Medium.ttf');
-     font-weight: 500;
+  font-family: oswald;
+  src: url('../fonts/Oswald-Medium.ttf');
+  font-weight: 500;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-Regular.ttf');
-     font-weight: 400;
+  font-family: oswald;
+  src: url('../fonts/Oswald-Regular.ttf');
+  font-weight: 400;
 }
 @font-face {
-     font-family: oswald;
-     src: url('../fonts/Oswald-SemiBold.ttf');
-     font-weight: 600;
+  font-family: oswald;
+  src: url('../fonts/Oswald-SemiBold.ttf');
+  font-weight: 600;
 }

@@ -1,8 +1,6 @@
 /* import style external files files  */
-@import "../assets/styles/_fonts.css";
-@import "../assets/styles/_variables.css";
-@import "./assets/styles/_fonts.css";
-@import "./assets/styles/_variables.css";
+@import url('../assets/styles/_fonts.css');
+@import url('../assets/styles/_variables.css');
 * {
   margin: 0;
   padding: 0;
@@ -55,12 +53,14 @@ button {
   color: var(--main) !important;
 }
 
-.main-heding, main ._content h1 {
+.main-heding,
+main ._content h1 {
   font-size: 60px;
   font-weight: 700;
 }
 
-h6, main ._content h6 {
+h6,
+main ._content h6 {
   color: var(--pure) !important;
   font-size: 24px !important;
   letter-spacing: 0.6px;
@@ -125,7 +125,7 @@ header nav .header_dropdown img {
 
 main {
   height: calc(100vh - 76px);
-  background-image: url("../assets/images/main.png");
+  background-image: url('../assets/images/main.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -233,7 +233,7 @@ main .filter form > div .input input::placeholder {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
-main .filter form > div input[type=button] {
+main .filter form > div input[type='button'] {
   font-size: 20px;
   margin-top: 1.6rem;
   font-weight: 700;
@@ -293,9 +293,9 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .card-body {
 }
 section .__slider .full-slider .slider-card-wrapper .slider-card img {
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -o-object-position: center;
-     object-position: center;
+  object-position: center;
   width: 100% !important;
 }
 section .__slider .full-slider .slider-card-wrapper .slider-card .properties {
@@ -303,7 +303,13 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .properties {
   color: var(--darkgray);
   font-size: 14px;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .properties > div {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .properties
+  > div {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -314,10 +320,23 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .properties p {
   gap: 4px;
   font-family: var(--axiforma-regular) !important;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .properties p span {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .properties
+  p
+  span {
   font-family: var(--axiforma-regular) !important;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .properties img {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .properties
+  img {
   width: 20px !important;
   height: 20px;
 }
@@ -326,10 +345,23 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer {
   margin-top: 1rem;
   gap: 1rem;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .card-footer
+  a {
   flex: 1;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a button {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .card-footer
+  a
+  button {
   font-family: var(--axiforma-regular);
   font-weight: 400;
   font-size: 12px;
@@ -339,7 +371,15 @@ section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a 
   color: var(--main);
   height: 100%;
 }
-section .__slider .full-slider .slider-card-wrapper .slider-card .card-footer a button svg {
+section
+  .__slider
+  .full-slider
+  .slider-card-wrapper
+  .slider-card
+  .card-footer
+  a
+  button
+  svg {
   width: 12px;
   margin-top: -3px;
 }
@@ -353,7 +393,7 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
 }
 
 .home-banner {
-  background-image: url("../assets/images/banner.png");
+  background-image: url('../assets/images/banner.png');
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -369,7 +409,9 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
   max-width: 460px;
   font-weight: 700;
 }
-.home-banner h6, .home-banner main ._content h6, main ._content .home-banner h6 {
+.home-banner h6,
+.home-banner main ._content h6,
+main ._content .home-banner h6 {
   color: var(--secondary) !important;
   font-weight: 700 !important;
   font-size: 18px !important;
@@ -525,4 +567,4 @@ section.car-type .slider-card-wrapper p {
     width: 100% !important;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

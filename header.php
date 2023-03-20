@@ -45,10 +45,10 @@
 
 	 <!-- <link rel="stylesheet" href="style.css" /> -->
 	 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/output/style.css" />
-	 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" />
+	
 	<?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 
 
-	<?php wp_head(); ?>
+	<?php //wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
