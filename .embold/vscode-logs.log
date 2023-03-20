@@ -14,3 +14,8 @@
 2023-03-20 14:04:03 error: SQLITE_ERROR: no such table: issues
 2023-03-20 14:04:19 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/refs/remotes/origin/main.lock
 2023-03-20 14:04:19 error: SQLITE_ERROR: no such table: issues
+2023-03-20 16:32:22 info: tempDirectory:c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\temp
+2023-03-20 16:32:22 info: Extraction complete for source: c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\resources\embold-scanner-archive.zip, destination: c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\temp
+2023-03-20 16:32:22 info: Congratulations, your extension "Embold" is now active!
+2023-03-20 16:41:05 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/index.lock
+2023-03-20 16:41:05 error: SQLITE_ERROR: no such table: issues
