@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -209,7 +208,7 @@
           class="slider-header d-flex flex-wrap mb-5 justify-content-between"
         >
           <h2>Leasing offers available immediately</h2>
-          <div class="slider-btn">
+          <div class="slider-btn loBtn">
             <button class="prev">
               <div>
                 <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
@@ -222,7 +221,7 @@
             </button>
           </div>
         </div>
-        <div class="full-slider" id="wrapper">
+        <div class="full-slider leasing-offer" id="wrapper">
           <div class="slider-card-wrapper">
             <div class="slider-card">
               <img
@@ -1546,7 +1545,7 @@
           class="slider-header d-flex flex-wrap mb-5 justify-content-between"
         >
           <h2>Leasing offers under €100</h2>
-          <div class="slider-btn">
+          <div class="slider-btn lou100">
             <button class="prev">
               <div>
                 <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
@@ -1559,7 +1558,7 @@
             </button>
           </div>
         </div>
-        <div class="full-slider" id="wrapper">
+        <div class="full-slider leasing-offer-under-hundred" id="wrapper">
           <div class="slider-card-wrapper">
             <div class="slider-card">
               <img
@@ -2917,200 +2916,651 @@
       </div>
     </section>
 
- <!-- Body Types -->
- <section class="ml-8-per car-type">
-  <div class="__slider">
-    <div
-      class="slider-header d-flex flex-wrap mb-5 justify-content-between"
-    >
-      <h2>Body Types</h2>
-      <div class="slider-btn">
-        <button class="prev">
-          <div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
+    <!-- Body Types -->
+    <section class="ml-8-per car-type">
+      <div class="__slider mb-4">
+        <div
+          class="slider-header d-flex flex-wrap mb-5 justify-content-between"
+        >
+          <h2>Body Types</h2>
+          <div class="slider-btn">
+            <button class="prev bodyTypes">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
+              </div>
+            </button>
+            <button class="next bodyTypes">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/right-arrow-dark.svg" width="12" />
+              </div>
+            </button>
           </div>
-        </button>
-        <button class="next">
-          <div>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/right-arrow-dark.svg" width="12" />
+        </div>
+        <div class="car-type-slider body-types-slider-wrapper" id="wrapper">
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
           </div>
-        </button>
-      </div>
-    </div>
-    <div class="car-type-slider" id="wrapper">
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
         </div>
-        <p class="mt-1">EV</p>
       </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
+    </section>
+
+    <!-- Popular brands -->
+    <section class="ml-8-per car-type">
+      <div class="__slider mt-5">
+        <div
+          class="slider-header d-flex flex-wrap mb-5 justify-content-between"
+        >
+          <h2>Popular Brands</h2>
+          <div class="slider-btn">
+            <button class="prev popularBrands">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
+              </div>
+            </button>
+            <button class="next popularBrands">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/right-arrow-dark.svg" width="12" />
+              </div>
+            </button>
+          </div>
         </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
+        <div class="car-type-slider popular-brands-slider-wrapper" id="wrapper">
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <figure class=" p-4">
+                <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                alt="car"
+                style="width: 100%"
+              />  
+              </figur>
+            </div>
+            <p class="mt-1">EV</p>
+          </div>
         </div>
-        <p class="mt-1">EV</p>
       </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
+    </section>
+
+    <!-- Latest News -->
+    <section class="ml-8-per">
+      <div class="__slider">
+        <div
+          class="slider-header d-flex flex-wrap mb-5 justify-content-between"
+        >
+          <h2>Latest News</h2>
+          <div class="slider-btn latestNews">
+            <button class="prev">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg" width="12" />
+              </div>
+            </button>
+            <button class="next">
+              <div>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/right-arrow-dark.svg" width="12" />
+              </div>
+            </button>
+          </div>
         </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
+        <div class="full-slider latest-news-wrapper" id="wrapper">
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-card-wrapper">
+            <div class="slider-card">
+              <img
+                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
+                alt="car"
+                style="width: 100%"
+              />
+              <div class="card-body">
+                <div class="properties">
+                  <div>
+                    <p>
+                      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
+                      <span class="mt-1">29 Jan 2023</span>
+                    </p>
+                  </div>
+                </div>
+                <h4 class="heading">BMW M3 (E92) the modern classic</h4>
+
+                <div class="card-footer">
+                  <a href="#">
+                    <button href="#" class="button">Read news</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="mt-1">EV</p>
       </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-      <div class="slider-card-wrapper">
-        <div class="slider-card">
-          <figure class=" p-4">
-            <img
-            src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-            alt="car"
-            style="width: 100%"
-          />  
-          </figur>
-        </div>
-        <p class="mt-1">EV</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
+    <!-- call to action  -->
+    <section class="call-to-action">
+        <h2 class="main-heding">Your next car is waiting for you here...</h2>
+        <div class="call_button mt-5 d-flex justify-content-center mx-auto
+          <a href="#">
+            <div class="button">
+              <img src="<?php bloginfo('template_directory'); ?>/assets/icons/env.svg" alt="env" width="28" height="28"/>
+              <span>INFO@001CARS.COM</span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="button btn-dark">
+              <img src="<?php bloginfo('template_directory'); ?>/assets/icons/phone.svg" alt="env" width="27" height="28"/>
+              <span>+420 246 034 700</span>
+            </div>
+          </a>
+        </div>
+    </section>
 
+    <!-- footer section -->
+    <footer class="container">
+      <section class="footer_nav row">
+        <div class="col-md-2">
+          <h3>SUPPORT</h3>
+          <ul>
+            <li><a href="#">About 001</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h3>SERVICE</h3>
+          <ul>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Code</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Car Catalogue</a></li>
+            <li><a href="#">car Subscription</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>DEALER</h3>
+          <ul>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">To Register</a></li>
+            <li><a href="#">Advantages</a></li>
+            <li><a href="#">Partner Info Portal</a></li>
+            <li><a href="#">Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h3>STAY IN CONTACT</h3>
+          <div class="input mt-5">
+            <input value ="" placeholder="Location">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin.svg" alt="pin"/>
+          </div>
+          <div class="social mt-5">
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/fb.svg" alt="facebook"/></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/in.svg" alt="instagram"/></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/tw.svg" alt="twitter"/></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/yt.svg" alt="youtube"/></a>
+          </div>
+        </div>
+      </section>
+      <section class="copyright d-flex justify-content-between">
+        <p>Copyrights © 2023 All Rights Reserved by Mufaqar</p>
+        <ul class="extra-links d-flex">
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Terms & Conditions </a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </section>
+    </footer>
+
+
+  
 
 <?php get_footer(); ?>

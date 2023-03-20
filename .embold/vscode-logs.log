@@ -3,3 +3,14 @@
 2023-03-18 20:02:29 info: Congratulations, your extension "Embold" is now active!
 2023-03-18 20:02:29 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/blank-theme%20%28%20updated%20%29.zip
 2023-03-18 20:02:30 error: SQLITE_ERROR: no such table: issues
+2023-03-20 14:03:51 info: tempDirectory:c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\temp
+2023-03-20 14:03:51 info: Extraction complete for source: c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\resources\embold-scanner-archive.zip, destination: c:\Users\acer\.vscode\extensions\embold-vscode.embold-0.1.4\temp
+2023-03-20 14:03:51 info: Congratulations, your extension "Embold" is now active!
+2023-03-20 14:04:01 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/index
+2023-03-20 14:04:01 error: SQLITE_ERROR: no such table: issues
+2023-03-20 14:04:02 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/index.lock
+2023-03-20 14:04:02 error: SQLITE_ERROR: no such table: issues
+2023-03-20 14:04:03 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/index.lock
+2023-03-20 14:04:03 error: SQLITE_ERROR: no such table: issues
+2023-03-20 14:04:19 info: file:///f%3A/wamp64/www/clients/car/wp-content/themes/car-theme/.git/refs/remotes/origin/main.lock
+2023-03-20 14:04:19 error: SQLITE_ERROR: no such table: issues

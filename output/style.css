@@ -1,6 +1,9 @@
 /* import style external files files  */
-@import url('../assets/styles/_fonts.css');
-@import url('../assets/styles/_variables.css');
+@import '../assets/styles/_fonts.css';
+@import '../assets/styles/_variables.css';
+@import './assets/styles/_fonts.css';
+@import './assets/styles/_variables.css';
+
 * {
   margin: 0;
   padding: 0;
@@ -83,6 +86,11 @@ main ._content h6 {
 
 figure {
   margin: 0;
+}
+
+.btn-dark {
+  background: var(--main);
+  color: var(--pure) !important;
 }
 
 header nav {
@@ -434,6 +442,12 @@ main ._content .home-banner h6 {
 section.car-type {
   background: var(--light-gray);
 }
+section.car-type .car-type-slider {
+  margin-left: -20px !important;
+}
+section.car-type .slider-header {
+  margin-bottom: 1rem !important;
+}
 section.car-type .slider-card-wrapper .slider-card figure {
   background: var(--pure) !important;
 }
@@ -444,6 +458,10 @@ section.car-type .slider-card-wrapper p {
 }
 
 @media (max-width: 480px) {
+  .call-to-action .call_button {
+    flex-direction: column !important;
+    padding: 0 2rem;
+  }
   main {
     height: 100%;
   }
@@ -485,17 +503,32 @@ section.car-type .slider-card-wrapper p {
     border: none;
   }
   .ml-8-per {
-    margin-left: 0;
+    padding-left: 0 !important;
+  }
+  .main-heding,
+  main ._content h1 {
+    font-size: 48px !important;
+  }
+  .home-banner p {
+    padding-left: 0 !important;
+  }
+  .home-banner .container {
+    max-width: 100% !important;
   }
   section .__slider {
     padding: 1rem;
     margin: 3rem 0;
+    margin-bottom: 0 !important;
+  }
+  section .__slider .slider-header {
+    align-items: baseline;
   }
   section .__slider .slick-slide {
     margin-right: 0;
   }
   section .__slider h2 {
     font-size: 1.7rem !important;
+    margin-bottom: 1rem;
   }
   section .__slider .card-footer {
     flex-direction: column;
@@ -503,7 +536,111 @@ section.car-type .slider-card-wrapper p {
   .slider-btn {
     margin-right: 0 !important;
   }
+  .copyright {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+  .copyright p {
+    text-align: center;
+  }
+  .copyright ul {
+    padding-left: 0 !important;
+  }
 }
+.latest-news-wrapper .card-body .properties {
+  margin-top: 1rem !important;
+}
+.latest-news-wrapper .heading {
+  color: var(--darkgray);
+  font-weight: 700;
+}
+.latest-news-wrapper .card-footer {
+  width: 155px;
+  padding-top: 10px !important;
+}
+
+.call-to-action {
+  padding: 5rem 0;
+  text-align: center;
+  margin-top: 10rem;
+  background: var(--light-gray);
+  color: var(--main) !important;
+}
+.call-to-action h2 {
+  max-width: 890px;
+  margin: 0 auto;
+}
+.call-to-action .call_button {
+  gap: 1rem;
+}
+.call-to-action .call_button .button {
+  border-radius: 6px;
+}
+
+footer {
+  padding: 5rem 1rem;
+  padding-bottom: 0;
+}
+footer .footer_nav {
+  gap: 2rem;
+}
+footer .footer_nav h3 {
+  color: var(--main);
+  font-family: var(--oswald);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+footer .footer_nav ul {
+  padding-left: 0 !important;
+}
+footer .footer_nav ul li {
+  font-size: 16px;
+  margin-top: 1.4rem;
+  text-transform: capitalize;
+}
+footer .footer_nav ul li a {
+  color: var(--light-dark);
+}
+footer .footer_nav ul li a:hover {
+  color: var(--secondary);
+}
+footer .footer_nav .input {
+  border-bottom: 1px solid var(--light-dark);
+  display: flex;
+}
+footer .footer_nav .input input {
+  padding: 10px !important;
+  border: none;
+  width: 100%;
+  outline: none;
+}
+footer .footer_nav .social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .footer_nav .social a {
+  transition: 0.3s ease-in-out;
+}
+footer .footer_nav .social a img {
+  width: 50px;
+}
+footer .copyright {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  padding-bottom: 1rem;
+  border-top: 2px solid var(--border-clr);
+}
+footer .copyright .extra-links li {
+  margin-left: 12px;
+}
+footer .copyright .extra-links li a {
+  color: var(--light-dark);
+}
+footer .copyright .extra-links li a:hover {
+  color: var(--secondary);
+}
+
 @media (min-width: 481px) and (max-width: 992px) {
   main {
     height: 100%;
