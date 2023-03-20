@@ -37,11 +37,11 @@
 	  <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/styles/bootstrap.min.css" />
     <!-- slickSlider  -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" 
+      href="<?php bloginfo('template_directory'); ?>/assets/slick/slick.css" 
       rel="stylesheet"
     />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      href="<?php bloginfo('template_directory'); ?>/assets/slick/slick-theme.css"
       rel="stylesheet"
     />
 
