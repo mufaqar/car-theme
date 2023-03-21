@@ -1,5 +1,4 @@
-<?php load_theme_textdomain('text_domain'); ?>
-<?php
+<?php load_theme_textdomain('text_domain'); 
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 140, 140, true );
 	add_image_size( 'single-post-thumbnail', 300, 9999 );
@@ -103,4 +102,6 @@ function add_first_and_last($items) {
 }
  
 add_filter('wp_nav_menu_objects', 'add_first_and_last');
+
+include get_template_directory() . '/inc/extra_functions.php';
 
