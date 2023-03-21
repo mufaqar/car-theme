@@ -116,7 +116,7 @@
     <div class="freature_wrapper container mx-auto">
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -125,7 +125,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -134,7 +134,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -143,7 +143,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -152,7 +152,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -161,7 +161,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -170,7 +170,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -179,7 +179,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -188,7 +188,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -197,7 +197,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -206,7 +206,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -535,7 +535,7 @@
   <section class="call-to-action">
     <h2 class="main-heding">Your next car is waiting for you here...</h2>
     <div class="call_button mt-5 d-flex justify-content-center mx-auto
-          <a href=""#>
+          <a href="#">
             <div class=" button">
       <img src="<?php bloginfo('template_directory'); ?>/assets/icons/env.svg" alt="env" width="28" height="28" />
       <span>INFO@001CARS.COM</span>
