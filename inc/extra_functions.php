@@ -69,6 +69,66 @@ if( function_exists('acf_add_local_field_group') ):
                     'class' => '',
                     'id' => '',
                 ),
+            ),
+            array (
+                'key' => 'vehicle_interior_color',
+                'label' => 'Interior color',
+                'name' => 'Interior color',
+                'type' => 'text',
+                'default_value' => 'Grey',
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'vehicle_interior_material',
+                'label' => 'Interior material',
+                'name' => 'Interior material',
+                'type' => 'text',
+                'default_value' => 'Cloth interior',
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'vehicle_ref_no',
+                'label' => 'Ref #',
+                'name' => 'Ref #',
+                'type' => 'text',
+                'default_value' => '7226369',
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'vehicle_seats',
+                'label' => 'Seats',
+                'name' => 'Seats',
+                'type' => 'text',
+                'default_value' => '5',
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
+            ),
+            array (
+                'key' => 'vehicle_vin',
+                'label' => 'VIN',
+                'name' => 'VIN',
+                'type' => 'text',
+                'default_value' => '5',
+                'wrapper' => array (
+                    'width' => '50',
+                    'class' => '',
+                    'id' => '',
+                ),
             )
         ),
         'location' => array (
