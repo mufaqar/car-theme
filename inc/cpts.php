@@ -79,20 +79,20 @@ function cptui_register_my_taxes_body_type() {
 }
 add_action( 'init', 'cptui_register_my_taxes_body_type' );
 
-function cptui_register_my_taxes_brand() {
+function cptui_register_my_taxes_make() {
 
 	/**
-	 * Taxonomy: Brands.
+	 * Taxonomy: Make.
 	 */
 
 	$labels = [
-		"name" => esc_html__( "Brands", "twentytwentytwo" ),
-		"singular_name" => esc_html__( "Brand", "twentytwentytwo" ),
+		"name" => esc_html__( "Make", "twentytwentytwo" ),
+		"singular_name" => esc_html__( "Make", "twentytwentytwo" ),
 	];
 
 	
 	$args = [
-		"label" => esc_html__( "Brands", "twentytwentytwo" ),
+		"label" => esc_html__( "Make", "twentytwentytwo" ),
 		"labels" => $labels,
 		"public" => true,
 		"publicly_queryable" => true,
@@ -101,17 +101,54 @@ function cptui_register_my_taxes_brand() {
 		"show_in_menu" => true,
 		"show_in_nav_menus" => true,
 		"query_var" => true,
-		"rewrite" => [ 'slug' => 'brand', 'with_front' => true,  'hierarchical' => true, ],
+		"rewrite" => [ 'slug' => 'make', 'with_front' => true,  'hierarchical' => true, ],
 		"show_admin_column" => true,
 		"show_in_rest" => true,
 		"show_tagcloud" => false,
-		"rest_base" => "brand",
+		"rest_base" => "make",
 		"rest_controller_class" => "WP_REST_Terms_Controller",
 		"rest_namespace" => "wp/v2",
 		"show_in_quick_edit" => false,
 		"sort" => false,
 		"show_in_graphql" => false,
 	];
-	register_taxonomy( "brand", [ "vehicle" ], $args );
+	register_taxonomy( "make", [ "vehicle" ], $args );
 }
-add_action( 'init', 'cptui_register_my_taxes_brand' );
+add_action( 'init', 'cptui_register_my_taxes_make' );
+
+function cptui_register_my_taxes_features() {
+
+	/**
+	 * Taxonomy: Features.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Features", "twentytwentytwo" ),
+		"singular_name" => esc_html__( "Feature", "twentytwentytwo" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Features", "twentytwentytwo" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'features', 'with_front' => true,  'hierarchical' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "features",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => false,
+		"sort" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "features", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_features' );
