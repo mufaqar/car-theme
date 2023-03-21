@@ -4,7 +4,7 @@
 <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-main d-flex justify-content-between">
-        <a href="#"><img src="./assets/icons/logo.svg" alt="logo" /></a>
+        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
           <div class="button mx-4"><a href="#">Registor</a></div>
           <div class="d-flex align-items-center header_dropdown">
             <span>Build Your Own</span>
-            <img src="./assets/icons/arrow_down.svg" alt="arrow Down" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
           </div>
         </div>
       </div>
@@ -41,18 +41,18 @@
       <div>
         <div class="main">
           <div class="slider slider-for">
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
           </div>
           <div class="slider slider-nav">
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="./assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
         <h3>Skoda Fabia</h3>
         <h5>ACTIVE #CLIMATE #LED #LANE KEEPING</h5>
         <div class="d-flex _border align-items-center gap-2 mt-3">
-          <img src="./assets/icons/pin_2.svg" alt="pin" width="21" height="21">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="pin" width="21" height="21">
           <span class="pin">DE 63165 Mühlheim..</span>
         </div>
         <h6 class="price">€ 128.99 per month</h6>
@@ -70,7 +70,7 @@
             <button>More leasing details</button>
             <p>
               <span>Only available as a lease</span>
-              <img src="./assets/icons/info.svg" alt="">
+              <img src="<?php bloginfo('template_directory'); ?>/assets/icons/info.svg" alt="">
             </p>
           </div>
           <div class="d-flex justify-content-between mt-3 mb-2">
@@ -96,7 +96,7 @@
             </div>
           </form>
           <div class="d-flex mt-3 justify-content-between mt-1 ">
-            <p class="gard"><img src="./assets/icons/gard.svg" alt="gard" /> <span>Insurance</span>
+            <p class="gard"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/gard.svg" alt="gard" /> <span>Insurance</span>
             <p>
             <p>from €6.85 monthly assure</p>
           </div>
@@ -104,7 +104,7 @@
             <div class="mt-2 requestButton">Request leasing</div>
           </a>
           <div class="brand">
-            <img src="./assets/images/brand.png" alt="brand" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/images/brand.png" alt="brand" />
           </div>
         </div>
       </div>
@@ -116,7 +116,7 @@
     <div class="freature_wrapper container mx-auto">
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -125,7 +125,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -134,7 +134,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -143,7 +143,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -152,7 +152,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -161,7 +161,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -170,7 +170,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -179,7 +179,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -188,7 +188,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -197,7 +197,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -206,7 +206,7 @@
       </div>
       <div class="d-flex feature align-items-center gap-2">
         <figure>
-          <img src="./assets/icons/>>.svg" alt="">
+          <img src="<?php bloginfo('template_directory'); ?>/assets/icons/>>.svg" alt="">
         </figure>
         <div class="content">
           <h6>Kms driven</h6>
@@ -287,131 +287,131 @@
       <div class="car-feature-wrapper">
         <ul>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>ABS</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Alloy Rims</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Front Speakers</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Navigation System</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Power Steering</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>USB and Auxillary Cable</span>
           </li>
         </ul>
         <ul>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>ABS</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Alloy Rims</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Front Speakers</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Navigation System</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Power Steering</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>USB and Auxillary Cable</span>
           </li>
         </ul>
         <ul>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>ABS</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Alloy Rims</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Front Speakers</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Navigation System</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Power Steering</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>USB and Auxillary Cable</span>
           </li>
         </ul>
         <ul>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>ABS</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Alloy Rims</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Front Speakers</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Navigation System</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Power Steering</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>USB and Auxillary Cable</span>
           </li>
         </ul>
         <ul>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>ABS</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Alloy Rims</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Front Speakers</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Navigation System</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>Power Steering</span>
           </li>
           <li>
-            <img src="./assets/icons/abs.svg" alt="logo" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span>USB and Auxillary Cable</span>
           </li>
         </ul>
@@ -427,15 +427,15 @@
         <h3>Benefits of leasing at a glance :</h3>
         <ul>
           <li>
-            <img src="./assets/icons/tick.svg" alt="tick"/>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/tick.svg" alt="tick"/>
             <span>Inexpensive: leasing pays off. </span>
           </li>
           <li>
-            <img src="./assets/icons/tick.svg" alt="tick"/>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/tick.svg" alt="tick"/>
             <span>Individual: According to your wishes. </span>
           </li>
           <li>
-            <img src="./assets/icons/tick.svg" alt="tick"/>
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/tick.svg" alt="tick"/>
             <span>Safe: plan in advance </span>
           </li>
         </ul>
@@ -537,13 +537,13 @@
     <div class="call_button mt-5 d-flex justify-content-center mx-auto
           <a href=""#>
             <div class=" button">
-      <img src="./assets/icons/env.svg" alt="env" width="28" height="28" />
+      <img src="<?php bloginfo('template_directory'); ?>/assets/icons/env.svg" alt="env" width="28" height="28" />
       <span>INFO@001CARS.COM</span>
     </div>
     </a>
     <a href="" #>
       <div class="button btn-dark">
-        <img src="./assets/icons/phone.svg" alt="env" width="27" height="28" />
+        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/phone.svg" alt="env" width="27" height="28" />
         <span>+420 246 034 700</span>
       </div>
     </a>
@@ -588,13 +588,13 @@
           <h3>STAY IN CONTACT</h3>
           <div class="input mt-5">
             <input value="" placeholder="Location">
-            <img src="./assets/icons/pin.svg" alt="pin" />
+            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin.svg" alt="pin" />
           </div>
           <div class="social mt-5">
-            <a href="#"><img src="./assets/icons/fb.svg" alt="facebook" /></a>
-            <a href="#"><img src="./assets/icons/in.svg" alt="instagram" /></a>
-            <a href="#"><img src="./assets/icons/tw.svg" alt="twitter" /></a>
-            <a href="#"><img src="./assets/icons/yt.svg" alt="youtube" /></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/fb.svg" alt="facebook" /></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/in.svg" alt="instagram" /></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/tw.svg" alt="twitter" /></a>
+            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/yt.svg" alt="youtube" /></a>
           </div>
         </div>
       </section>
