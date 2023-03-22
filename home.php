@@ -1,48 +1,5 @@
 <?php get_header(); ?>
-<header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse justify-content-center navbar-collapse"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Buy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">sell</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">flexiable purchase model</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">decision support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="d-flex align-items-center text-uppercase logins_section">
-            <div class="button mx-4"><a href="#">Registor</a></div>
-            <div class="d-flex align-items-center header_dropdown">
-              <span>Build Your Own</span>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+
     <main>
       <div class="_content">
         <h1>Love Your Car Guarantee</h1>
@@ -3503,62 +3460,6 @@
         </div>
     </section>
 
-    <!-- footer section -->
-    <footer class="container">
-      <section class="footer_nav row">
-        <div class="col-md-2">
-          <h3>SUPPORT</h3>
-          <ul>
-            <li><a href="#">About 001</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Conditions</a></li>
-          </ul>
-        </div>
-        <div class="col-md-2">
-          <h3>SERVICE</h3>
-          <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Car Catalogue</a></li>
-            <li><a href="#">car Subscription</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h3>DEALER</h3>
-          <ul>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">To Register</a></li>
-            <li><a href="#">Advantages</a></li>
-            <li><a href="#">Partner Info Portal</a></li>
-            <li><a href="#">Conditions</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h3>STAY IN CONTACT</h3>
-          <div class="input mt-5">
-            <input value ="" placeholder="Location">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin.svg" alt="pin"/>
-          </div>
-          <div class="social mt-5">
-            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/fb.svg" alt="facebook"/></a>
-            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/in.svg" alt="instagram"/></a>
-            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/tw.svg" alt="twitter"/></a>
-            <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/yt.svg" alt="youtube"/></a>
-          </div>
-        </div>
-      </section>
-      <section class="copyright d-flex justify-content-between">
-        <p>Copyrights © 2023 All Rights Reserved by Mufaqar</p>
-        <ul class="extra-links d-flex">
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Terms & Conditions </a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </section>
-    </footer>
 
 
   
