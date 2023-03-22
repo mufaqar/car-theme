@@ -816,6 +816,363 @@ section.slug .detail-content .brand img {
   text-align: end;
 }
 
+section.leasing {
+  background-image: url("../assets/images/main.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 170px 0;
+  color: var(--pure);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section.leasing h2 {
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+}
+section.leasing p {
+  font-size: 24px;
+  text-align: center;
+}
+section.leasing a {
+  background: var(--secondary);
+  color: var(--main);
+  padding: 10px 2rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+section.leasing a:hover {
+  background: var(--pure);
+}
+
+.leasing-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 5rem;
+  gap: 1.5rem;
+}
+.leasing-card div {
+  border: 1px solid var(--border-clr);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1411764706);
+  border-radius: 6px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.leasing-card div img {
+  width: 110px;
+}
+.leasing-card div h4 {
+  font-size: 24px;
+  max-width: 250px;
+  margin-top: 1rem;
+}
+.leasing-card div p {
+  color: var(--darkgray);
+  max-width: 350px;
+  margin-top: 1rem;
+}
+
+section.content {
+  font-weight: 700 !important;
+  color: var(--main);
+  margin-top: 5rem;
+  text-align: center;
+}
+section.content h2 {
+  font-size: 42px !important;
+  margin-bottom: 2rem;
+}
+section.content p {
+  color: var(--darkgray);
+  font-weight: 300 !important;
+  padding: 0 8rem;
+  line-height: 2rem;
+}
+
+.subscription-work {
+  background: var(--light-gray);
+  margin-top: 4rem;
+  padding: 4rem 0 !important;
+  text-align: center;
+}
+.subscription-work h2 {
+  font-size: 42px !important;
+  margin-bottom: 2rem;
+  color: var(--main);
+}
+.subscription-work .wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+.subscription-work .wrapper div {
+  flex: 1;
+}
+.subscription-work .wrapper div figure {
+  background: var(--pure);
+  border: 1.5px solid var(--border-clr);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.05);
+}
+.subscription-work .wrapper div figure img {
+  width: 100%;
+}
+.subscription-work .wrapper div h6 {
+  text-align: center;
+  font-family: var(--oswald);
+  color: var(--main) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  margin-top: 10px;
+}
+
+.cards_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin: 7rem 0;
+  align-items: center;
+}
+.cards_content .order {
+  order: 2;
+}
+.cards_content h2 {
+  font-size: 42px !important;
+  margin-bottom: 2rem;
+  color: var(--main);
+  line-height: 60px;
+}
+.cards_content p {
+  font-size: 20px;
+  color: var(--darkgray);
+}
+.cards_content ul {
+  padding-left: 0 !important;
+}
+.cards_content ul li {
+  color: var(--darkgray);
+  margin-top: 1rem;
+  font-size: 15px;
+}
+.cards_content ul li img {
+  padding: 8px;
+  border: 1.5px solid var(--border-clr);
+  border-radius: 50%;
+}
+.cards_content ul li span {
+  margin-left: 10px;
+}
+.cards_content a > div {
+  background: var(--secondary);
+  color: var(--main);
+  margin-top: 2rem;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+.cards_content ._img {
+  position: relative;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+.cards_content ._img img {
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.cards_content ._img .bg-overlay {
+  content: "";
+  background: var(--secondary);
+  width: 100%;
+  height: 85%;
+  top: 40px;
+  position: absolute;
+  z-index: -1;
+  right: -30px;
+}
+.cards_content ._img .bg-left {
+  left: -30px !important;
+}
+
+.faq_header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 8rem 0;
+  padding: 0 10px;
+}
+.faq_header h2 {
+  color: var(--main);
+  font-weight: 700;
+  font-family: var(--axiforma-bold);
+  text-align: center;
+}
+.faq_header p {
+  max-width: 360px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 1rem;
+}
+.faq_header div {
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  background: #E3E7EE;
+  width: 100%;
+  border-radius: 50px;
+  padding-right: 1rem;
+  margin-top: 1rem;
+}
+.faq_header div input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1rem;
+}
+.faq_header div svg {
+  cursor: pointer;
+}
+
+.faq .accordion {
+  padding: 0 10px !important;
+}
+.faq .accordion-item {
+  margin-top: 1.5rem;
+  border: 1.6px solid var(--border-clr);
+  border-bottom: 1.6px solid var(--border-clr) !important;
+  border-top: 1.6px solid var(--border-clr) !important;
+  border-radius: 15px;
+}
+.faq .accordion-item button {
+  padding: 1.7rem;
+  font-family: var(--axiforma-bold);
+}
+.faq .accordion-item .accordion-button:not(.collapsed) {
+  background: transparent !important;
+}
+.faq .accordion-item .accordion-body {
+  padding: 1.7rem;
+}
+
+.contact-us {
+  background: var(--secondary);
+  padding-bottom: 6rem;
+}
+.contact-us h2 {
+  font-family: var(--axiforma-bold);
+  color: var(--main);
+  text-align: center;
+  margin-top: 5rem;
+}
+.contact-us p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.contact-us-form {
+  padding-top: 6rem;
+  background: var(--light-gray);
+  z-index: 1;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.031372549);
+}
+.contact-us-form p {
+  color: var(--darkgray);
+  padding-top: 10px;
+}
+.contact-us-form .form {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--pure);
+  padding: 3rem;
+  border-radius: 6px;
+}
+.contact-us-form label {
+  color: var(--main);
+  font-family: var(--axiforma-bold);
+}
+.contact-us-form ._input {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.contact-us-form ._input input, .contact-us-form ._input select {
+  padding: 14px;
+  border: 1.5px solid var(--border-clr) !important;
+  outline: none;
+  border-radius: 8px;
+  color: var(--darkgray);
+}
+.contact-us-form .submit_button {
+  background: var(--secondary);
+  color: var(--main);
+  border: none;
+  padding: 12px 1.4rem;
+  border-radius: 6px;
+  font-family: var(--axiforma-bold);
+  margin-top: 1rem;
+}
+
+.contact-us-footer {
+  background: var(--light-gray);
+  padding: 6rem 0;
+}
+.contact-us-footer .contact-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+}
+.contact-us-footer .contact-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contact-us-footer .contact-card div figure {
+  background: #E4E6E8;
+  padding: 12px;
+  border-radius: 10px;
+}
+.contact-us-footer .contact-card div figure img {
+  width: 32px;
+  height: 32px;
+}
+.contact-us-footer .contact-card div h3 {
+  color: var(--main);
+  margin-top: 1rem;
+  font-size: 30px;
+}
+.contact-us-footer .contact-card div p {
+  margin-top: 0.5rem;
+  color: var(--darkgray);
+}
+.contact-us-footer .contact-card div a {
+  font-family: var(--axiforma-bold);
+  font-size: 16px;
+  margin-top: 1rem;
+  color: var(--main);
+  cursor: pointer;
+}
+.contact-us-footer .contact-card div .button {
+  border: 2px solid var(--secondary);
+  border-radius: 6px;
+  background: transparent !important;
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 !important;
@@ -874,7 +1231,7 @@ section.slug .detail-content .brand img {
     padding-left: 0 !important;
   }
   .main-heding, main ._content h1 {
-    font-size: 48px !important;
+    font-size: 35px !important;
   }
   .home-banner p {
     padding-left: 0 !important;
@@ -988,6 +1345,85 @@ section.slug .detail-content .brand img {
   }
   .leasing-price .right div {
     padding: 1rem;
+  }
+  section.leasing {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.leasing h2 {
+    font-size: 2rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+  }
+  .leasing-card img {
+    width: 90px !important;
+  }
+  .leasing-card h4 {
+    font-size: 1.4rem !important;
+  }
+  section.content {
+    padding: 0 10px;
+  }
+  section.content h2 {
+    font-size: 1.8rem !important;
+  }
+  section.content p {
+    padding: 0 !important;
+    line-height: 24px;
+  }
+  .subscription-work {
+    padding: 2rem 10px !important;
+  }
+  .subscription-work h2 {
+    font-size: 1.8rem !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .cards_content {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
+  }
+  .cards_content h2 {
+    font-size: 32px !important;
+    line-height: 48px;
+  }
+  .cards_content ._img {
+    padding-bottom: 58px !important;
+  }
+  .order {
+    order: 0 !important;
+  }
+  .contact-us-form {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+  }
+  .contact-us-form .form {
+    padding: 3rem 1rem;
+  }
+  .contact-us-form .form div {
+    flex-direction: column;
+  }
+  .contact-us-form .form div ._input {
+    width: 100%;
+  }
+  .contact-us-footer {
+    padding: 4rem 10px;
+  }
+  .contact-us-footer .contact-card {
+    grid-template-columns: 1fr;
+  }
+  .contact-us {
+    padding: 8rem 10px;
+  }
+  .contact-us h2 {
+    margin-top: 0;
   }
 }
 @media (min-width: 481px) and (max-width: 992px) {
@@ -1104,6 +1540,46 @@ section.slug .detail-content .brand img {
   .leasing-price .right div {
     padding: 1rem;
   }
+  section.leasing {
+    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.leasing h2 {
+    font-size: 3rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  section.content p {
+    padding: 0 !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .cards_content {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
+  }
+  .cards_content h2 {
+    font-size: 32px !important;
+    line-height: 48px;
+  }
+  .cards_content ._img {
+    padding-bottom: 86px !important;
+  }
+  .order {
+    order: 0 !important;
+  }
+  .contact-us-footer {
+    padding: 4rem 10px;
+  }
+  .contact-us-footer .contact-card {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (min-width: 481px) and (max-width: 680px) {
   .__slider .card-footer {
@@ -1115,6 +1591,46 @@ section.slug .detail-content .brand img {
   }
   .leasing-price .right div {
     padding: 1rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+  }
+  .leasing-card img {
+    width: 90px !important;
+  }
+  .leasing-card h4 {
+    font-size: 1.4rem !important;
+  }
+  .subscription-work {
+    padding: 2rem 10px !important;
+  }
+  .subscription-work h2 {
+    font-size: 1.8rem !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .contact-us-form {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+  }
+  .contact-us-form .form {
+    padding: 3rem 1rem;
+  }
+  .contact-us-form .form div {
+    flex-direction: column;
+  }
+  .contact-us-form .form div ._input {
+    width: 100%;
+  }
+  .contact-us {
+    padding: 8rem 10px;
+  }
+  .contact-us h2 {
+    margin-top: 0;
   }
 }
 @media (min-width: 1400px) {
