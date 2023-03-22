@@ -63,10 +63,13 @@ function pagination($pages = '', $range = 4)
 }
 
 if (function_exists('register_nav_menus')) {
-register_nav_menus( array(
-		'main' => __( 'Main Menu', '' ),
-		'footer' => __( 'Footer Menu', '' ),
-	) );
+    register_nav_menus( array(
+            'main' => __( 'Main Menu', '' ),
+            'footer-1' => __( 'Footer Support Menu'),
+            'footer-2' => __( 'Footer Services Menu'),
+            'footer-3' => __( 'Footer Dealder Menu'),
+            'footer-4' => __( 'Footer Copyright Menu')
+        ) );
 }
 
 function fallbackmenu1(){ ?>

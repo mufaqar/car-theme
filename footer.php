@@ -28,33 +28,15 @@
       <section class="footer_nav row">
         <div class="col-md-2">
           <h3>SUPPORT</h3>
-          <ul>
-            <li><a href="#">About 001</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Conditions</a></li>
-          </ul>
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-1','fallback_cb'=> 'fallbackmenu1' ) ); ?>
         </div>
         <div class="col-md-2">
           <h3>SERVICE</h3>
-          <ul>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Car Catalogue</a></li>
-            <li><a href="#">car Subscription</a></li>
-          </ul>
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-2','fallback_cb'=> 'fallbackmenu1' ) ); ?>
         </div>
         <div class="col-md-4">
           <h3>DEALER</h3>
-          <ul>
-            <li><a href="#">Register</a></li>
-            <li><a href="#">To Register</a></li>
-            <li><a href="#">Advantages</a></li>
-            <li><a href="#">Partner Info Portal</a></li>
-            <li><a href="#">Conditions</a></li>
-          </ul>
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-3','fallback_cb'=> 'fallbackmenu1' ) ); ?>
         </div>
         <div class="col-md-3">
           <h3>STAY IN CONTACT</h3>
@@ -72,11 +54,8 @@
       </section>
       <section class="copyright d-flex justify-content-between">
         <p>Copyrights © 2023 All Rights Reserved by Mufaqar</p>
-        <ul class="extra-links d-flex">
-          <li><a href="#">Sitemap</a></li>
-          <li><a href="#">Terms & Conditions </a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
+        
+        <?php wp_nav_menu( array( 'theme_location' => 'footer-4','menu_class'=> 'extra-links d-flex',      'container'         => 'false' ) ); ?>
       </section>
     </footer>
        

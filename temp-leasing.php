@@ -133,7 +133,7 @@ get_header(); ?>
       </div>
       <div class="_img img-left">
         <img src="./assets/images/old-car.png" alt="image" >
-        <div class="bg-overlay "/>
+        <div class="bg-overlay ">
       </div>
     </section>
 
