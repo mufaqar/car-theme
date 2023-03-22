@@ -61,7 +61,7 @@
 <header>
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
+          <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -77,26 +77,24 @@
             class="collapse justify-content-center navbar-collapse"
             id="navbarNav"
           >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Buy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">sell</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">flexiable purchase model</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">decision support</a>
-              </li>
-            </ul>
+            
+			<?php wp_nav_menu( array(
+					'menu'              => 'main',
+					'theme_location'    => 'main',
+					'depth'             => 2,
+					'container'         => 'false',
+					'menu_class'        => 'navbar-nav',
+					'fallback_cb'       => 'wp_bootstrap_navlist_walker::fallback',
+					'walker'          => new WP_Bootstrap_Navwalker(),
+					) ); ?>
+
           </div>
           <div class="d-flex align-items-center text-uppercase logins_section">
-            <div class="button mx-4"><a href="#">Registor</a></div>
+            <div class="button mx-4"><a href="<?php echo home_url('register'); ?>">Registor</a></div>
             <div class="d-flex align-items-center header_dropdown">
-              <span>Build Your Own</span>
+			<a href="<?php echo home_url(); ?>"> <span>Build Your Own</span>
               <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
+				</a>
             </div>
           </div>
         </div>

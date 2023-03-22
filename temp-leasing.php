@@ -2,50 +2,7 @@
 
 get_header(); ?>
 
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-main d-flex justify-content-between">
-          <a href="#"><img src="./assets/icons/logo.svg" alt="logo" /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse justify-content-center navbar-collapse"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Buy</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">sell</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">flexiable purchase model</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">decision support</a>
-              </li>
-            </ul>
-          </div>
-          <div class="d-flex align-items-center text-uppercase logins_section">
-            <div class="button mx-4"><a href="#">Registor</a></div>
-            <div class="d-flex align-items-center header_dropdown">
-              <span>Build Your Own</span>
-              <img src="./assets/icons/arrow_down.svg" alt="arrow Down" />
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
+    
 
     <section class="leasing">
         <h2 class="main-heading">Shop with real rates in hand.</h2>
