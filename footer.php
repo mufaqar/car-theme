@@ -20,8 +20,7 @@
                 </a>
                 </div>
             </section> 
-    <?php } ?>
-    
+    <?php } ?>   
 
     <!-- footer section -->
     <footer class="container">
