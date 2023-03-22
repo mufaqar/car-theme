@@ -108,3 +108,14 @@ add_filter('wp_nav_menu_objects', 'add_first_and_last');
 
 include get_template_directory() . '/inc/extra_functions.php';
 
+
+
+function add_car_theme_scripts() {
+wp_enqueue_script( 'car_bootstrap', get_template_directory_uri() . '/assets/scripts/bootstrap.min.js', array( 'jquery' ), 1.1, true);
+wp_enqueue_script( 'car_jquery_min', get_template_directory_uri() . '/assets/scripts/jquery.min.js', array( 'jquery' ), 1.1, true);
+wp_enqueue_script( 'car_slick', get_template_directory_uri() . '/assets/scripts/slick.js', array( 'jquery' ), 1.1, true);
+wp_enqueue_script( 'car_slick_slider', get_template_directory_uri() . '/assets/scripts/slick-slider.js', array( 'jquery' ), 1.1, true);
+
+}
+add_action( 'wp_enqueue_scripts', 'add_car_theme_scripts' );
+

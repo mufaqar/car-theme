@@ -58,13 +58,6 @@
         <?php wp_nav_menu( array( 'theme_location' => 'footer-4','menu_class'=> 'extra-links d-flex',      'container'         => 'false' ) ); ?>
       </section>
     </footer>
-       
-       <?php wp_footer(); ?>
-        <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/bootstrap.min.js"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/jquery.min.js"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/slick.js"></script>    
-        <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/slick-slider.js"></script>
-
-
+    <?php wp_footer(); ?>
     </body>
     </html>
