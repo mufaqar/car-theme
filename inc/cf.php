@@ -33,7 +33,7 @@ acf_add_local_field_group(array (
 		array (
 			'key' => 'vehicle_register',
 			'label' => 'Registered In',
-			'name' => 'Registered In',
+			'name' => 'vehicle_register',
 			'type' => 'text',
 			'default_value' => '2016',
 			'wrapper' => array (
