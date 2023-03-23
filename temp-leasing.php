@@ -129,7 +129,7 @@ get_header(); ?>
             <span>Before you subscribe to a car, the provider will check your Schufa entry - so you should have a positive credit rating.</span>
           </li>
         </ul>
-        <a href=""><div>TO THE CAR SUBSCRIPTION OFFERS</div></a>
+        <a href="#"><div>TO THE CAR SUBSCRIPTION OFFERS</div></a>
       </div>
       <div class="_img img-left">
         <img src="<?php bloginfo('template_directory'); ?>/assets/images/old-car.png" alt="image" >
