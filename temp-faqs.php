@@ -18,36 +18,37 @@ get_header(); ?>
     <section class="container mx-auto faq">
 
       <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="1">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              How does car leasing work?
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="1" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="2">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              What do you have to pay attention to when leasing?
-            </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="2" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="3">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              Which lease term is the best?
-            </button>
-          </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="3" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-          </div>
-        </div>
+        
+
+
+        <?php query_posts(array(
+            'post_type' => 'faq',
+            'posts_per_page' => -1,
+            'order' => 'desc'
+            
+              )); 
+
+              $i= 1 ;
+          if (have_posts()) :  while (have_posts()) : the_post(); ?>
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="<?php echo $i?>">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-<?php echo $i?>" aria-expanded="false" aria-controls="flush-collapse-<?php echo $i?>">
+                              <?php the_title()?>
+                              </button>
+                            </h2>
+                            <div id="flush-collapse-<?php echo $i?>" class="accordion-collapse collapse" aria-labelledby="<?php echo $i?>" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body"> <?php the_content()?></div>
+                            </div>
+                          </div>
+              
+
+              <?php $i++; endwhile; wp_reset_query(); else : ?>
+            <h2><?php _e('Nothing Found','lbt_translate'); ?></h2>
+                <?php endif; ?> 
+	
+
+
       </div>
 
     </section>

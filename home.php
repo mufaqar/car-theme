@@ -6,8 +6,7 @@ get_header(); ?>
       <div class="_content">
         <h1>Love Your Car Guarantee</h1>
         <h6>
-          No impact on your credit scoreOnly takes minutes Personalized, real
-          rates
+        One-Stop Platform for Exceptional Automotive Solutions
         </h6>
       </div>
       <!-- filter  -->

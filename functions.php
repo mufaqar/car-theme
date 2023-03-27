@@ -118,4 +118,3 @@ wp_enqueue_script( 'car_slick_slider', get_template_directory_uri() . '/assets/s
 
 }
 add_action( 'wp_enqueue_scripts', 'add_car_theme_scripts' );
-
