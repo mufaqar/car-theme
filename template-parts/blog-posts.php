@@ -37,7 +37,7 @@
                   <div>
                     <p>
                       <img src="<?php bloginfo('template_directory'); ?>/assets/icons/calender.svg" alt="cal"/>
-                      <span class="mt-1">29 Jan 2023</span>
+                      <span class="mt-1"> <?php the_time(get_option('date_format')); ?> </span>
                     </p>
                   </div>
                 </div>
