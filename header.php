@@ -90,11 +90,11 @@
 
           </div>
           <div class="d-flex align-items-center text-uppercase logins_section">
-            <div class="button mx-4"><a href="<?php echo home_url('register'); ?>">Registor</a></div>
+            <div class="button mx-4"><a href="<?php echo home_url('register'); ?>">Register</a></div>
             <div class="d-flex align-items-center header_dropdown">
-			<a href="<?php echo home_url(); ?>"> <span>Build Your Own</span>
-              <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
-				</a>
+			        <a href="<?php echo home_url(); ?>"> <span>Build Your Own</span>
+                   <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
+			      	</a>
             </div>
           </div>
         </div>
