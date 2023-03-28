@@ -23,7 +23,7 @@
                     $terms = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {                  
                         foreach ( $terms as $term ) {
-                        $feature_icon =  get_field('feature_icon2', $term);
+                        $feature_icon =  get_field('feature_icon', $term);
                     ?>    
           <div class="slider-card-wrapper">
             <div class="slider-card">
