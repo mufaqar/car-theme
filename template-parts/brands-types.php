@@ -18,174 +18,29 @@
           </div>
         </div>
         <div class="car-type-slider popular-brands-slider-wrapper" id="wrapper">
+
+        <?php
+                    $terms = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
+                    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {                  
+                        foreach ( $terms as $term ) {
+                        $feature_icon =  get_field('feature_icon2', $term);
+                    ?>    
           <div class="slider-card-wrapper">
             <div class="slider-card">
               <figure class=" p-4">
                 <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
+                src="<?php echo $feature_icon ?>"
                 alt="car"
                 style="width: 100%"
               />  
               </figur>
             </div>
-            <p class="mt-1">EV</p>
+            <p class="mt-1"><?php echo $term->name ?> </p>
           </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
-          <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/car.png"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1">EV</p>
-          </div>
+          <?php   }   } 
+               ?> 
+         
+          
         </div>
       </div>
     </section>
