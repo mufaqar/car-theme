@@ -34,17 +34,17 @@
                      
 
                       <div class="slider-card-wrapper">
-            <div class="slider-card">
-              <figure class=" p-4">
-                <img
-                src="<?php echo $feature_icon ?>"
-                alt="car"
-                style="width: 100%"
-              />  
-              </figur>
-            </div>
-            <p class="mt-1"><?php echo $term->name ?> </p>
-          </div>
+                          <div class="slider-card">
+                            <figure class=" p-4">
+                              <img
+                              src="<?php echo $feature_icon ?>"
+                              alt="car"
+                              style="width: 100%"
+                            />  
+                            </figur>
+                          </div>
+                          <p class="mt-1"><?php echo $term->name ?> </p>
+                      </div>
                     <?php
                 }  
 
