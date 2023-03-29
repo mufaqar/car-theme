@@ -28,7 +28,7 @@
 	<?php endif; ?>
 <?php endif; ?>
 <?php if ( comments_open() ) : ?>
-<div id="respond">
+<div id="respond" class="comment-wrapper">
 	<h3><?php comment_form_title(__('Leave a Reply','text_domain'), __('Leave a Reply to %s','text_domain') ); ?></h3>
 	<div class="cancel-comment-reply">
 		<?php cancel_comment_reply_link(); ?>
