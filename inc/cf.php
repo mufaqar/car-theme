@@ -23,7 +23,7 @@ acf_add_local_field_group(array (
 			'label' => 'Price',
 			'name' => 'vehicle_price',
 			'type' => 'text',
-			'default_value' => 'DE 63165 Mühlheim..',
+			'default_value' => '610',
 			'wrapper' => array (
 				'width' => '50',
 				'class' => '',
@@ -144,6 +144,18 @@ acf_add_local_field_group(array (
 			'name' => 'vehicle_model',
 			'type' => 'text',
 			'default_value' => 'Vitara',
+			'wrapper' => array (
+				'width' => '50',
+				'class' => '',
+				'id' => '',
+			),
+		),
+		array (
+			'key' => 'vehicle_mileage',
+			'label' => 'Mileage',
+			'name' => 'vehicle_mileage',
+			'type' => 'text',
+			'default_value' => '133,042 km',
 			'wrapper' => array (
 				'width' => '50',
 				'class' => '',

@@ -5,7 +5,12 @@
 		      	'order' => 'desc'
 			
         )); 
-		if (have_posts()) :  while (have_posts()) : the_post(); ?>
+		if (have_posts()) :  while (have_posts()) : the_post();    
+      $price =  get_post_meta( get_the_ID(), 'vehicle_price', true );    
+      $location =  get_post_meta( get_the_ID(), 'vehicle_location', true ); 
+      $mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true ); 
+      $register =  get_post_meta( get_the_ID(), 'vehicle_register', true );    
+    ?>
     <div class="slider-card-wrapper">
             <div class="slider-card">
               <img
@@ -14,7 +19,7 @@
                 style="width: 100%"
               />
               <div class="card-body">
-                <h4 class="heading">Audi Q5 Sportback S line 50 TDI Lo...</h4>
+                <h4 class="heading"><?php the_title()?>...</h4>
                 <div class="properties">
                   <div>
                     <p>
@@ -25,8 +30,7 @@
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="21"
                         height="21.011"
-                        viewBox="0 0 21 21.011"
-                      >
+                        viewBox="0 0 21 21.011" >
                         <defs>
                           <clipPath id="clip-path">
                             <rect
@@ -61,7 +65,7 @@
                       </svg>
                       <span>Price:</span>
                     </p>
-                    <p class="text-end">€ 610,- per month</p>
+                    <p class="text-end">€ <?php echo $price; ?>,- per month</p>
                   </div>
                   <div>
                     <p>
@@ -72,8 +76,7 @@
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         width="21"
                         height="18.408"
-                        viewBox="0 0 21 18.408"
-                      >
+                        viewBox="0 0 21 18.408"   >
                         <defs>
                           <clipPath id="clip-path">
                             <rect
@@ -141,16 +144,16 @@
                       </svg>
                       <span>Distance:</span>
                     </p>
-                    <p class="text-end">€ 10,000 km, 48 months</p>
+                    <p class="text-end"><?php echo $mileage; ?>, <?php echo $register; ?></p>
                   </div>
                 </div>
 
                 <div class="card-footer">
-                  <a href="#">
-                    <button href="#" class="button">Leasing Privately</button>
+                  <a href="<?php the_permalink()?>">
+                    <button href="<?php the_permalink()?>" class="button">Leasing Privately</button>
                   </a>
-                  <a href="#">
-                    <button href="#" class="button">
+                  <a href="<?php the_permalink()?>">
+                    <button href="<?php the_permalink()?>" class="button">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -163,7 +166,7 @@
                           clip-rule="evenodd"
                         />
                       </svg>
-                      <span>DE 63165 Mühlheim..</span>
+                      <span><?php echo $location ?></span>
                     </button>
                   </a>
                 </div>
