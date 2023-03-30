@@ -17,7 +17,7 @@
             </button>
           </div>
         </div>
-        <div class="car-type-slider popular-brands-slider-wrapper" id="wrapper">
+        <div class="car-type-slider popular-brands-slider-wrapper home_brands" id="wrapper">
 
         <?php
                     $terms = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
@@ -26,7 +26,7 @@
                         $feature_icon =  get_field('feature_icon', $term);
                     ?>    
           <div class="slider-card-wrapper">
-            <div class="slider-card">
+            <div class="slider-card _brand">
               <figure class=" p-4">
                 <img
                 src="<?php echo $feature_icon ?>"
