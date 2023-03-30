@@ -12,9 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 /***** Reset CSS *****/
 
 .home_brands ._brand {
-  max-height: 115px;
 }
 
 ._brand figure img {
-  max-height: 65px;
 }
