@@ -13,11 +13,15 @@
     ?>
     <div class="slider-card-wrapper">
             <div class="slider-card">
-              <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
-                alt="car"
-                style="width: 100%"
-              />
+              
+              <?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail('vehicle-thumbnail');
+								} else { ?>
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"  alt="car"   style="width: 100%"  />
+							<?php } ?>
+
+
+
               <div class="card-body">
                 <h4 class="heading"><?php the_title()?>...</h4>
                 <div class="properties">
