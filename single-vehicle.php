@@ -2,8 +2,7 @@
   <section class="slug">
     <div class="container mx-auto main-section-wrapper">
       <div>
-        <div class="main">
-         
+        <div class="main">         
               <?php 
                 $images = get_field('vehicle_gallery');
                 if( $images ): ?>
@@ -16,7 +15,6 @@
                       <?php endforeach; ?>
                  </div>
              <?php endif; ?>
-
              <?php 
                 $images = get_field('vehicle_gallery');
                 if( $images ): ?>
@@ -28,8 +26,6 @@
                       <?php endforeach; ?>
                  </div>
              <?php endif; ?>
-          
-          
         </div>
       </div>
       <div class="detail-content">
