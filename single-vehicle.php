@@ -1,4 +1,25 @@
 <?php get_header(); ?>
+
+<?php if (have_posts()):while (have_posts()):	the_post();
+  
+$vehicle_location =  get_post_meta( get_the_ID(), 'vehicle_location', true );
+$vehicle_price =  get_post_meta( get_the_ID(), 'vehicle_price', true );   
+$vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true ); 
+$vehicle_register =  get_post_meta( get_the_ID(), 'vehicle_register', true );
+$vehicle_engine_capacity =  get_post_meta( get_the_ID(), 'vehicle_engine_capacity', true );
+$vehicle_assembly =  get_post_meta( get_the_ID(), 'vehicle_assembly', true );
+$vehicle_interior_color =  get_post_meta( get_the_ID(), 'vehicle_interior_color', true );
+$vehicle_interior_material =  get_post_meta( get_the_ID(), 'vehicle_interior_material', true );
+$vehicle_ref_no =  get_post_meta( get_the_ID(), 'vehicle_ref_no', true );
+$vehicle_seats =  get_post_meta( get_the_ID(), 'vehicle_seats', true );
+$vehicle_vin =  get_post_meta( get_the_ID(), 'vehicle_vin', true );
+$vehicle_emission_class =  get_post_meta( get_the_ID(), 'vehicle_emission_class', true );
+$vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
+$vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
+
+
+?>
+
   <section class="slug">
     <div class="container mx-auto main-section-wrapper">
       <div>
@@ -33,10 +54,10 @@
         <h5>ACTIVE #CLIMATE #LED #LANE KEEPING</h5>
         <div class="d-flex _border align-items-center gap-2 mt-3">
           <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="pin" width="21" height="21">
-          <span class="pin">DE 63165 Mühlheim..</span>
+          <span class="pin"><?php echo $vehicle_location; ?>..</span>
         </div>
-        <h6 class="price">€ 128.99 per month</h6>
-        <p class="vat">€ 108.39 per month excl. VAT</p>
+        <h6 class="price">€ <?php echo $vehicle_price; ?> per month</h6>
+        <p class="vat">€ <?php echo $vehicle_price; ?> per month excl. VAT</p>
         <div class="info">
           <div class="d-md-flex justify-content-between">
             <button>More leasing details</button>
@@ -197,11 +218,11 @@
         <ul>
           <li>
             <p>Registered In</p>
-            <p>N/A</p>
+            <p><?php echo $vehicle_register; ?></p>
           </li>
           <li>
             <p>Assembly</p>
-            <p>Local</p>
+            <p><?php echo $vehicle_assembly; ?></p>
           </li>
           <li>
             <p>Body Type</p>
@@ -209,35 +230,35 @@
           </li>
           <li>
             <p>Ref #</p>
-            <p>7226369</p>
+            <p><?php echo $vehicle_ref_no; ?></p>
           </li>
         </ul>
         <ul>
           <li>
             <p>Engine Capacity</p>
-            <p>1500 cc</p>
+            <p><?php echo $vehicle_engine_capacity; ?></p>
           </li>
           <li>
             <p>Interior color</p>
-            <p>Other interior color</p>
+            <p><?php echo $vehicle_interior_color; ?></p>
           </li>
           <li>
             <p>Interior material</p>
-            <p>Cloth interior</p>
+            <p><?php echo $vehicle_interior_material; ?></p>
           </li>
           <li>
             <p>Seats</p>
-            <p>5</p>
+            <p><?php echo $vehicle_seats; ?></p>
           </li>
         </ul>
         <ul>
           <li>
             <p>VIN</p>
-            <p>not published</p>
+            <p><?php echo $vehicle_vin; ?></p>
           </li>
           <li>
             <p>Emission class</p>
-            <p>Euro 6d</p>
+            <p><?php echo $vehicle_emission_class; ?></p>
           </li>
           <li>
             <p>Make</p>
@@ -245,7 +266,7 @@
           </li>
           <li>
             <p>Model</p>
-            <p>Vitara</p>
+            <p><?php echo $vehicle_model; ?></p>
           </li>
         </ul>
       </div>
@@ -258,135 +279,13 @@
       <h2 class="sub-heading">Car features</h2>
       <div class="car-feature-wrapper">
         <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>ABS</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Alloy Rims</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Front Speakers</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Navigation System</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Power Steering</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>USB and Auxillary Cable</span>
-          </li>
+          
+          <?php 
+          get_features_type();
+
+          ?>
         </ul>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>ABS</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Alloy Rims</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Front Speakers</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Navigation System</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Power Steering</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>USB and Auxillary Cable</span>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>ABS</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Alloy Rims</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Front Speakers</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Navigation System</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Power Steering</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>USB and Auxillary Cable</span>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>ABS</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Alloy Rims</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Front Speakers</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Navigation System</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Power Steering</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>USB and Auxillary Cable</span>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>ABS</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Alloy Rims</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Front Speakers</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Navigation System</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Power Steering</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>USB and Auxillary Cable</span>
-          </li>
-        </ul>
+        
       </div>
     </div>
   </section>
@@ -500,6 +399,8 @@
         </div>
       </div>
   </section>
+
+  <?php endwhile; endif; ?>
 
 
 
