@@ -6,19 +6,59 @@
     <div class="container mx-auto main-section-wrapper">
       <div>
         <div class="main">
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
           <div class="slider slider-for">
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+          <?php 
+        $images = get_field('vehicle_gallery');
+        if( $images ): ?>
+            <div class="slider slider-for">
+                <?php foreach( $images as $image ): 
+                //  print "<pre>";
+                //  print_r($image);
+                  
+                  ?>
+                 
+                    <div>
+                            <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </div>
+                        
+                  
+                <?php endforeach; ?>
+                </div>
+        <?php endif; ?>
           </div>
           <div class="slider slider-nav">
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
-            <div><img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" /></div>
+          <?php 
+        $thumbnail_images = get_field('vehicle_gallery');
+        if( $images ): ?>
+            <div class="slider slider-for">
+                <?php foreach( $images as $image ): 
+                 // print "<pre>";
+                 // print_r($image);
+                  
+                  ?>
+                 
+                    <div>
+                            <img src="<?php echo esc_url($image['sizes']['vehicle-thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                </div>
+                        
+                  
+                <?php endforeach; ?>
+                </div>
+        <?php endif; ?>
           </div>
         </div>
       </div>
