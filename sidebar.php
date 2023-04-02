@@ -1,24 +1,29 @@
 <aside class="col-md-3 filter-sidebar">
     <h4>basic spacific & location
-      <form>
-        <label>Make</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+      <form >
         <label>Brand</label>
         <select class="form-select" aria-label="Default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option selected>Select Branch</option>         
+             <?php
+                    $terms_brands = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_brands ) && ! is_wp_error( $terms_brands ) ) {                  
+                        foreach ( $terms_brands as $terms_brand ) {  ?> 
+                      <option value="<?php echo $terms_brand->slug ?> "><?php echo $terms_brand->name ?> </option>                   
+            <?php } } ?> 
+        </select>
+        <label>Body Type</label>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select Body Type</option>
+          <?php
+                    $terms_body_types = get_terms( array('taxonomy' => 'body_type',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_body_types ) && ! is_wp_error( $terms_body_types ) ) {                  
+                        foreach ( $terms_body_types as $terms_body_type ) {  ?> 
+                      <option value="<?php echo $terms_body_type->slug ?> "><?php echo $terms_body_type->name ?> </option>                   
+            <?php } } ?> 
         </select>
         <label>Variant</label>
-        <input class="form-control form-control-lg" type="text" placeholder="e.g. Plus, GTI, etc."
-          aria-label=".form-control-lg example">
-        <label>Body type</label>
+        <input class="form-control form-control-lg" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
+        <label>body shape</label>
         <select class="form-select" aria-label="Default select example">
           <option selected>Open this select menu</option>
           <option value="1">One</option>
@@ -37,15 +42,19 @@
         <div class="d-flex gap-1">
           <select class="form-select" aria-label="Default select example">
             <option selected>From</option>
-            <option value="1">2023</option>
-            <option value="2">2022</option>
-            <option value="3">2021</option>
+             <?php for ($x = 2010; $x <= 2023; $x++) {
+                echo "<option value='1'> $x </option>";
+                }
+                ?>
+
+
           </select>
           <select class="form-select" aria-label="Default select example">
             <option selected>To</option>
-            <option value="1">2023</option>
-            <option value="2">2022</option>
-            <option value="3">2021</option>
+            <?php for ($x = 2010; $x <= 2023; $x++) {
+                echo "<option value='1'> $x </option>";
+                }
+                ?>
           </select>
         </div>
         <label>Price</label>
