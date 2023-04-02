@@ -21,16 +21,17 @@
                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {                  
                         foreach ( $terms as $term ) {
                         $feature_icon =  get_field('feature_icon2', $term);
+                        $term_link = get_term_link( $term );
                     ?>                    
 
                       <div class="slider-card-wrapper">
                             <div class="slider-card">
                                 <figure class=" p-4">
-                                  <img
-                                  src="<?php echo $feature_icon ?>"
+                                  <a href="<?php echo $term_link ?>">
+                                  <img src="<?php echo $feature_icon ?>"
                                   alt="car"
-                                  style="width: 100%"
-                                />  
+                                  style="width: 100%"  /> 
+                                 </a>
                                 </figur>
                             </div>
                             <p class="mt-1"><?php echo $term->name ?> </p>
