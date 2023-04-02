@@ -27,11 +27,12 @@
 		if (have_posts()) :  while (have_posts()) : the_post(); ?>
           <div class="slider-card-wrapper">
             <div class="slider-card">
-              <img
-                src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"
-                alt="car"
-                style="width: 100%"
-              />
+            <a href="<?php the_permalink()?>">
+              <?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail('vehicle-thumbnail');
+								} else { ?>
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"  alt="car"   style="width: 100%"  />
+							<?php } ?></a>
               <div class="card-body">
                 <div class="properties">
                   <div>
@@ -41,7 +42,7 @@
                     </p>
                   </div>
                 </div>
-                <h4 class="heading"><?php the_title()?></h4>
+                <h4 class="heading">   <a href="<?php the_permalink()?>"><?php the_title()?></a></h4>
 
                 <div class="card-footer">
                   <a href="<?php the_permalink()?>">
