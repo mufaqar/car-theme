@@ -8,11 +8,6 @@ get_header(); ?>
         <h6>
         One-Stop Platform for Exceptional Automotive Solutions
         </h6>
-
-        <?php
-          //get_all_body_type();
-           
-              ?>
       </div>
       <!-- filter  -->
       <div class="filter">
@@ -40,8 +35,7 @@ get_header(); ?>
               </h2>
             </div>
           </div>
-
-          <form class="row">
+          <form class="row" method="POST" action="<?php echo home_url('search-listing'); ?>">
             <div class="col-md-9">
               <div class="input">
                 <label class="d-block">Monthly Downpayment</label>
@@ -82,7 +76,7 @@ get_header(); ?>
             </div>
             <div class="col-md-3 d-flex flex-column">
               <input
-                type="button"
+                type="submit"
                 class="d-block submit button border border-0 text-capitalize"
                 value="get pre-Qualified"
               />
