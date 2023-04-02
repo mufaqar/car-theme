@@ -1,8 +1,8 @@
 <aside class="col-md-3 filter-sidebar">
     <h4>basic spacific & location
-      <form >
+    <form class="row" method="GET" action="<?php echo home_url('search-listing'); ?>">
         <label>Brand</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" name="brand" id="brand"  onchange="this.form.submit()">
           <option selected>Select Branch</option>         
              <?php
                     $terms_brands = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
@@ -12,7 +12,7 @@
             <?php } } ?> 
         </select>
         <label>Body Type</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" name="body_type" id="body_type"  onchange="this.form.submit()">
           <option selected>Select Body Type</option>
           <?php
                     $terms_body_types = get_terms( array('taxonomy' => 'body_type',  'hide_empty' => false ) );
@@ -24,14 +24,14 @@
         <label>Variant</label>
         <input class="form-control form-control-lg" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
         <label>body shape</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" >
           <option selected>Open this select menu</option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
         </select>
         <label>Fuel type</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" >
           <option selected>Open this select menu</option>
           <option value="1">One</option>
           <option value="2">Two</option>
@@ -40,7 +40,7 @@
 
         <label>First registration</label>
         <div class="d-flex gap-1">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>From</option>
              <?php for ($x = 2010; $x <= 2023; $x++) {
                 echo "<option value='1'> $x </option>";
@@ -49,7 +49,7 @@
 
 
           </select>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>To</option>
             <?php for ($x = 2010; $x <= 2023; $x++) {
                 echo "<option value='1'> $x </option>";
@@ -59,13 +59,13 @@
         </div>
         <label>Price</label>
         <div class="d-flex gap-1">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>From</option>
             <option value="1">$ 2500</option>
             <option value="2">$ 3000</option>
             <option value="3">$ 4000</option>
           </select>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>To</option>
             <option value="1">$ 2500</option>
             <option value="2">$ 3000</option>
@@ -77,13 +77,13 @@
           aria-label=".form-control-lg example">
         <label>Mileage</label>
         <div class="d-flex gap-1">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>From</option>
             <option value="1">2500</option>
             <option value="2">3000</option>
             <option value="3">4000</option>
           </select>
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" >
             <option selected>To</option>
             <option value="1">2500</option>
             <option value="2">3000</option>
@@ -91,7 +91,7 @@
           </select>
         </div>
         <label>Gear</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" >
           <option selected>Open this select menu</option>
           <option value="1">Manual</option>
           <option value="2">Automatic</option>
@@ -119,3 +119,21 @@
 
       </form>
   </aside>
+
+
+  <script type="text/javascript">
+// Using jQuery.
+
+$(function() {
+    $('form').each(function() {
+        $(this).find('input').keypress(function(e) {
+            // Enter pressed?
+            if(e.which == 10 || e.which == 13) {
+                this.form.submit();
+            }
+        });
+
+        $(this).find('input[type=submit]').hide();
+    });
+});
+</script>
