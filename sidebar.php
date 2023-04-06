@@ -3,7 +3,7 @@
     <form class="row" method="GET" action="<?php echo home_url('search-listing'); ?>">
         <label>Brand</label>
         <select class="form-select" name="brand" id="brand"  onchange="this.form.submit()">
-          <option selected>Select Branch</option>         
+          <option value="">Select Brand</option>         
              <?php
                     $terms_brands = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
                     if ( ! empty( $terms_brands ) && ! is_wp_error( $terms_brands ) ) {                  
@@ -13,7 +13,7 @@
         </select>
         <label>Body Type</label>
         <select class="form-select" name="body_type" id="body_type"  onchange="this.form.submit()">
-          <option selected>Select Body Type</option>
+           <option value="">Select Body Type</option>  
           <?php
                     $terms_body_types = get_terms( array('taxonomy' => 'body_type',  'hide_empty' => false ) );
                     if ( ! empty( $terms_body_types ) && ! is_wp_error( $terms_body_types ) ) {                  
@@ -22,10 +22,10 @@
             <?php } } ?> 
         </select>
         <label>Variant</label>
-        <input class="form-control form-control-lg" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
+        <input class="form-control form-control-lg submit_on_enter" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
         <label>body shape</label>
-        <select class="form-select" >
-          <option selected>Open this select menu</option>
+        <select class="form-select" name="body_shape" id="body_shape"  onchange="this.form.submit()">
+          <option value="">Select Body Type</option> 
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
