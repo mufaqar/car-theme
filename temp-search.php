@@ -10,7 +10,21 @@ get_header(); ?>
  <section class="container row mx-auto search">
       <?php get_sidebar()?>
       <div class="col-md-9 listing">
-          <?php get_template_part( 'template-parts/vehicle', 'card' ); ?>
+         
+
+<?php query_posts(array(
+    'post_type' => 'vehicle',
+    'posts_per_page' => 6,
+          'order' => 'desc'
+    
+)); 
+if (have_posts()) :  while (have_posts()) : the_post();    
+
+          
+          
+          get_template_part( 'template-parts/vehicle', 'card' ); endwhile; wp_reset_query(); else : ?>
+			<h2><?php _e('Nothing Found','lbt_translate'); ?></h2>
+	        <?php endif; ?> 
       </div>
  </section>
 

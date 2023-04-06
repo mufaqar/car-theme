@@ -1,11 +1,31 @@
-<div class="single-card row">
+
+  <?php
+
+
+  $vehicle_location =  get_post_meta( get_the_ID(), 'vehicle_location', true );
+  $vehicle_price =  get_post_meta( get_the_ID(), 'vehicle_price', true );   
+  $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true ); 
+  $vehicle_register =  get_post_meta( get_the_ID(), 'vehicle_register', true );
+  $vehicle_engine_capacity =  get_post_meta( get_the_ID(), 'vehicle_engine_capacity', true );
+  $vehicle_assembly =  get_post_meta( get_the_ID(), 'vehicle_assembly', true );
+  $vehicle_interior_color =  get_post_meta( get_the_ID(), 'vehicle_interior_color', true );
+  $vehicle_interior_material =  get_post_meta( get_the_ID(), 'vehicle_interior_material', true );
+  $vehicle_ref_no =  get_post_meta( get_the_ID(), 'vehicle_ref_no', true );
+  $vehicle_seats =  get_post_meta( get_the_ID(), 'vehicle_seats', true );
+  $vehicle_vin =  get_post_meta( get_the_ID(), 'vehicle_vin', true );
+  $vehicle_emission_class =  get_post_meta( get_the_ID(), 'vehicle_emission_class', true );
+  $vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
+  $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
+
+  ?>
+  <div class="single-card row mb-3">
       <figure class="col-md-4 p-0 m-0">
         <img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car"
           style="width: 100%" />
       </figure>
       <div class="card-body col-md-8">
-        <h4 class="heading">Audi Q5 Sportback S line 50 TDI Lo...</h4>
-        <h3 class="price">$ 3200</h3>
+        <h4 class="heading"><?php the_title()?></h4>
+        <h3 class="price">$ <?php echo $vehicle_price ?></h3>
         <div class="properties">
           <div>
             <p>
@@ -66,7 +86,7 @@
           
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>54,000 km</span>
+            <span><?php echo $vehicle_mileage ?></span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
