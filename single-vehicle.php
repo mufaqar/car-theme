@@ -18,6 +18,7 @@ $vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
 $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
 
 
+
 ?>
 
   <section class="slug">

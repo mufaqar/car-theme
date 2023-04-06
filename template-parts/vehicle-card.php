@@ -47,7 +47,7 @@
               </svg>
               <span>Price:</span>
             </p>
-            <p class="text-end">€ 610,- per month</p>
+            <p class="text-end">€ <?php echo $vehicle_price ?>,- per month</p>
           </div>
           <div>
             <p>
@@ -79,7 +79,7 @@
               </svg>
               <span>Distance:</span>
             </p>
-            <p class="text-end">€ 10,000 km, 48 months</p>
+            <p class="text-end"><?php echo $vehicle_mileage ?>, 48 months</p>
           </div>
         </div>
         <ul class="p-0 m-0 mt-1 d-flex">
@@ -94,15 +94,15 @@
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>AB08/2010</span>
+            <span><?php echo $vehicle_register ?></span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Gasoline</span>
+            <span><?php echo $vehicle_assembly ?></span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>350 kW (476 hp)</span>
+            <span><?php echo $vehicle_engine_capacity ?></span>
           </li>
         </ul>
       </div>

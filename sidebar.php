@@ -23,22 +23,19 @@
         </select>
         <label>Variant</label>
         <input class="form-control form-control-lg submit_on_enter" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
-        <label>body shape</label>
-        <select class="form-select" name="body_shape" id="body_shape"  onchange="this.form.submit()">
-          <option value="">Select Body Type</option> 
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-        <label>Fuel type</label>
+        
+        <label>Engine Type</label>
         <select class="form-select" >
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option >Select Engine Type</option>
+          <?php
+                    $terms_engine_types = get_terms( array('taxonomy' => 'engine_type',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_engine_types ) && ! is_wp_error( $terms_engine_types ) ) {                  
+                        foreach ( $terms_engine_types as $terms_engine_type ) {  ?> 
+                      <option value="<?php echo $terms_engine_type->slug ?> "><?php echo $terms_engine_type->name ?> </option>                   
+            <?php } } ?> 
         </select>
 
-        <label>First registration</label>
+        <label>First Registration</label>
         <div class="d-flex gap-1">
           <select class="form-select" >
             <option selected>From</option>
@@ -90,32 +87,31 @@
             <option value="3">4000</option>
           </select>
         </div>
-        <label>Gear</label>
+        <label>Color</label>
         <select class="form-select" >
-          <option selected>Open this select menu</option>
-          <option value="1">Manual</option>
-          <option value="2">Automatic</option>
-          <option value="3">Semi Automatic</option>
+          <option selected>Select Color</option>
+          <?php
+                    $terms_colors = get_terms( array('taxonomy' => 'color',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_colors ) && ! is_wp_error( $terms_colors ) ) {                  
+                        foreach ( $terms_colors as $terms_color ) {  ?> 
+                      <option value="<?php echo $terms_color->slug ?> "><?php echo $terms_color->name ?> </option>                   
+            <?php } } ?> 
         </select>
-        <label>Vehicle condition</label>
-        <div class="checkbox">
-          <input class="form-check-input" type="checkbox" value="" id="new">
-          <label class="form-check-label" for="new">
-            New
-          </label>
-        </div>
-        <div class="checkbox">
-          <input class="form-check-input" type="checkbox" value="" id="used">
-          <label class="form-check-label" for="used">
-            Used
-          </label>
-        </div>
-        <div class="checkbox">
-          <input class="form-check-input" type="checkbox" value="" id="pre-reg">
-          <label class="form-check-label" for="pre-reg">
-            Pre Registor
-          </label>
-        </div>
+        <label>Vehicle Condition</label>
+        
+          <?php
+                    $terms_vehicle_types = get_terms( array('taxonomy' => 'vehicle_type',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_vehicle_types ) && ! is_wp_error( $terms_vehicle_types ) ) {                  
+                        foreach ( $terms_vehicle_types as $terms_vehicle_type ) {  ?> 
+                      <div class="checkbox">
+                        <input class="form-check-input" type="checkbox" value="<?php echo $terms_vehicle_type->slug ?>" id="<?php echo $terms_vehicle_type->slug ?>">
+                        <label class="form-check-label" for="<?php echo $terms_vehicle_type->slug ?>">
+                        <?php echo $terms_vehicle_type->name ?>
+                        </label>
+                     </div>                   
+            <?php } } ?> 
+       
+        
 
       </form>
   </aside>

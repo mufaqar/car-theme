@@ -202,3 +202,152 @@ function cptui_register_my_taxes_features() {
 	register_taxonomy( "features", [ "vehicle" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes_features' );
+
+
+function cptui_register_my_taxes_vehicle_type() {
+
+	/**
+	 * Taxonomy: Types.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Types", "twentynineteen" ),
+		"singular_name" => esc_html__( "Type", "twentynineteen" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Types", "twentynineteen" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'vehicle_type', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "vehicle_type",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => false,
+		"sort" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "vehicle_type", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_vehicle_type' );
+
+function cptui_register_my_taxes_color() {
+
+	/**
+	 * Taxonomy: Color.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Color", "twentynineteen" ),
+		"singular_name" => esc_html__( "Color", "twentynineteen" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Color", "twentynineteen" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'color', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "color",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => false,
+		"sort" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "color", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_color' );
+
+function cptui_register_my_taxes_engine_type() {
+
+	/**
+	 * Taxonomy:              Engine Type.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "             Engine Type", "twentynineteen" ),
+		"singular_name" => esc_html__( "Engine Type", "twentynineteen" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "             Engine Type", "twentynineteen" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'engine_type', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "engine_type",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => false,
+		"sort" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "engine_type", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_engine_type' );
+
+function cptui_register_my_taxes_transmission() {
+
+	/**
+	 * Taxonomy: Transmission.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Transmission", "twentynineteen" ),
+		"singular_name" => esc_html__( "Transmission", "twentynineteen" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Transmission", "twentynineteen" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'transmission', 'with_front' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "transmission",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => false,
+		"sort" => false,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "transmission", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_transmission' );
