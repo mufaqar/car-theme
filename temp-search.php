@@ -3,8 +3,10 @@
 get_header();
 
 
+if (!isset($_REQUEST['brand'])) {
+    $brand = $_REQUEST['brand'];
+}
 
-$brand = $_REQUEST['brand'];
 $body_type= $_REQUEST['body_type'];
 $body_type= $_REQUEST['body_type'];
 $body_type= $_REQUEST['body_type'];
