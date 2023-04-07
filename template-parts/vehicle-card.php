@@ -20,12 +20,16 @@
   ?>
   <div class="single-card row mb-3">
       <figure class="col-md-4 p-0 m-0">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car"
-          style="width: 100%" />
+      <a href="<?php the_permalink()?>">
+              <?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail('vehicle-thumbnail');
+								} else { ?>
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"  alt="car"   style="width: 100%"  />
+							<?php } ?></a>
       </figure>
       <div class="card-body col-md-8">
         <h4 class="heading"><?php the_title()?></h4>
-        <h3 class="price">$ <?php echo $vehicle_price ?></h3>
+        <h3 class="price"><?php echo $vehicle_location ?></h3>
         <div class="properties">
           <div>
             <p>

@@ -1,5 +1,5 @@
 <!-- Leasing offers available immediately -->
-<section class="ml-8-per">
+  <section class="ml-8-per">
       <div class="__slider">
         <div
           class="slider-header d-flex flex-wrap mb-5 justify-content-between" >
@@ -21,4 +21,4 @@
             <?php get_template_part( 'partials/vehicle', 'slider' ); ?>
         </div>
       </div>
-    </section>
+  </section>
