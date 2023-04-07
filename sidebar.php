@@ -13,7 +13,7 @@
         </select>
         <label>Body Type</label>
         <select class="form-select" name="body_type" id="body_type"  onchange="this.form.submit()">
-           <option value="">Select Body Type</option>  
+        <option value="">Select Body Type</option>  
           <?php
                     $terms_body_types = get_terms( array('taxonomy' => 'body_type',  'hide_empty' => false ) );
                     if ( ! empty( $terms_body_types ) && ! is_wp_error( $terms_body_types ) ) {                  
@@ -26,7 +26,7 @@
         
         <label>Engine Type</label>
         <select class="form-select" name="engine_type" onchange="this.form.submit()">
-          <option >Select Engine Type</option>
+        <option value="">Select Engine Type</option>
           <?php
                     $terms_engine_types = get_terms( array('taxonomy' => 'engine_type',  'hide_empty' => false ) );
                     if ( ! empty( $terms_engine_types ) && ! is_wp_error( $terms_engine_types ) ) {                  
@@ -38,8 +38,8 @@
         <label>First Registration</label>
         <div class="d-flex gap-1">
           <select class="form-select" name="engine_reg" onchange="this.form.submit()">
-            <option >From</option>
-             <?php for ($x = 2010; $x <= 2023; $x++) {
+          <option value="">From</option>
+             <?php for ($x = 2000; $x <= 2023; $x++) {
                 echo "<option value='1'> $x </option>";
                 }
                 ?>
@@ -89,7 +89,7 @@
         </div>
         <label>Color</label>
         <select class="form-select"  name="color" onchange="this.form.submit()">
-          <option>Select Color</option>
+          <option value="">Select Color</option>
           <?php
                     $terms_colors = get_terms( array('taxonomy' => 'color',  'hide_empty' => false ) );
                     if ( ! empty( $terms_colors ) && ! is_wp_error( $terms_colors ) ) {                  

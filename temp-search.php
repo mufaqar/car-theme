@@ -31,7 +31,7 @@ $tax_query = array('relation' => 'AND');
     if (!empty($body_type))
     {
         $tax_query[] =  array(
-                'taxonomy' => 'cat_fault_type',
+                'taxonomy' => 'body_type',
                 'field' => 'slug',
                 'terms' => $body_type
             );
