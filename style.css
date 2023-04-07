@@ -174,14 +174,14 @@ body.dark .switch::before{
     box-shadow: none !important;
     border: none;
     font-weight: bold;
-    border-bottom: 2px solid skyblue;
+    border-bottom: 2px solid #e1c591;
     outline-width: 0;
 }
 
 /*Blue Buttons*/
 #msform .action-button {
     width: 100px;
-    background: skyblue;
+    background: #e1c591;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -192,7 +192,7 @@ body.dark .switch::before{
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #e1c591;
 }
 
 /*Previous Buttons*/
@@ -222,7 +222,7 @@ select.list-dt {
 }
 
 select.list-dt:focus {
-    border-bottom: 2px solid skyblue;
+    border-bottom: 2px solid #e1c591;
 }
 
 /*The background card*/
@@ -310,7 +310,7 @@ select.list-dt:focus {
 
 /*Color number of the step and the connector before it*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: skyblue;
+    background: #e1c591;
 }
 
 /*Imaged Radio Buttons*/
