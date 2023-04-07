@@ -28,12 +28,15 @@
                     ?>    
           <div class="slider-card-wrapper">
             <div class="slider-card _brand">
-              <figure class=" p-4">
+              <figure class="p-2">
               <a href="<?php echo $term_link ?>">
                 <img
                 src="<?php echo $feature_icon ?>"
                 alt="car"
-                style="width: 100%"
+                style="height: 80px;
+    width: 80px;
+    object-fit: contain;
+    margin: 0px auto;"
               />  </a>
               </figur>
             </div>

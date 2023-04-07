@@ -1,6 +1,19 @@
 <?php /*  Template Name:  Search */
 
-get_header(); ?>
+get_header();
+
+
+
+$brand = $_REQUEST['brand'];
+$body_type= $_REQUEST['body_type'];
+$body_type= $_REQUEST['body_type'];
+$body_type= $_REQUEST['body_type'];
+
+
+
+
+
+?>
 
 <section class="search_header container mx-auto">
   <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg"
@@ -14,8 +27,10 @@ get_header(); ?>
 
 <?php query_posts(array(
     'post_type' => 'vehicle',
-    'posts_per_page' => 6,
-          'order' => 'desc'
+    'posts_per_page' => -1,
+     'order' => 'desc',
+     'brand' => $brand,
+     'body_type' => $body_type,
     
 )); 
 if (have_posts()) :  while (have_posts()) : the_post();    

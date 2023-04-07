@@ -14,7 +14,7 @@
                 style="width: 100%"
               />
               <div class="card-body">
-                <h4 class="heading">Audi Q5 Sportback S line 50 TDI Lo...</h4>
+                <h4 class="heading"><?php the_title()?>..</h4>
                 <div class="properties">
                   <div>
                     <p>
