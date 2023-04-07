@@ -86,8 +86,7 @@
             <p class="text-end"><?php echo $vehicle_mileage ?>, 48 months</p>
           </div>
         </div>
-        <ul class="p-0 m-0 mt-1 d-flex">
-          
+        <ul class="p-0 m-0 mt-1 d-flex">          
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
             <span><?php echo $vehicle_mileage ?></span>
