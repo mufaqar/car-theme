@@ -91,7 +91,18 @@
 
           </div>
           <div class="d-flex align-items-center text-uppercase logins_section">
-            <div class="button mx-4"><a href="<?php echo home_url('register'); ?>">Register</a></div>
+            <div class="button mx-4">
+
+            <?php
+              if ( is_user_logged_in() ) {
+                ?><a href="<?php echo home_url('/dashboard'); ?>">Dashboard</a><?php
+              } else {
+                  ?><a href="<?php echo home_url('register'); ?>">Register</a><?php
+              }
+              ?>
+          
+          
+          </div>
             <div class="d-flex align-items-center header_dropdown">
 			        <a href="<?php echo home_url(); ?>"> <span>Build Your Own</span>
                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />

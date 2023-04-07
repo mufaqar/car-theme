@@ -82,10 +82,9 @@ if(isset($_POST['register'])){
   <!-- MultiStep Form -->
 <div class="container-fluid" id="grad1">
     <div class="row justify-content-center mt-0">
-        <div class="col-lg-12 text-center p-0 mt-3 mb-2">
+        <div class="col-lg-12 text-center p-0  mb-2">
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                 <h2><strong>Add your Vehicle</strong></h2>
-                <p>Fill all form field to go to next step</p>
                 <div class="row">
                     <div class="col-md-12 mx-0">
                         <form id="msform">
@@ -109,12 +108,7 @@ if(isset($_POST['register'])){
                                     <input type="text" name="pwd" placeholder="Assembly"/>
                                     <input type="text" name="cpwd" placeholder="Interior color"/>
                                     <input type="text" name="name" placeholder="Interior material"/>
-                                    <input type="text" name="uname" placeholder="Ref #"/>
-                                    <input type="text" name="pwd" placeholder="Seats"/>
-                                    <input type="text" name="cpwd" placeholder="Model"/>
-                                    <input type="text" name="name" placeholder="Emission class"/>
-                                    <input type="text" name="uname" placeholder="Mileage"/>
-
+                                  
 
 
                                 </div>
@@ -122,6 +116,14 @@ if(isset($_POST['register'])){
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
+
+                                   
+                                    <input type="text" name="uname" placeholder="Ref #"/>
+                                    <input type="text" name="pwd" placeholder="Seats"/>
+                                    <input type="text" name="cpwd" placeholder="Model"/>
+                                    <input type="text" name="name" placeholder="Emission class"/>
+                                    <input type="text" name="uname" placeholder="Mileage"/>
+
 
                                     <div class="row">
                                         <div class="col-3">
