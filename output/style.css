@@ -702,6 +702,8 @@ section.slug .detail-content .brand img {
 .car-features .car-feature-wrapper {
   margin-top: 2rem;
   margin-bottom: 3rem;
+}
+.car-features .car-feature-wrapper .features_list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;

@@ -734,9 +734,11 @@ section.slug {
      .car-feature-wrapper {
           margin-top: 2rem;
           margin-bottom: 3rem;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1rem;
+          .features_list{
+               display: grid;
+               grid-template-columns: repeat(5, 1fr);
+               gap: 1rem;
+          }
           ul {
                padding-left: 0;
                li {
