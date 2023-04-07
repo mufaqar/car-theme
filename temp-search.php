@@ -17,6 +17,13 @@ if (isset($_REQUEST['engine_type'])) {
 }
 
 
+if (isset($_REQUEST['transmission'])) {
+    $brand = $_REQUEST['transmission'];
+}
+
+
+
+
 
 
 $tax_query = array('relation' => 'AND');
@@ -51,6 +58,15 @@ $tax_query = array('relation' => 'AND');
                 'taxonomy' => 'engine_type',
                 'field' => 'slug',
                 'terms' => $engine_type
+            );
+    }
+
+    if (!empty($transmission))
+    {
+        $tax_query[] =  array(
+                'taxonomy' => 'transmission',
+                'field' => 'slug',
+                'terms' => $transmission
             );
     }
 

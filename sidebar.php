@@ -7,8 +7,13 @@
              <?php
                     $terms_brands = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
                     if ( ! empty( $terms_brands ) && ! is_wp_error( $terms_brands ) ) {                  
-                        foreach ( $terms_brands as $terms_brand ) {  ?> 
-                      <option value="<?php echo $terms_brand->slug ?> "><?php echo $terms_brand->name ?> </option>                   
+                        foreach ( $terms_brands as $terms_brand ) { 
+
+                          print_r($terms_brand);
+                          
+                          
+                          ?> 
+                      <option value="<?php echo $terms_brand->slug ?> "><?php echo $terms_brand->name ?> (<?php echo $terms_brand->count ?>)  </option>                   
             <?php } } ?> 
         </select>
         <label>Body Type</label>
@@ -18,7 +23,7 @@
                     $terms_body_types = get_terms( array('taxonomy' => 'body_type',  'hide_empty' => false ) );
                     if ( ! empty( $terms_body_types ) && ! is_wp_error( $terms_body_types ) ) {                  
                         foreach ( $terms_body_types as $terms_body_type ) {  ?> 
-                      <option value="<?php echo $terms_body_type->slug ?> "><?php echo $terms_body_type->name ?> </option>                   
+                      <option value="<?php echo $terms_body_type->slug ?> "><?php echo $terms_body_type->name ?> (<?php echo $terms_body_type->count ?>)  </option>                   
             <?php } } ?> 
         </select>
         <label>Variant</label>
@@ -31,7 +36,18 @@
                     $terms_engine_types = get_terms( array('taxonomy' => 'engine_type',  'hide_empty' => false ) );
                     if ( ! empty( $terms_engine_types ) && ! is_wp_error( $terms_engine_types ) ) {                  
                         foreach ( $terms_engine_types as $terms_engine_type ) {  ?> 
-                      <option value="<?php echo $terms_engine_type->slug ?> "><?php echo $terms_engine_type->name ?> </option>                   
+                      <option value="<?php echo $terms_engine_type->slug ?> "><?php echo $terms_engine_type->name ?> (<?php echo $terms_engine_type->count ?>)   </option>                   
+            <?php } } ?> 
+        </select>
+
+        <label>Transmission</label>
+        <select class="form-select" name="transmission" onchange="this.form.submit()">
+        <option value="">Select Transmission</option>
+          <?php
+                    $terms_transmissions = get_terms( array('taxonomy' => 'transmission',  'hide_empty' => false ) );
+                    if ( ! empty( $terms_transmissions ) && ! is_wp_error( $terms_transmissions ) ) {                  
+                        foreach ( $terms_transmissions as $terms_transmission ) {  ?> 
+                      <option value="<?php echo $terms_transmission->slug ?> "><?php echo $terms_transmission->name ?> (<?php echo $terms_transmission->count ?>)    </option>                   
             <?php } } ?> 
         </select>
 
@@ -94,7 +110,7 @@
                     $terms_colors = get_terms( array('taxonomy' => 'color',  'hide_empty' => false ) );
                     if ( ! empty( $terms_colors ) && ! is_wp_error( $terms_colors ) ) {                  
                         foreach ( $terms_colors as $terms_color ) {  ?> 
-                      <option value="<?php echo $terms_color->slug ?> "><?php echo $terms_color->name ?> </option>                   
+                      <option value="<?php echo $terms_color->slug ?> "><?php echo $terms_color->name ?>  (<?php echo $terms_color->count ?>)  </option>                   
             <?php } } ?> 
         </select>
         <label>Vehicle Condition</label>
@@ -106,7 +122,7 @@
                       <div class="checkbox">
                         <input class="form-check-input" type="checkbox" value="<?php echo $terms_vehicle_type->slug ?>" id="<?php echo $terms_vehicle_type->slug ?>">
                         <label class="form-check-label" for="<?php echo $terms_vehicle_type->slug ?>">
-                        <?php echo $terms_vehicle_type->name ?>
+                        <?php echo $terms_vehicle_type->name ?> (<?php echo $terms_vehicle_type->count ?>)   
                         </label>
                      </div>                   
             <?php } } ?> 
