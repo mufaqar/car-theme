@@ -10,14 +10,3 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
 /***** Reset CSS *****/
-
-.home_brands ._brand {
-}
-
-._brand figure img {
-}
-
-.features_list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
