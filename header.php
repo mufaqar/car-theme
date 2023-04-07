@@ -103,11 +103,11 @@
           
           
           </div>
-            <div class="d-flex align-items-center header_dropdown">
+            <!-- <div class="d-flex align-items-center header_dropdown">
 			        <a href="<?php echo home_url(); ?>"> <span>Build Your Own</span>
                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/arrow_down.svg" alt="arrow Down" />
 			      	</a>
-            </div>
+            </div> -->
           </div>
         </div>
       </nav>
