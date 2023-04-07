@@ -1,13 +1,39 @@
-<?php  /*  Template Name:  Contact */
+<?php  /*  Template Name:  Signup */
 
 get_header(); ?>
 
+<?php
+if(isset($_POST['register'])){
+   $username = $_POST['username'];
+   $email = $_POST['email'];
+   $password = $_POST['password'];
+   $userdata = array(
+      'user_login' => $username,
+      'user_email' => $email,
+      'user_pass' => $password,
+      'role' => 'custom_role' // Your custom role slug
+   );
+   $user_id = wp_insert_user( $userdata );
+   if( ! is_wp_error( $user_id ) ) {
+      echo 'Registration complete. Please check your email to activate your account.';
+   }
+}
+?>
 
+<form method="post">
+   <label for="username">Username</label>
+   <input type="text" name="username" required>
+   <label for="email">Email</label>
+   <input type="email" name="email" required>
+   <label for="password">Password</label>
+   <input type="password" name="password" required>
+   <button type="submit" name="register">Register</button>
+</form>
 
    
    <section class="contact-us">
-      <h2 class="sub-heading">Contact our team</h2>
-      <p>If you need our help, have questions about how to use the platform or are experiencing technical difficulties, please do not hesitate to contact us.</p>
+      <h2 class="sub-heading">Signup </h2>
+      <p>Sign up for lsting</p>
    </section>
 
    <section class="contact-us-form">

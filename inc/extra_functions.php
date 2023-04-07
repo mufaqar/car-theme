@@ -51,6 +51,15 @@ include get_template_directory() . '/inc/wp-bootstrap-navlist-walker.php';
           }
 }
 
+$result = add_role(
+    'agent', // Role slug
+    'Agent', // Role display name
+    array(
+       'read' => true, // Allow role to read content
+       'level_0' => true // Allow role to create posts
+    )
+ );
+
 
 
 
