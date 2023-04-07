@@ -34,47 +34,7 @@ if(isset($_POST['register'])){
    <div class="row">
   <div class="col-3"><nav class="sidebar">
         
-
-        <div class="menu-bar">
-            
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Overview</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Listing</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">My Orders</span>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">My Ads</span>
-                    </a>
-                </li>
-
-                <li class="">
-                    <a href="#">
-                        <i class='bx bx-log-out icon' ></i>
-                        <span class="text nav-text">Settings</span>
-                    </a>
-                </li>
-
-                
-
-            </div>
-        </div>
+ <?php get_template_part( 'partials/side', 'menu' ); ?>
 
     </nav></div>
   <div class="col"> <section class="dash_content">
