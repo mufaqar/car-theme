@@ -25,7 +25,7 @@
         <input class="form-control form-control-lg submit_on_enter" name="variant" id="variant" type="text" placeholder="e.g. Plus, GTI" >
         
         <label>Engine Type</label>
-        <select class="form-select" >
+        <select class="form-select" name="engine_type" onchange="this.form.submit()">
           <option >Select Engine Type</option>
           <?php
                     $terms_engine_types = get_terms( array('taxonomy' => 'engine_type',  'hide_empty' => false ) );
@@ -37,7 +37,7 @@
 
         <label>First Registration</label>
         <div class="d-flex gap-1">
-          <select class="form-select" >
+          <select class="form-select" name="engine_reg" onchange="this.form.submit()">
             <option selected>From</option>
              <?php for ($x = 2010; $x <= 2023; $x++) {
                 echo "<option value='1'> $x </option>";
@@ -88,7 +88,7 @@
           </select>
         </div>
         <label>Color</label>
-        <select class="form-select" >
+        <select class="form-select"  name="color" onchange="this.form.submit()">
           <option selected>Select Color</option>
           <?php
                     $terms_colors = get_terms( array('taxonomy' => 'color',  'hide_empty' => false ) );

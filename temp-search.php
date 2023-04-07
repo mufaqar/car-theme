@@ -3,13 +3,20 @@
 get_header();
 
 
-if (!isset($_REQUEST['brand'])) {
+if (isset($_REQUEST['brand'])) {
     $brand = $_REQUEST['brand'];
 }
+if (isset($_REQUEST['body_type'])) {
+    $body_type= $_REQUEST['body_type'];
+}
+if (isset($_REQUEST['color'])) {
+    $brand = $_REQUEST['color'];
+}
+if (isset($_REQUEST['engine_type'])) {
+    $brand = $_REQUEST['engine_type'];
+}
 
-$body_type= $_REQUEST['body_type'];
-$body_type= $_REQUEST['body_type'];
-$body_type= $_REQUEST['body_type'];
+
 
 
 $tax_query = array('relation' => 'AND');
@@ -30,20 +37,20 @@ $tax_query = array('relation' => 'AND');
             );
     }
   
-    if (!empty($model_cat))
+    if (!empty($color))
     {
         $tax_query[] =  array(
-                'taxonomy' => 'model_type_cat',
-                'field' => 'id',
-                'terms' => $model_cat
+                'taxonomy' => 'color',
+                'field' => 'slug',
+                'terms' => $color
             );
     }
-	if (!empty($model_name))
+	if (!empty($engine_type))
     {
         $tax_query[] =  array(
-                'taxonomy' => 'model_cat',
-                'field' => 'id',
-                'terms' => $model_name
+                'taxonomy' => 'engine_type',
+                'field' => 'slug',
+                'terms' => $engine_type
             );
     }
 
