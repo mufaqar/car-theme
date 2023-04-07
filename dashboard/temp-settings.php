@@ -41,7 +41,23 @@ if(isset($_POST['register'])){
   <div class="col"> 
     <section class="dash_content">
 
-    Settings
+        <form class="form">
+          <div class="d-flex gap-4">
+            <div class="mb-3 _input">
+              <label for="" class="form-label">Older Password</label>
+              <input type="text" class="" id="old_pass" placeholder="Julia William">
+            </div>
+            <div class="mb-3 _input">
+              <label for="exampleFormControlInput1" class="form-label">New Password address</label>
+              <input type="text" class="" id="new_pass" placeholder="you@example.com">
+            </div>
+          </div>
+
+         
+
+         
+          <input type="button" value="Change Password" class="submit_button">
+      </form>
 
 
         

@@ -40,14 +40,15 @@ if(isset($_POST['register'])){
   <div class="col"> <section class="dash_content">
 
   <section class="dash_content">
-
+ <div class="form">
+          <div class="gap-4">
         <h2>My Ads</h2>
         <table class="table table-bordered">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
+                    <th scope="col">Vehicle Name</th>
+                    <th scope="col">Location</th>
                     <th scope="col">Handle</th>
                     </tr>
                 </thead>
@@ -59,11 +60,7 @@ if(isset($_POST['register'])){
                     <td>@mdo</td>
                     </tr>
                     <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    </tr>
+                   
                     <tr>
                     <th scope="row">3</th>
                     <td colspan="2">Larry the Bird</td>
@@ -71,6 +68,7 @@ if(isset($_POST['register'])){
                     </tr>
                 </tbody>
         </table>
+</div></div>
     </section>
         
     </section></div>
