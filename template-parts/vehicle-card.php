@@ -89,23 +89,23 @@
         <ul class="p-0 m-0 mt-1 d-flex">          
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span><?php echo $vehicle_mileage ?></span>
+            <span> <?php echo $vehicle_mileage ?> </span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span>Automatic</span>
+            <span> Automatic </span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span><?php echo $vehicle_register ?></span>
+            <span> <?php echo $vehicle_register ?> </span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span><?php echo $vehicle_assembly ?></span>
+            <span> <?php echo $vehicle_assembly ?> </span>
           </li>
           <li>
             <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="logo" />
-            <span><?php echo $vehicle_engine_capacity ?></span>
+            <span> <?php echo $vehicle_engine_capacity ?> </span>
           </li>
         </ul>
       </div>
