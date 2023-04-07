@@ -38,152 +38,42 @@ if(isset($_POST['register'])){
        <?php get_template_part( 'partials/side', 'menu' ); ?>
 
     </nav></div>
-  <div class="col"> <section class="dash_content">
+  <div class="col">
+     <section class="dash_content">
 
-  <!-- MultiStep Form -->
-<div class="container-fluid" id="grad1">
-    <div class="row justify-content-center mt-0">
-        <div class="col-lg-12 text-center p-0  mb-2">
-            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
-                <h2><strong>Add your Vehicle</strong></h2>
-                <div class="row">
-                    <div class="col-md-12 mx-0">
-                        <form id="msform">
-                            <!-- progressbar -->
-                            <ul id="progressbar">
-                                <li class="active" id="account"><strong>Step 1</strong></li>
-                                <li id="personal"><strong>Step 2</strong></li>
-                                <li id="payment"><strong>Step 3</strong></li>
-                                <li id="confirm"><strong>Finish</strong></li>
-                            </ul>
-                            <!-- fieldsets -->
-                            <fieldset>
-                                <div class="form-card">
-                               
-                                    <input type="text" name="name" placeholder="Vehicle Name"/>
-                                    <input type="text" name="uname" placeholder="Location"/>
-                                    <input type="text" name="pwd" placeholder="Price"/>
-                                    <input type="text" name="cpwd" placeholder="Registered In"/>
-                                    <input type="text" name="name" placeholder="Vehicle Name"/>
-                                    <input type="text" name="uname" placeholder="Engine Capacity"/>
-                                    <input type="text" name="pwd" placeholder="Assembly"/>
-                                    <input type="text" name="cpwd" placeholder="Interior color"/>
-                                    <input type="text" name="name" placeholder="Interior material"/>
-                                  
+        <h2>My orders</h2>
+        <table class="table table-bordered">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                </tbody>
+        </table>
+    </section>
 
-
-                                </div>
-                                <input type="button" name="next" class="next action-button" value="Next Step"/>
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-
-                                   
-                                    <input type="text" name="uname" placeholder="Ref #"/>
-                                    <input type="text" name="pwd" placeholder="Seats"/>
-                                    <input type="text" name="cpwd" placeholder="Model"/>
-                                    <input type="text" name="name" placeholder="Emission class"/>
-                                    <input type="text" name="uname" placeholder="Mileage"/>
-
-
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label class="pay">Brand *</label>
-                                        </div>
-                                        <div class="col-9">
-                                            <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Audi</option>
-                                                <option>BM@</option>
-                                            </select>                                           
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label class="pay">Body Type *</label>
-                                        </div>
-                                        <div class="col-9">
-                                            <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Audi</option>
-                                                <option>BM@</option>
-                                            </select>                                           
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label class="pay">Color *</label>
-                                        </div>
-                                        <div class="col-9">
-                                            <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Audi</option>
-                                                <option>BM@</option>
-                                            </select>                                           
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label class="pay">Engine Type</label>
-                                        </div>
-                                        <div class="col-9">
-                                            <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Audi</option>
-                                                <option>BM@</option>
-                                            </select>                                           
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-3">
-                                            <label class="pay">Transmission</label>
-                                        </div>
-                                        <div class="col-9">
-                                            <select class="list-dt" id="month" name="expmonth">
-                                                <option selected>Audi</option>
-                                                <option>BM@</option>
-                                            </select>                                           
-                                        </div>
-                                    </div>
-                                
-                                </div>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                                <input type="button" name="next" class="next action-button" value="Next Step"/>
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <h2 class="fs-title">Other Information</h2>
-                                  
-                                    <label class="pay">Card Holder Name*</label>
-                                    <input type="file" class="form-control" id="customFile" />
-                                   
-                                </div>
-                                <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                                <input type="button" name="make_payment" class="next action-button" value="Confirm"/>
-                            </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                    <h2 class="fs-title text-center">Success !</h2>
-                                    <br><br>
-                                    <div class="row justify-content-center">
-                                        <div class="col-3">
-                                            <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image">
-                                        </div>
-                                    </div>
-                                    <br><br>
-                                    <div class="row justify-content-center">
-                                        <div class="col-7 text-center">
-                                            <h5>You Add Successfully Added</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-        
-    </section></div>
   
 </div>
 
