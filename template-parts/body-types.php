@@ -34,7 +34,7 @@
                                  </a>
                                 </figur>
                             </div>
-                            <p class="mt-1"><?php echo $term->name ?> </p>
+                            <p class="mt-1"><?php echo $term->name ?>(<?php echo $term->count ?>) </p>
                       </div>
                     <?php   }   } 
                ?> 

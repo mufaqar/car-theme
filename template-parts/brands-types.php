@@ -33,14 +33,10 @@
                 <img
                 src="<?php echo $feature_icon ?>"
                 alt="car"
-                style="height: 80px;
-    width: 80px;
-    object-fit: contain;
-    margin: 0px auto;"
-              />  </a>
+                style="height: 80px; width: 80px; object-fit: contain; margin: 0px auto;"   />  </a>
               </figur>
             </div>
-            <p class="mt-1"><?php echo $term->name ?> </p>
+            <p class="mt-1"><?php echo $term->name ?> (<?php echo $term->count ?>) </p>
           </div>
           <?php   }   } 
                ?> 
