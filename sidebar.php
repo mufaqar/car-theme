@@ -38,7 +38,7 @@
         <label>First Registration</label>
         <div class="d-flex gap-1">
           <select class="form-select" name="engine_reg" onchange="this.form.submit()">
-            <option selected>From</option>
+            <option >From</option>
              <?php for ($x = 2010; $x <= 2023; $x++) {
                 echo "<option value='1'> $x </option>";
                 }
@@ -89,7 +89,7 @@
         </div>
         <label>Color</label>
         <select class="form-select"  name="color" onchange="this.form.submit()">
-          <option selected>Select Color</option>
+          <option>Select Color</option>
           <?php
                     $terms_colors = get_terms( array('taxonomy' => 'color',  'hide_empty' => false ) );
                     if ( ! empty( $terms_colors ) && ! is_wp_error( $terms_colors ) ) {                  
