@@ -7,14 +7,9 @@
              <?php
                     $terms_brands = get_terms( array('taxonomy' => 'brand',  'hide_empty' => false ) );
                     if ( ! empty( $terms_brands ) && ! is_wp_error( $terms_brands ) ) {                  
-                        foreach ( $terms_brands as $terms_brand ) { 
-
-                          print_r($terms_brand);
-                          
-                          
-                          ?> 
-                      <option value="<?php echo $terms_brand->slug ?> "><?php echo $terms_brand->name ?> (<?php echo $terms_brand->count ?>)  </option>                   
-            <?php } } ?> 
+                        foreach ( $terms_brands as $terms_brand ) {  ?> 
+                         <option value="<?php echo $terms_brand->slug ?> "><?php echo $terms_brand->name ?> (<?php echo $terms_brand->count ?>)  </option>                   
+                 <?php } } ?> 
         </select>
         <label>Body Type</label>
         <select class="form-select" name="body_type" id="body_type"  onchange="this.form.submit()">
