@@ -279,12 +279,8 @@ $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
     <div class="container mx-auto">
       <h2 class="sub-heading">Car features</h2>
       <div class="car-feature-wrapper">
-        <ul>
-          
-          <?php 
-          get_features_type();
-
-          ?>
+        <ul class="features_list">          
+          <?php  get_features_type();          ?>
         </ul>
         
       </div>

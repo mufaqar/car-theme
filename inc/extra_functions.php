@@ -40,10 +40,9 @@ include get_template_directory() . '/inc/wp-bootstrap-navlist-walker.php';
                   ?>
                     <li>
                         <img src="<?php echo $feature_icon ?>" alt="suv" />
-                        <span><?php echo $term->name ?> </span>
-                        
+                        <span><?php echo $term->name ?> </span>                       
                        
-              </li>  
+                    </li>  
                   <?php
 
               }     
