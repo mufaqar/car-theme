@@ -10,6 +10,44 @@ $body_type= $_REQUEST['body_type'];
 $body_type= $_REQUEST['body_type'];
 
 
+$tax_query = array('relation' => 'AND');
+    if (!empty($brand))
+    {
+        $tax_query[] =  array(
+                'taxonomy' => 'brand',
+                'field' => 'slug',
+                'terms' => $brand
+            );
+    }
+    if (!empty($body_type))
+    {
+        $tax_query[] =  array(
+                'taxonomy' => 'cat_fault_type',
+                'field' => 'slug',
+                'terms' => $body_type
+            );
+    }
+  
+    if (!empty($model_cat))
+    {
+        $tax_query[] =  array(
+                'taxonomy' => 'model_type_cat',
+                'field' => 'id',
+                'terms' => $model_cat
+            );
+    }
+	if (!empty($model_name))
+    {
+        $tax_query[] =  array(
+                'taxonomy' => 'model_cat',
+                'field' => 'id',
+                'terms' => $model_name
+            );
+    }
+
+  
+
+
 
 
 
@@ -29,8 +67,7 @@ $body_type= $_REQUEST['body_type'];
     'post_type' => 'vehicle',
     'posts_per_page' => -1,
      'order' => 'desc',
-     'brand' => $brand,
-     'body_type' => $body_type,
+     'tax_query' => $tax_query	
     
 )); 
 if (have_posts()) :  while (have_posts()) : the_post();    
