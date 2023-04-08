@@ -22,7 +22,8 @@
                                     <h2><strong>Add your Vehicle</strong></h2>
                                     <div class="row">
                                         <div class="col-md-12 mx-0">
-                                            <form id="msform">
+
+                                            <form class="add_vehicle" id="add_vehicle" action="#" enctype="multipart/form-data">
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
                                                     <li class="active" id="account"><strong>Step 1</strong></li>
@@ -87,7 +88,8 @@
                                                                            foreach ( $terms_body_types as $terms_body_type ) {  ?>
                                                                     <option
                                                                         value="<?php echo $terms_body_type->term_id ?>">
-                                                                        <?php echo $terms_body_type->name ?></option>
+                                                                        <?php echo $terms_body_type->name ?>
+                                                                    </option>
                                                                     <?php } } ?>
                                                                 </select>
                                                             </div>
@@ -123,7 +125,8 @@
                                                                            foreach ( $terms_engine_types as $terms_engine_type ) {  ?>
                                                                     <option
                                                                         value="<?php echo $terms_engine_type->term_id ?>">
-                                                                        <?php echo $terms_engine_type->name ?></option>
+                                                                        <?php echo $terms_engine_type->name ?>
+                                                                    </option>
                                                                     <?php } } ?>
                                                                 </select>
                                                             </div>
@@ -142,7 +145,8 @@
                                                                            foreach ( $terms_transmissions as $terms_transmission ) {  ?>
                                                                     <option
                                                                         value="<?php echo $terms_transmission->term_id ?>">
-                                                                        <?php echo $terms_transmission->name ?></option>
+                                                                        <?php echo $terms_transmission->name ?>
+                                                                    </option>
                                                                     <?php } } ?>
                                                                 </select>
                                                             </div>
@@ -161,7 +165,8 @@
                                                                            foreach ( $terms_vehicle_types as $terms_vehicle_type ) {  ?>
                                                                     <option
                                                                         value="<?php echo $terms_vehicle_type->term_id ?>">
-                                                                        <?php echo $terms_vehicle_type->name ?></option>
+                                                                        <?php echo $terms_vehicle_type->name ?>
+                                                                    </option>
                                                                     <?php } } ?>
                                                                 </select>
                                                             </div>
@@ -182,7 +187,7 @@
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
-                                                    <input type="button" name="make_payment" class="next action-button"
+                                                    <input type="submit" name="make_payment" class="next action-button"
                                                         value="Confirm" />
                                                 </fieldset>
                                                 <fieldset>
@@ -325,7 +330,8 @@ jQuery(document).ready(function($) {
         $(".hideme").css("display", "none");
     });
 
-    $("#add_repair").submit(function(e) {
+    $("#msform").submit(function(e) {
+       
         e.preventDefault();
         var name = jQuery('#name').val();
         var location = jQuery('#location').val();

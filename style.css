@@ -100,13 +100,13 @@ body.dark .switch::before {
 /*Background color*/
 
 /*form styles*/
-#msform {
+#add_vehicle {
   text-align: center;
   position: relative;
   margin-top: 20px;
 }
 
-#msform fieldset .form-card {
+#add_vehicle fieldset .form-card {
   background: white;
   border: 0 none;
   border-radius: 0px;
@@ -120,7 +120,7 @@ body.dark .switch::before {
   position: relative;
 }
 
-#msform fieldset {
+#add_vehicle fieldset {
   background: white;
   border: 0 none;
   border-radius: 0.5rem;
@@ -134,17 +134,17 @@ body.dark .switch::before {
 }
 
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
+#add_vehicle fieldset:not(:first-of-type) {
   display: none;
 }
 
-#msform fieldset .form-card {
+#add_vehicle fieldset .form-card {
   text-align: left;
   color: #9e9e9e;
 }
 
-#msform input,
-#msform textarea {
+#add_vehicle input,
+#add_vehicle textarea {
   padding: 0px 8px 4px 8px;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -159,8 +159,8 @@ body.dark .switch::before {
   letter-spacing: 1px;
 }
 
-#msform input:focus,
-#msform textarea:focus {
+#add_vehicle input:focus,
+#add_vehicle textarea:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -171,7 +171,7 @@ body.dark .switch::before {
 }
 
 /*Blue Buttons*/
-#msform .action-button {
+#add_vehicle .action-button {
   width: 100px;
   background: #e1c591;
   font-weight: bold;
@@ -183,13 +183,13 @@ body.dark .switch::before {
   margin: 10px 5px;
 }
 
-#msform .action-button:hover,
-#msform .action-button:focus {
+#add_vehicle .action-button:hover,
+#add_vehicle .action-button:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #e1c591;
 }
 
 /*Previous Buttons*/
-#msform .action-button-previous {
+#add_vehicle .action-button-previous {
   width: 100px;
   background: #616161;
   font-weight: bold;
@@ -201,8 +201,8 @@ body.dark .switch::before {
   margin: 10px 5px;
 }
 
-#msform .action-button-previous:hover,
-#msform .action-button-previous:focus {
+#add_vehicle .action-button-previous:hover,
+#add_vehicle .action-button-previous:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
 }
 
