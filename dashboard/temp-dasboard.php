@@ -1,22 +1,5 @@
 <?php  /*  Template Name:  Dashboard  */
    get_header(); ?>
-<?php
-   if(isset($_POST['register'])){
-      $username = $_POST['username'];
-      $email = $_POST['email'];
-      $password = $_POST['password'];
-      $userdata = array(
-         'user_login' => $username,
-         'user_email' => $email,
-         'user_pass' => $password,
-         'role' => 'custom_role' // Your custom role slug
-      );
-      $user_id = wp_insert_user( $userdata );
-      if( ! is_wp_error( $user_id ) ) {
-         echo 'Registration complete. Please check your email to activate your account.';
-      }
-   }
-   ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 <section class="contact-us">
    <h2 class="sub-heading"><?php the_title()?> </h2>
