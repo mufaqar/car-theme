@@ -29,35 +29,35 @@
                                                     <li class="active" id="account"><strong>Step 1</strong></li>
                                                     <li id="personal"><strong>Step 2</strong></li>
                                                     <li id="payment"><strong>Step 3</strong></li>
-                                                    <li id="confirm"><strong>Finish</strong></li>
+                                                 
                                                 </ul>
                                                 <!-- fieldsets -->
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" name="name" placeholder="Vehicle Name" />
-                                                        <input type="text" name="location" placeholder="Location" />
-                                                        <input type="text" name="price" placeholder="Price" />
-                                                        <input type="text" name="registered_in"
+                                                        <input type="text" value="" id="name" name="name" placeholder="Vehicle Name"  required/>
+                                                        <input type="text" value="" id="location" name="location" placeholder="Location" />
+                                                        <input type="text" value="" id="price" name="price" placeholder="Price" />
+                                                        <input type="text" value="" id="registered_in" name="registered_in"
                                                             placeholder="Registered In" />
-                                                        <input type="text" name="engine_capacity"
+                                                        <input type="text" value="" id="engine_capacity" name="engine_capacity"
                                                             placeholder="Engine Capacity" />
-                                                        <input type="text" name="assembly" placeholder="Assembly" />
-                                                        <input type="text" name="interior_color"
+                                                        <input type="text" value="" id="assembly" name="assembly" placeholder="Assembly" />
+                                                        <input type="text" value="" id="interior_color" name="interior_color"
                                                             placeholder="Interior color" />
-                                                        <input type="text" name="interior_material"
+                                                        <input type="text" value="" id="interior_material" name="interior_material"
                                                             placeholder="Interior material" />
                                                     </div>
-                                                    <input type="button" name="next" class="next action-button"
+                                                    <input type="button" value="" id="" name="next" class="next action-button"
                                                         value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" name="ref_no" placeholder="Ref #" />
-                                                        <input type="text" name="seats" placeholder="Seats" />
-                                                        <input type="text" name="model" placeholder="Model" />
-                                                        <input type="text" name="emission_class"
+                                                        <input type="text" value="" id="ref_no" name="ref_no" placeholder="Ref #" />
+                                                        <input type="text" value="" id="seats" name="seats" placeholder="Seats" />
+                                                        <input type="text" value="" id="model" name="model" placeholder="Model" />
+                                                        <input type="text" value="" id="emission_class" name="emission_class"
                                                             placeholder="Emission class" />
-                                                        <input type="text" name="mileage" placeholder="Mileage" />
+                                                        <input type="text" value="" id="mileage" name="mileage" placeholder="Mileage" />
                                                         <div class="row">
                                                             <div class="col-3">
                                                                 <label class="pay">Brand *</label>
@@ -267,7 +267,6 @@ $(document).ready(function() {
             step: function(now) {
                 // for making fielset appear animation
                 opacity = 1 - now;
-
                 current_fs.css({
                     'display': 'none',
                     'position': 'relative'
@@ -281,16 +280,12 @@ $(document).ready(function() {
     });
 
     $(".previous").click(function() {
-
         current_fs = $(this).parent();
         previous_fs = $(this).parent().prev();
-
         //Remove class active
         $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
         //show the previous fieldset
         previous_fs.show();
-
         //hide the current fieldset with style
         current_fs.animate({
             opacity: 0
@@ -330,8 +325,7 @@ jQuery(document).ready(function($) {
         $(".hideme").css("display", "none");
     });
 
-    $("#msform").submit(function(e) {
-       
+    $("#add_vehicle").submit(function(e) {       
         e.preventDefault();
         var name = jQuery('#name').val();
         var location = jQuery('#location').val();
@@ -377,6 +371,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
+        alert();
 
 
         $.ajax({

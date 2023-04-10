@@ -2,10 +2,8 @@
 include get_template_directory() . '/inc/cpts.php';
 include get_template_directory() . '/inc/cf.php';
 include get_template_directory() . '/inc/wp-bootstrap-navlist-walker.php';
+include get_template_directory() . '/inc/ajax_request.php';
 
-
-
-    // get all body type icon 1
     function get_all_body_type () {
                 $terms = get_terms( array(
                     'taxonomy' => 'body_type',
