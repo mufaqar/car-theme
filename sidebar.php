@@ -1,4 +1,4 @@
-<aside class="col-md-3 filter-sidebar">
+<aside class="col-md-4 col-lg-3" >
     <h4>Choose Options</h4>
     <form class="row" method="GET" action="<?php echo home_url('search-listing'); ?>">
         <label>Brand</label>

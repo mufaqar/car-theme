@@ -21,7 +21,6 @@ main ._content h6,
 p,
 span,
 a,
-label,
 div {
   overflow-y: hidden;
 }
@@ -57,7 +56,7 @@ button {
 }
 
 .main-heding, main ._content h1 {
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 700;
 }
 
@@ -72,10 +71,15 @@ h6, main ._content h6 {
   font-size: 2.5rem;
 }
 
-.container {
+.container-main {
   max-width: 90% !important;
   width: 100% !important;
   margin: 0 auto;
+}
+
+._border {
+  border-bottom: 2px solid var(--border-clr);
+  padding-bottom: 1.5rem;
 }
 
 .ml-8-per {
@@ -131,7 +135,7 @@ header nav .header_dropdown img {
 
 main {
   height: calc(100vh - 76px);
-  background-image: url("../assets/images/main.jpg");
+  background-image: url("../assets/images/main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -178,6 +182,11 @@ main .main-slider .item_wrapper .item {
   flex-direction: column !important;
   align-items: center !important;
   gap: 5px !important;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+main .main-slider .item_wrapper .item:hover {
+  scale: 0.95;
 }
 main .main-slider .item_wrapper .item img {
   width: 61px;
@@ -195,6 +204,7 @@ main ._content {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  top: 25%;
 }
 main ._content h6 {
   text-align: center;
@@ -207,6 +217,9 @@ main .filter {
   background: rgba(27, 49, 89, 0.8470588235);
   padding: 3rem;
   color: var(--pure) !important;
+}
+main .filter .slick-list {
+  margin-left: -2.5px !important;
 }
 main .filter form > div {
   display: grid;
@@ -356,6 +369,9 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
   font-weight: 600;
   text-align: left;
 }
+section .__slider .full-slider .slider-card-wrapper h4.heading a {
+  color: var(--main);
+}
 
 .home-banner {
   background-image: url("../assets/images/banner.png");
@@ -396,6 +412,9 @@ section .__slider .full-slider .slider-card-wrapper h4.heading {
 
 section.car-type {
   background: var(--light-gray);
+}
+section.car-type .__slider.mt-5 {
+  padding-bottom: 4rem;
 }
 section.car-type .car-type-slider {
   margin-left: -20px !important;
@@ -702,8 +721,6 @@ section.slug .detail-content .brand img {
 .car-features .car-feature-wrapper {
   margin-top: 2rem;
   margin-bottom: 3rem;
-}
-.car-features .car-feature-wrapper .features_list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
@@ -769,7 +786,7 @@ section.slug .detail-content .brand img {
   gap: 1rem;
 }
 .leasing-price .right div {
-  background: #F8F2E8;
+  background: #f8f2e8;
   padding: 2rem;
 }
 .leasing-price .right div h3 {
@@ -803,7 +820,7 @@ section.slug .detail-content .brand img {
 }
 
 section.leasing {
-  background-image: url("../assets/images/main.jpg");
+  background-image: url("../assets/images/main.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1013,7 +1030,7 @@ section.content p {
   display: flex;
   align-items: center;
   max-width: 500px;
-  background: #E3E7EE;
+  background: #e3e7ee;
   width: 100%;
   border-radius: 50px;
   padding-right: 1rem;
@@ -1095,7 +1112,8 @@ section.content p {
   display: flex;
   flex-direction: column;
 }
-.contact-us-form ._input input, .contact-us-form ._input select {
+.contact-us-form ._input input,
+.contact-us-form ._input select {
   padding: 14px;
   border: 1.5px solid var(--border-clr) !important;
   outline: none;
@@ -1129,7 +1147,7 @@ section.content p {
   text-align: center;
 }
 .contact-us-footer .contact-card div figure {
-  background: #E4E6E8;
+  background: #e4e6e8;
   padding: 12px;
   border-radius: 10px;
 }
@@ -1159,118 +1177,6 @@ section.content p {
   background: transparent !important;
 }
 
-.comment-wrapper {
-  background: var(--main);
-  padding: 2rem;
-  margin-top: 2rem;
-}
-.comment-wrapper a {
-  color: var(--secondary);
-}
-.comment-wrapper h3 {
-  color: var(--pure);
-  font-weight: 700;
-  font-family: var(--axiforma-bold);
-  font-size: 1.4rem;
-}
-.comment-wrapper p {
-  color: var(--pure);
-}
-.comment-wrapper form textarea {
-  width: 100%;
-  border: 1px solid #686363;
-  background: transparent;
-  padding: 10px;
-  outline: none;
-  color: white;
-}
-.comment-wrapper form .submit-comments {
-  background: var(--secondary);
-  margin-top: 1rem;
-  color: var(--main);
-  padding: 12px 1.2rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.comment-wrapper form .submit-comments::hover {
-  background: var(--secondary);
-  color: var(--main);
-}
-
-.blog-single .content .main-heading {
-  color: var(--main);
-  font-weight: 700;
-  font-family: var(--axiforma-bold);
-  text-align: left;
-}
-.blog-single .content .post_meta {
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border-clr);
-}
-.blog-single .content .post_meta .posted-on {
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.blog-single .content .post_meta .posted-on a {
-  color: var(--secondary);
-  text-transform: capitalize;
-}
-.blog-single .content .post_meta .posted-on .post-on {
-  background: var(--secondary);
-  padding: 12px;
-  font-weight: 600;
-  padding-right: 6px;
-  margin-right: 3px;
-}
-.blog-single .content .post_meta .comment-count {
-  padding-bottom: 0.8rem;
-}
-.blog-single .content .post_meta .message-icon {
-  width: 1.2rem;
-  height: 1.2rem;
-  color: var(--secondary);
-}
-.blog-single .content .entry {
-  text-align: left;
-}
-.blog-single .content .entry h1,
-.blog-single .content .entry h2,
-.blog-single .content .entry h3 {
-  color: var(--main);
-  font-weight: 700;
-  font-family: var(--axiforma-bold);
-  font-size: 1.7rem;
-  margin: 1rem 0;
-}
-.blog-single .content .entry b {
-  color: var(--main);
-  font-weight: 700;
-  font-family: var(--axiforma-bold);
-}
-.blog-single .content .entry ul,
-.blog-single .content .entry ol {
-  padding: 0;
-}
-.blog-single .content .entry ul li,
-.blog-single .content .entry ol li {
-  position: relative;
-  padding-left: 1.5rem;
-}
-.blog-single .content .entry ul li::before,
-.blog-single .content .entry ol li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 15px;
-  height: 15px;
-  background: var(--secondary);
-}
-.blog-single .blog_sidebar {
-  background: var(--light-gray);
-}
-
 .search_header {
   display: flex;
   margin-top: 5rem;
@@ -1284,7 +1190,7 @@ section.content p {
 .search aside {
   background: var(--light-gray);
   border: 1px solid var(--border-clr);
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .search aside h4 {
   color: var(--main);
@@ -1292,6 +1198,9 @@ section.content p {
   font-family: var(--axiforma-bold);
   font-size: 1.2rem;
   text-transform: capitalize;
+}
+.search aside form div {
+  padding: 0;
 }
 .search aside form label {
   font-size: 14px;
@@ -1318,13 +1227,40 @@ section.content p {
 .search aside form .checkbox label {
   margin-top: 10px !important;
 }
-.search aside form select:focus, .search aside form input:focus {
+.search aside form select:focus,
+.search aside form input:focus {
   border-color: none;
   box-shadow: none;
   outline: 0 none;
 }
 .search .listing {
   padding-left: 3rem;
+}
+.search .listing ._p {
+  padding: 0 0.7rem;
+}
+.search .listing .filter-responce {
+  background: var(--light-gray);
+  padding: 2rem;
+}
+.search .listing .filter-responce h2 {
+  font-family: var(--axiforma-regular);
+  font-size: 1.6rem;
+  color: var(--main) !important;
+}
+.search .listing .filter-responce .filters {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.search .listing .filter-responce .filters .tag {
+  border: 1px solid var(--main);
+  text-transform: capitalize;
+  padding: 8px 1.8rem;
+  border-radius: 50px;
+  cursor: pointer;
 }
 .search .listing .single-card {
   background: #f3f3f3;
@@ -1377,24 +1313,54 @@ section.content p {
 .search .listing .single-card .card-body ul li img {
   height: auto;
 }
+.search .listing .result-notfound {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background: var(--light-gray);
+}
+.search .listing .result-notfound div {
+  width: 100%;
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main);
+}
+.search .listing .result-notfound h2 {
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--main) !important;
+  line-height: 2.5rem;
+}
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 !important;
+  }
+  .call-to-action {
+    margin-top: 3rem !important;
+  }
   .call-to-action .call_button {
     flex-direction: column !important;
     padding: 0 2rem;
+  }
+  .home-banner {
+    margin-top: 4rem;
   }
   main {
     height: 100%;
   }
   main ._content {
     position: relative;
-    padding: 10rem 10px;
+    padding: 10rem 1.5rem;
   }
   main ._content h1 {
     font-size: 40px;
   }
   main ._content h6 {
     font-size: 18px;
+    line-height: 2.2rem;
   }
   main .filter {
     padding: 3rem 10px;
@@ -1407,6 +1373,9 @@ section.content p {
   }
   main .filter form > div .input {
     max-width: 100%;
+  }
+  main .filter .submit.button {
+    margin-top: 2rem;
   }
   header .logins_section {
     display: none !important;
@@ -1427,7 +1396,7 @@ section.content p {
     padding-left: 0 !important;
   }
   .main-heding, main ._content h1 {
-    font-size: 48px !important;
+    font-size: 35px !important;
   }
   .home-banner p {
     padding-left: 0 !important;
@@ -1466,114 +1435,197 @@ section.content p {
   .copyright ul {
     padding-left: 0 !important;
   }
+  .slug {
+    padding: 10px !important;
+  }
+  .slug .slider-for img {
+    height: 220px !important;
+  }
+  .slug .main-section-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 12px !important;
+  }
+  .slug .main-section-wrapper .detail-content h5 {
+    margin-top: 7px !important;
+    font-size: 16px !important;
+  }
+  .slug .main-section-wrapper .detail-content .info button {
+    margin-bottom: 10px;
+  }
+  .features {
+    padding: 10px;
+    padding-top: 1rem;
+    padding-bottom: 2rem !important;
+  }
+  .features .freature_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features .freature_wrapper .feature .content h6 {
+    font-size: 14px;
+  }
+  .features .freature_wrapper .feature figure {
+    padding: 0.5rem;
+  }
+  .features .freature_wrapper .feature figure img {
+    width: 18px;
+    height: 18px;
+  }
+  .highlights {
+    padding: 10px;
+  }
+  .highlights h2 {
+    font-size: 2rem;
+  }
+  .highlights .highlights_wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 0rem;
+  }
+  .car-features {
+    padding: 10px;
+  }
+  .car-features h2 {
+    font-size: 2rem;
+  }
+  .car-features .car-feature-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem;
+  }
+  .leasing-price {
+    display: block;
+    padding: 10px !important;
+    margin: 0;
+  }
+  .leasing-price .left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .leasing-price .left h2 {
+    font-size: 2rem;
+  }
+  .leasing-price .right {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+  }
+  .leasing-price .right div {
+    padding: 1rem;
+  }
+  section.leasing {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.leasing h2 {
+    font-size: 2rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+  }
+  .leasing-card img {
+    width: 90px !important;
+  }
+  .leasing-card h4 {
+    font-size: 1.4rem !important;
+  }
+  section.content {
+    padding: 0 10px;
+  }
+  section.content h2 {
+    font-size: 1.8rem !important;
+  }
+  section.content p {
+    padding: 0 !important;
+    line-height: 24px;
+  }
+  .subscription-work {
+    padding: 2rem 10px !important;
+  }
+  .subscription-work h2 {
+    font-size: 1.8rem !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .cards_content {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
+  }
+  .cards_content h2 {
+    font-size: 32px !important;
+    line-height: 48px;
+  }
+  .cards_content ._img {
+    padding-bottom: 58px !important;
+  }
+  .order {
+    order: 0 !important;
+  }
+  .contact-us-form {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+  }
+  .contact-us-form .form {
+    padding: 3rem 1rem;
+  }
+  .contact-us-form .form div {
+    flex-direction: column;
+  }
+  .contact-us-form .form div ._input {
+    width: 100%;
+  }
+  .contact-us-footer {
+    padding: 4rem 10px;
+  }
+  .contact-us-footer .contact-card {
+    grid-template-columns: 1fr;
+  }
+  .contact-us {
+    padding: 8rem 10px;
+  }
+  .contact-us h2 {
+    margin-top: 0;
+  }
+  .result-notfound h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.5 !important;
+    padding: 1.2rem !important;
+  }
+  .search {
+    padding: 0 10px !important;
+  }
+  .search .listing {
+    padding-left: 0px !important;
+    padding: 0;
+  }
+  .filter-responce {
+    margin-top: 2rem;
+  }
+  .filter-responce h2 {
+    font-size: 1.2rem !important;
+  }
+  .filter-responce .tag {
+    padding: 5px 1rem !important;
+  }
 }
-.latest-news-wrapper .card-body .properties {
-  margin-top: 1rem !important;
-}
-.latest-news-wrapper .heading {
-  color: var(--darkgray);
-  font-weight: 700;
-}
-.latest-news-wrapper .card-footer {
-  width: 155px;
-  padding-top: 10px !important;
-}
-
-.call-to-action {
-  padding: 5rem 0;
-  text-align: center;
-  margin-top: 10rem;
-  background: var(--light-gray);
-  color: var(--main) !important;
-}
-.call-to-action h2 {
-  max-width: 890px;
-  margin: 0 auto;
-}
-.call-to-action .call_button {
-  gap: 1rem;
-}
-.call-to-action .call_button .button {
-  border-radius: 6px;
-}
-
-footer {
-  padding: 5rem 1rem;
-  padding-bottom: 0;
-}
-footer .footer_nav {
-  gap: 2rem;
-}
-footer .footer_nav h3 {
-  color: var(--main);
-  font-family: var(--oswald);
-  font-size: 18px;
-  text-transform: uppercase;
-}
-footer .footer_nav ul {
-  padding-left: 0 !important;
-}
-footer .footer_nav ul li {
-  font-size: 16px;
-  margin-top: 1.4rem;
-  text-transform: capitalize;
-}
-footer .footer_nav ul li a {
-  color: var(--light-dark);
-}
-footer .footer_nav ul li a:hover {
-  color: var(--secondary);
-}
-footer .footer_nav .input {
-  border-bottom: 1px solid var(--light-dark);
-  display: flex;
-}
-footer .footer_nav .input input {
-  padding: 10px !important;
-  border: none;
-  width: 100%;
-  outline: none;
-}
-footer .footer_nav .social {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-footer .footer_nav .social a {
-  transition: 0.3s ease-in-out;
-}
-footer .footer_nav .social a img {
-  width: 50px;
-}
-footer .copyright {
-  margin-top: 3rem;
-  padding: 2rem 0;
-  padding-bottom: 1rem;
-  border-top: 2px solid var(--border-clr);
-}
-footer .copyright .extra-links li {
-  margin-left: 12px;
-}
-footer .copyright .extra-links li a {
-  color: var(--light-dark);
-}
-footer .copyright .extra-links li a:hover {
-  color: var(--secondary);
-}
-
 @media (min-width: 481px) and (max-width: 992px) {
   main {
     height: 100%;
   }
   main ._content {
     position: relative;
-    padding: 10rem 10px;
+    padding: 10rem 2rem;
   }
   main ._content h1 {
     font-size: 48px;
   }
   main ._content h6 {
     font-size: 20px;
+    line-height: 2.2rem;
   }
   main .filter {
     padding: 3rem 10px;
@@ -1583,6 +1635,9 @@ footer .copyright .extra-links li a:hover {
   }
   main .filter form > div {
     grid-template-columns: 1fr 1fr;
+  }
+  main .filter .submit.button {
+    margin-top: 2rem;
   }
   header .logins_section {
     display: none !important;
@@ -1602,10 +1657,192 @@ footer .copyright .extra-links li a:hover {
   .ml-8-per {
     margin-left: 0;
   }
+  .slug {
+    padding: 10px !important;
+  }
+  .slug .slider-for img {
+    height: 420px !important;
+  }
+  .slug .main-section-wrapper {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    padding: 25px !important;
+  }
+  .slug .main-section-wrapper .detail-content h5 {
+    margin-top: 7px !important;
+    font-size: 16px !important;
+  }
+  .slug .main-section-wrapper .detail-content .info button {
+    margin-bottom: 10px;
+  }
+  .features {
+    padding: 10px;
+    padding-top: 1rem;
+  }
+  .features .freature_wrapper {
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features .freature_wrapper .feature .content h6 {
+    font-size: 14px;
+  }
+  .features .freature_wrapper .feature figure {
+    padding: 0.5rem;
+  }
+  .features .freature_wrapper .feature figure img {
+    width: 18px;
+    height: 18px;
+  }
+  .highlights {
+    padding: 10px;
+  }
+  .highlights h2 {
+    margin-top: 1rem;
+  }
+  .highlights .highlights_wrapper {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+    margin-bottom: 0rem;
+  }
+  .car-features {
+    padding: 10px;
+  }
+  .car-features .car-feature-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 1rem;
+  }
+  .leasing-price {
+    display: block;
+    padding: 10px !important;
+    margin: 0;
+  }
+  .leasing-price .left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .leasing-price .left h2 {
+    font-size: 2rem;
+  }
+  .leasing-price .right {
+    width: 100%;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .leasing-price .right div {
+    padding: 1rem;
+  }
+  section.leasing {
+    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section.leasing h2 {
+    font-size: 3rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  section.content p {
+    padding: 0 !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .cards_content {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
+  }
+  .cards_content h2 {
+    font-size: 32px !important;
+    line-height: 48px;
+  }
+  .cards_content ._img {
+    padding-bottom: 86px !important;
+  }
+  .order {
+    order: 0 !important;
+  }
+  .contact-us-footer {
+    padding: 4rem 10px;
+  }
+  .contact-us-footer .contact-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .filter-responce {
+    margin-top: 1.5rem;
+  }
+  .search .listing {
+    padding-left: 0rem !important;
+    padding: 0;
+  }
+  .search .listing ._p {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .search .listing {
+    padding-left: 1rem !important;
+    padding: 0;
+  }
+  .search .listing ._p {
+    padding-left: 0.7rem;
+  }
+  .filter-responce {
+    margin-top: 0rem;
+  }
 }
 @media (min-width: 481px) and (max-width: 680px) {
   .__slider .card-footer {
     flex-direction: column;
+  }
+  .leasing-price .right {
+    width: 100%;
+    grid-template-columns: 1fr !important;
+  }
+  .leasing-price .right div {
+    padding: 1rem;
+  }
+  .leasing-card {
+    grid-template-columns: 1fr;
+    padding: 0 10px !important;
+  }
+  .leasing-card img {
+    width: 90px !important;
+  }
+  .leasing-card h4 {
+    font-size: 1.4rem !important;
+  }
+  .subscription-work {
+    padding: 2rem 10px !important;
+  }
+  .subscription-work h2 {
+    font-size: 1.8rem !important;
+  }
+  .subscription-work .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .contact-us-form {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0;
+  }
+  .contact-us-form .form {
+    padding: 3rem 1rem;
+  }
+  .contact-us-form .form div {
+    flex-direction: column;
+  }
+  .contact-us-form .form div ._input {
+    width: 100%;
+  }
+  .contact-us {
+    padding: 8rem 10px;
+  }
+  .contact-us h2 {
+    margin-top: 0;
   }
 }
 @media (min-width: 1400px) {
