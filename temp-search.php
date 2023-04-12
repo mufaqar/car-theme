@@ -82,19 +82,13 @@ $tax_query = array('relation' => 'AND');
         <div class="row">
             <div class="col">
                 <h2>0 offers for Vehicles </h2>
-
                 <div class="filer_area">
-
                     <div class="filters">
-                        <h5 class="card-title">Card title</h5>
-
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <span class="tag"><?php echo $brand ?></span>
+                        <span class="tag"><?php echo $color ?></span>
+                        <span class="tag"><?php echo $transmission ?></span>                      
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
         <?php query_posts(array(
@@ -106,8 +100,10 @@ $tax_query = array('relation' => 'AND');
         )); 
         if (have_posts()) :  while (have_posts()) : the_post();  
                  get_template_part( 'template-parts/vehicle', 'card' ); endwhile; wp_reset_query(); else : ?>
-        <h2><?php _e('Unfortunately, there were no results for this filter combination. Try it without the marked filter.
-','lbt_translate'); ?></h2>
+
+                        <h2><?php _e('Unfortunately, there were no results for this filter combination. Try it without the marked filter.
+                ','lbt_translate'); ?></h2>
+                
         <?php endif; ?>
     </div>
 </section>
