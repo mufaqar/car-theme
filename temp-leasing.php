@@ -1,143 +1,124 @@
-<?php  /*  Template Name:  Leasing */
+<?php /*  Template Name:  Leasing */
 
-get_header(); ?>
+get_header();
 
-    
 
-    <section class="leasing">
-        <h2 class="main-heading">Shop with real rates in hand.</h2>
-        <p>Get financing results without impacting your credit</p>
-        <a href="#">Get pre-qualified</a>
-    </section>
 
-    <section class="leasing-card container mx-auto">
-      <div>
-        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/leasing-ico.svg" alt="icon"/>
-        <h4>No Impact on Your Credit Score</h4>
-        <p>Get your credit limit within 15 minutes. Then you're ready to pick your car.</p>
-      </div>
-      <div>
-        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/leasing-ico.svg" alt="icon"/>
-        <h4>Only Takes Minutes</h4>
-        <p>Just enter a few basic details to instantly see your options</p>
-      </div>
-      <div>
-        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/leasing-ico.svg" alt="icon"/>
-        <h4>Personalized Real Rates</h4>
-        <p>Know your real monthly payment before visiting the dealer</p>
-      </div>
-    </section>
+if (isset($_REQUEST['brand'])) {
+    $brand = $_REQUEST['brand'];
+}
+if (isset($_REQUEST['body_type'])) {
+    $body_type = $_REQUEST['body_type'];
+}
+if (isset($_REQUEST['color'])) {
+    $color = $_REQUEST['color'];
+}
+if (isset($_REQUEST['engine_type'])) {
+    $engine_type = $_REQUEST['engine_type'];
+}
 
-    <section class="content">
-      <div class="container mx-auto">
-        <h2 class="main-heding">This is how the car subscription works:</h2>
-        <p> car subscription is the flexible and convenient way to drive a vehicle for a certain period of time. Instead of signing a conventional leasing contract, as a subscriber you pay a monthly fee to use the car for a certain period of time - depending on the provider, from as little as one month. Insurance and maintenance are included in the price, so you don't have to worry about unexpected repair bills or high insurance premiums. When the subscription expires, you simply return the car and can subscribe to a new vehicle. Depending on your needs, you can choose from a variety of different vehicles. Whether it's an electric car for city traffic, a limousine for commuting or a larger SUV for family trips: a car subscription promises comfort and flexibilit</p>
-      </div>
-    </section>
 
-    <!-- This is how the car subscription works: -->
-    <section class="subscription-work">
-      <div class="container mx-auto">
-      <h2 class="main-heding">Your next car is waiting for you here...</h2>
-      <div class="wrapper">
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
+if (isset($_REQUEST['transmission'])) {
+    $transmission = $_REQUEST['transmission'];
+}
+
+$tax_query = array('relation' => 'AND');
+if (!empty($brand)) {
+    $tax_query[] = array(
+        'taxonomy' => 'brand',
+        'field' => 'slug',
+        'terms' => $brand
+    );
+}
+if (!empty($body_type)) {
+    $tax_query[] = array(
+        'taxonomy' => 'body_type',
+        'field' => 'slug',
+        'terms' => $body_type
+    );
+}
+
+if (!empty($color)) {
+    $tax_query[] = array(
+        'taxonomy' => 'color',
+        'field' => 'slug',
+        'terms' => $color
+    );
+}
+if (!empty($engine_type)) {
+    $tax_query[] = array(
+        'taxonomy' => 'engine_type',
+        'field' => 'slug',
+        'terms' => $engine_type
+    );
+}
+
+if (!empty($transmission)) {
+    $tax_query[] = array(
+        'taxonomy' => 'transmission',
+        'field' => 'slug',
+        'terms' => $transmission
+    );
+}
+
+
+
+
+
+?>
+
+<section class="search_header container mx-auto">
+    <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg"
+            alt="logo" /></a>
+</section>
+<section class="container row mx-auto search">
+    <?php get_sidebar() ?>
+    <div class="col-md-8 col-lg-9 listing">
+        <div class="row _p">
+            <div class="col filter-responce">
+                <h2>0 offers for Vehicles </h2>
+                <div class="filer_area">
+                    <div class="filters">
+                        <p class="tag">
+                            <?php echo $brand ?>
+                        </p>
+                        <p class="tag">
+                            <?php echo $color ?>
+                        </p>
+                        <p class="tag">
+                            <?php echo $transmission ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
-        </div>
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
-        </div>
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
-        </div>
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
-        </div>
-        <div>
-          <figure>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/images/subscription-work.png" alt="logo"/>
-          </figure>
-          <h6>tabor</h6>
-        </div>
-      </div>
-      </div>
-    </section>
+        <?php query_posts(
+            array(
+                'post_type' => 'vehicle',
+                'posts_per_page' => -1,
+                'order' => 'desc',
+                'tax_query' => $tax_query
 
-    <!-- cards content  -->
-    <section class="cards_content container mx-auto">
-      <div>
-        <h2>What else you should know about the car subscription</h2>
-        <p>With the car subscription, you select a suitable provider and receive a new car or a recently used vehicle. What are the specifics?</p>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>You just rent the car. In this way you pay a permanent monthly amount and renounce ownership.</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>With some car subscription providers there are further restrictions, in addition to a minimum age of the driver, for example also the limitation of the annual mileage.</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>If you like driving a vehicle for years, the flexible car subscription is probably not interesting for you.</span>
-          </li>
-        </ul>
-        <a href=""><div>TO THE CAR SUBSCRIPTION OFFERS</div></a>
-      </div>
-      <div class="_img">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/old-car.png" alt="image" >
-        <div class="bg-overlay"/>
-      </div>
-    </section>
+            )
+        );
+        if (have_posts()):
+            while (have_posts()):
+                the_post();
+                get_template_part('template-parts/vehicle', 'card');
+            endwhile;
+            wp_reset_query();
+        else: ?>
+            <div class="result-notfound">
+           
+            <h2>
+                <?php _e('Unfortunately!, there were no results for this filter combination. Try it without the marked filter.
+                ', 'lbt_translate'); ?>
+            </h2>
+            </div>
+            
 
-    <section class="cards_content container mx-auto">
-      <div class="order">
-        <h2>Requirements for the car subscription:</h2>
-        <p>With the car subscription, you select a suitable provider and receive a new car or a recently used vehicle. What are the specifics?</p>
-        <ul>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>Depending on the provider, you must be at least 18 or 23 years old.</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>You have a valid EU driver's license in the appropriate vehicle class.</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>Some providers charge a starting fee before the subscription starts.</span>
-          </li>
-          <li>
-            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/yes.svg" alt="icon"/>
-            <span>Before you subscribe to a car, the provider will check your Schufa entry - so you should have a positive credit rating.</span>
-          </li>
-        </ul>
-        <a href="#"><div>TO THE CAR SUBSCRIPTION OFFERS</div></a>
-      </div>
-      <div class="_img img-left">
-        <img src="<?php bloginfo('template_directory'); ?>/assets/images/old-car.png" alt="image" >
-        <div class="bg-overlay ">
-      </div>
-    </section>
+        <?php endif; ?>
+    </div>
+</section>
 
-
-
-
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
