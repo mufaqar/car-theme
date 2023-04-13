@@ -343,3 +343,7 @@ select.list-dt:focus {
 .hide {
   display: none;
 }
+header nav{
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
