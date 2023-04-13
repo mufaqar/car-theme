@@ -2,8 +2,7 @@
  <section class="ml-8-per">
       <div class="__slider">
         <div
-          class="slider-header d-flex flex-wrap mb-5 justify-content-between"
-        >
+          class="slider-header d-flex flex-wrap mb-5 justify-content-between" >
           <h2>Long Term Rental offers available immediately</h2>
           <div class="slider-btn lou100">
             <button class="prev">

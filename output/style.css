@@ -135,7 +135,7 @@ header nav .header_dropdown img {
 
 main {
   height: calc(100vh - 76px);
-  background-image: url("../assets/images/main.png");
+  background-image: url("../assets/images/main.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -820,7 +820,7 @@ section.slug .detail-content .brand img {
 }
 
 section.leasing {
-  background-image: url("../assets/images/main.png");
+  background-image: url("../assets/images/main.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
