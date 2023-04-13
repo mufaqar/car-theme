@@ -52,7 +52,7 @@
         </div>
       </section>
       <section class="copyright d-flex justify-content-between">
-        <p>Copyrights © 2023 All Rights Reserved. Design and Devloped by LION</p>
+        <p>Copyrights © 2023 All Rights Reserved. Design and Devloped by Lion Papcke</p>
         
         <?php wp_nav_menu( array( 'theme_location' => 'footer-4','menu_class'=> 'extra-links d-flex',      'container'         => 'false' ) ); ?>
       </section>
