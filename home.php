@@ -87,9 +87,9 @@ get_header(); ?>
       </div>
     </main>
     <!-- leasing  / -->
-    <?php get_template_part( 'template-parts/leasing', 'offers' ); ?>
+    <?php get_template_part( 'template-parts/parts', 'leasing' ); ?>
     <!-- leasing  Under 100 / -->
-    <?php get_template_part( 'template-parts/leasing', 'offers_limit' ); ?>
+    <?php get_template_part( 'template-parts/parts', 'rent' ); ?>
 
    
     <!-- banner  / -->
