@@ -1,8 +1,9 @@
    
      <?php query_posts(array(
             'post_type' => 'vehicle',
-            'posts_per_page' => 6,
-		      	'order' => 'desc'
+            'posts_per_page' => 8,
+		      	'order' => 'desc',
+            'vehicle_type' => 'rental'
 			
         )); 
 		if (have_posts()) :  while (have_posts()) : the_post();    
@@ -154,7 +155,7 @@
 
                 <div class="card-footer">
                   <a href="<?php the_permalink()?>">
-                    <button href="<?php the_permalink()?>" class="button">Leasing Privately</button>
+                    <button href="<?php the_permalink()?>" class="button">Long Term Rental</button>
                   </a>
                   <a href="<?php the_permalink()?>">
                     <button href="<?php the_permalink()?>" class="button">

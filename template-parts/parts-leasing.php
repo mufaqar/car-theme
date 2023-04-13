@@ -1,4 +1,4 @@
-<!-- Leasing offers available immediately -->
+
   <section class="ml-8-per">
       <div class="__slider">
         <div

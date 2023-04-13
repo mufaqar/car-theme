@@ -1,8 +1,9 @@
    
      <?php query_posts(array(
             'post_type' => 'vehicle',
-            'posts_per_page' => 6,
-		      	'order' => 'desc'
+            'posts_per_page' => 8,
+		      	'order' => 'desc',
+            'vehicle_type' => 'used'
 			
         )); 
 		if (have_posts()) :  while (have_posts()) : the_post();    
