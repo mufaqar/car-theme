@@ -92,6 +92,46 @@ function cptui_register_my_cpts_vehicle() {
 add_action( 'init', 'cptui_register_my_cpts_vehicle' );
 
 
+
+function cptui_register_my_taxes_vehicle_type() {
+
+	/**
+	 * Taxonomy: Types.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Types", "twentynineteen" ),
+		"singular_name" => esc_html__( "Type", "twentynineteen" ),
+	];
+
+	
+	$args = [
+		"label" => esc_html__( "Types", "twentynineteen" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'vehicle_type', 'with_front' => true, ],
+		"show_admin_column" => true,
+		"show_in_rest" => true,
+		"show_tagcloud" => false,
+		"rest_base" => "vehicle_type",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"rest_namespace" => "wp/v2",
+		"show_in_quick_edit" => true,
+		"sort" => true,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "vehicle_type", [ "vehicle" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_vehicle_type' );
+
+
+
 function cptui_register_my_taxes_brand() {
 
 	/**
@@ -192,7 +232,7 @@ function cptui_register_my_taxes_features() {
 		"show_in_nav_menus" => true,
 		"query_var" => true,
 		"rewrite" => [ 'slug' => 'features', 'with_front' => true,  'hierarchical' => true, ],
-		"show_admin_column" => true,
+		"show_admin_column" => false,
 		"show_in_rest" => true,
 		"show_tagcloud" => false,
 		"rest_base" => "features",
@@ -206,43 +246,6 @@ function cptui_register_my_taxes_features() {
 }
 add_action( 'init', 'cptui_register_my_taxes_features' );
 
-
-function cptui_register_my_taxes_vehicle_type() {
-
-	/**
-	 * Taxonomy: Types.
-	 */
-
-	$labels = [
-		"name" => esc_html__( "Types", "twentynineteen" ),
-		"singular_name" => esc_html__( "Type", "twentynineteen" ),
-	];
-
-	
-	$args = [
-		"label" => esc_html__( "Types", "twentynineteen" ),
-		"labels" => $labels,
-		"public" => true,
-		"publicly_queryable" => true,
-		"hierarchical" => true,
-		"show_ui" => true,
-		"show_in_menu" => true,
-		"show_in_nav_menus" => true,
-		"query_var" => true,
-		"rewrite" => [ 'slug' => 'vehicle_type', 'with_front' => true, ],
-		"show_admin_column" => false,
-		"show_in_rest" => true,
-		"show_tagcloud" => false,
-		"rest_base" => "vehicle_type",
-		"rest_controller_class" => "WP_REST_Terms_Controller",
-		"rest_namespace" => "wp/v2",
-		"show_in_quick_edit" => false,
-		"sort" => false,
-		"show_in_graphql" => false,
-	];
-	register_taxonomy( "vehicle_type", [ "vehicle" ], $args );
-}
-add_action( 'init', 'cptui_register_my_taxes_vehicle_type' );
 
 function cptui_register_my_taxes_color() {
 
