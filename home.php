@@ -96,7 +96,7 @@ get_header(); ?>
     <section class="home-banner">
       <div class="container  mx-auto row wrapper items-center">
         <div class="col-lg-6">
-            <h2 class="mb-5">Finance your car in few minutes</h2>
+            <h2 class="mb-5">Long Term Rental Cars available in a few minutes</h2>
             <div>
               <h6>
                 <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon"/>
