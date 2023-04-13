@@ -16,8 +16,9 @@ get_header(); ?>
   <?php query_posts(
     array(
       'post_type' => 'vehicle',
-      'posts_per_page' => 8,
+      'posts_per_page' => -1,
       'order' => 'desc',
+      'vehicle_type' => 'rental'
 
     )
   );
@@ -31,9 +32,14 @@ get_header(); ?>
       ?>
       <div class="slider-card-wrapper">
         <div class="slider-card">
-          <img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png" alt="car" style="width: 100%" />
+        <a href="<?php the_permalink()?>">
+              <?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail('vehicle-thumbnail');
+								} else { ?>
+							<img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"  alt="car"   style="width: 100%"  />
+							<?php } ?></a>
           <div class="card-body">
-            <h4 class="heading">Audi Q5 Sportback S line 50 TDI Lo...</h4>
+          <h4 class="heading">  <a href="<?php the_permalink()?>"><?php the_title()?>... </a></h4>
             <div class="properties">
               <div>
                 <p>
@@ -55,7 +61,7 @@ get_header(); ?>
                   </svg>
                   <span>Price:</span>
                 </p>
-                <p class="text-end">€ 610,- per month</p>
+                <p class="text-end">€ <?php echo $price; ?>,- per month</p>
               </div>
               <div>
                 <p>
@@ -87,14 +93,14 @@ get_header(); ?>
                   </svg>
                   <span>Distance:</span>
                 </p>
-                <p class="text-end">€ 10,000 km, 48 months</p>
+                <p class="text-end"><?php echo $mileage; ?>, <?php echo $register; ?></p>
               </div>
             </div>
 
             <div class="card-footer">
-              <a href="#">
-                <button href="#" class="button">Long Term Rental </button>
-              </a>
+            <a href="<?php the_permalink()?>">
+                    <button href="<?php the_permalink()?>" class="button">Long Term Rental</button>
+                  </a>
               <a href="#">
                 <button href="#" class="button">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-2 h-2">
@@ -102,7 +108,7 @@ get_header(); ?>
                       d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
                       clip-rule="evenodd" />
                   </svg>
-                  <span>DE 63165 Mühlheim..</span>
+                  <span><?php echo $location ?></span>
                 </button>
               </a>
             </div>
