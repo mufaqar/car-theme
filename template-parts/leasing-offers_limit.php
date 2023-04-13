@@ -4,7 +4,7 @@
         <div
           class="slider-header d-flex flex-wrap mb-5 justify-content-between"
         >
-          <h2>Long Term Rental offers available immediately</h2>
+          <h2>Long Term Rental Cars available in a few minutes</h2>
           <div class="slider-btn lou100">
             <button class="prev">
               <div>
