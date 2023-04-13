@@ -93,7 +93,7 @@ get_header(); ?>
 
             <div class="card-footer">
               <a href="#">
-                <button href="#" class="button">Leasing Privately</button>
+                <button href="#" class="button">Long Term Rental </button>
               </a>
               <a href="#">
                 <button href="#" class="button">
