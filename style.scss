@@ -307,83 +307,83 @@ section .__slider {
      }
      .full-slider {
           margin-left: -10px;
-          .slider-card-wrapper {
-               .slider-card {
-                    border: 1px solid var(--border-clr);
-                    border-radius: 6px;
-                    // max-width: 370px;
-                    width: 100%;
+          
+     }
+}
+.slider-card-wrapper {
+     .slider-card {
+          border: 1px solid var(--border-clr);
+          border-radius: 6px;
+          // max-width: 370px;
+          width: 100%;
 
-                    .card-body {
-                         padding: 1rem;
-                         padding-top: 0.5rem;
-                    }
-                    img {
-                         object-fit: cover;
-                         object-position: center;
-                         width: 100% !important;
-                    }
-                    .properties {
-                         margin-top: 2rem;
-                         & > div {
-                              display: flex;
-                              justify-content: space-between;
-                              gap: 1rem;
-                         }
-                         color: var(--darkgray);
-                         font-size: 14px;
-                         p {
-                              display: flex;
-                              align-items: center;
-                              gap: 4px;
-                              font-family: var(--axiforma-regular) !important;
-                              span {
-                                   font-family: var(--axiforma-regular) !important;
-                              }
-                         }
-                         img {
-                              width: 20px !important;
-                              height: 20px;
-                         }
-                    }
-                    .card-footer {
-                         display: flex;
-                         margin-top: 1rem;
-                         gap: 1rem;
-                         a {
-                              flex: 1;
-                              button {
-                                   font-family: var(--axiforma-regular);
-                                   font-weight: 400;
-                                   font-size: 12px;
-                                   padding: 12px 5px;
-                                   background: var(--secondary);
-                                   width: 100%;
-                                   color: var(--main);
-                                   height: 100%;
-                                   svg {
-                                        width: 12px;
-                                        margin-top: -3px;
-                                   }
-                              }
-                         }
+          .card-body {
+               padding: 1rem;
+               padding-top: 0.5rem;
+          }
+          img {
+               object-fit: cover;
+               object-position: center;
+               width: 100% !important;
+          }
+          .properties {
+               margin-top: 2rem;
+               & > div {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+               }
+               color: var(--darkgray);
+               font-size: 14px;
+               p {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-family: var(--axiforma-regular) !important;
+                    span {
+                         font-family: var(--axiforma-regular) !important;
                     }
                }
-               h4.heading {
-                    color: var(--main);
-                    font-family: axiformaRegular;
-                    font-size: 1.1rem !important;
-                    margin-top: 12px !important;
-                    font-weight: 600;
-                    text-align: left;
-                    a {
+               img {
+                    width: 20px !important;
+                    height: 20px;
+               }
+          }
+          .card-footer {
+               display: flex;
+               margin-top: 1rem;
+               gap: 1rem;
+               a {
+                    flex: 1;
+                    button {
+                         font-family: var(--axiforma-regular);
+                         font-weight: 400;
+                         font-size: 12px;
+                         padding: 12px 5px;
+                         background: var(--secondary);
+                         width: 100%;
                          color: var(--main);
+                         height: 100%;
+                         svg {
+                              width: 12px;
+                              margin-top: -3px;
+                         }
                     }
                }
           }
      }
+     h4.heading {
+          color: var(--main);
+          font-family: axiformaRegular;
+          font-size: 1.1rem !important;
+          margin-top: 12px !important;
+          font-weight: 600;
+          text-align: left;
+          a {
+               color: var(--main);
+          }
+     }
 }
-
 // home-banner
 .home-banner {
      background-image: url("../assets/images/banner.png");
@@ -433,20 +433,20 @@ section.car-type {
           margin-bottom: 1rem !important;
      }
      background: var(--light-gray);
-     .slider-card-wrapper {
-          .slider-card {
-               figure {
-                    background: var(--pure) !important;
-               }
-          }
-          p {
-               font-weight: 700;
-               font-family: var(--oswald);
-               letter-spacing: 0.8px;
+     
+}
+.slider-card-wrapper {
+     .slider-card {
+          figure {
+               background: var(--pure) !important;
           }
      }
+     p {
+          font-weight: 700;
+          font-family: var(--oswald);
+          letter-spacing: 0.8px;
+     }
 }
-
 // latest-news-wrapper
 .latest-news-wrapper {
      .card-body {
