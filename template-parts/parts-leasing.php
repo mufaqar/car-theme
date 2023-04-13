@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="full-slider leasing-offer" id="wrapper">
-            <?php get_template_part( 'partials/vehicle', 'slider' ); ?>
+            <?php get_template_part( 'partials/vehicle', 'leasing' ); ?>
         </div>
       </div>
   </section>
