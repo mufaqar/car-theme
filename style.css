@@ -366,3 +366,15 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img{
 }
 
 .slider-card img { min-height: 278px;}
+.requestButton {    background: var(--secondary);
+color: var(--main);
+font-size: 18px;
+padding: 10px;
+text-align: center;
+border-radius: 6px;
+font-weight: 700;
+width: 100%;
+margin-top: 10px;
+border: none;;
+
+}

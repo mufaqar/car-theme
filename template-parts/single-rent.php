@@ -100,9 +100,9 @@
                         <p>
                         <p>Monthly insurance included in price</p>
                     </div>
-                    <a href="#">
-                        <div class="mt-2 requestButton">Request Long Term Rental</div>
-                    </a>
+                    <input type="submit" class="mt-2 requestButton" value="Request Long Term Rental">
+                        <div ></div>
+                    </input>
                     
                 </div>
             </div>
