@@ -3,7 +3,7 @@ Theme Name: 001Car Theme
 Theme URI: http://mufaqar.com
 Author: M Mufaqar Islam
 Author URI: http://mufaqar.com
-Version: 1.3.0
+Version: 1.3.1
 Description: WordPress theme 
 Tags: #
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -365,4 +365,4 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img{
   padding: 0 !important;
 }
 
-.slider-card img { min-height: 380px;}
+.slider-card img { min-height: 278px;}
