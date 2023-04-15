@@ -14,8 +14,8 @@
         $vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
         $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
         $down_payment = $vehicle_price*30/100;
-        $payment_24 = ($vehicle_price-$down_payment)/24;
-        $payment_36= ($vehicle_price-$down_payment)/36;
+        $payment_24 = number_format(($vehicle_price-$down_payment)/24,2, '.', '');
+
         
     ?>
     <section class="slug">
