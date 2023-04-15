@@ -14,6 +14,7 @@
         $vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
         $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
         
+        
     ?>
 <!-- features  -->
 <section class="features">
@@ -197,6 +198,8 @@
     </div>
 </section>
 
+<?php   if (! has_term( 'rental', 'vehicle_type' ) ) { ?>
+
 <!-- Leasing prices -->
 <section class="leasing-price container mx-auto">
     <div class="left">
@@ -307,3 +310,5 @@
         </div>
     </div>
 </section>
+
+<?php } ?>
