@@ -103,9 +103,7 @@
                     <a href="#">
                         <div class="mt-2 requestButton">Request Long Term Rental</div>
                     </a>
-                    <div class="brand">
-                        <img src="<?php bloginfo('template_directory'); ?>/assets/images/brand.png" alt="brand" />
-                    </div>
+                    
                 </div>
             </div>
         </div>
