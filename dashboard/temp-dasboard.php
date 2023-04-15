@@ -52,7 +52,7 @@
                                                         <input type="text" value="" id="interior_material"
                                                             name="interior_material" placeholder="Interior material" />
                                                     </div>
-                                                    <input type="button" value="" id="" name="next"
+                                                    <input type="button" id="" name="next"
                                                         class="next action-button" value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>

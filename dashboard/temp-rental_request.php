@@ -38,7 +38,7 @@
                                                             placeholder="Mobile No" />
 
                                                     </div>
-                                                    <input type="button" value="" id="" name="next"
+                                                    <input type="button" id="" name="next"
                                                         class="next action-button" value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>
@@ -72,8 +72,7 @@
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
-                                                    <input type="submit" name="make_payment" class="next action-button"
-                                                        value="Confirm" />
+                                                    <input type="submit" name="make_payment" class="next action-button"    value="Confirm" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
