@@ -18,113 +18,116 @@
 
         
     ?>
-    <section class="slug">
-        <div class="container mx-auto main-section-wrapper">
-            <div>
-                <div class="main">
-                    <?php 
+<section class="slug">
+    <div class="container mx-auto main-section-wrapper">
+        <div>
+            <div class="main">
+                <?php 
                 $images = get_field('vehicle_gallery');
                 if( $images ): ?>
-                    <div class="slider slider-for">
-                        <?php foreach( $images as $image ): 
+                <div class="slider slider-for">
+                    <?php foreach( $images as $image ): 
                       //  print "<pre>";
                       //  print_r($image); 
                       ?>
-                        <div> <img src="<?php echo esc_url($image['sizes']['large']); ?>"
-                                alt="<?php echo esc_attr($image['alt']); ?>" /></div>
-                        <?php endforeach; ?>
-                    </div>
-                    <?php endif; ?>
-                    <?php 
+                    <div> <img src="<?php echo esc_url($image['sizes']['large']); ?>"
+                            alt="<?php echo esc_attr($image['alt']); ?>" /></div>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
+                <?php 
                 $images = get_field('vehicle_gallery');
                 if( $images ): ?>
-                    <div class="slider slider-nav">
-                        <?php foreach( $images as $image ): 
+                <div class="slider slider-nav">
+                    <?php foreach( $images as $image ): 
                       //  print "<pre>";
                       //  print_r($image); ?>
-                        <div> <img src="<?php echo esc_url($image['sizes']['vehicle-thumbnail']); ?>"
-                                alt="<?php echo esc_attr($image['alt']); ?>" /></div>
-                        <?php endforeach; ?>
-                    </div>
-                    <?php endif; ?>
+                    <div> <img src="<?php echo esc_url($image['sizes']['vehicle-thumbnail']); ?>"
+                            alt="<?php echo esc_attr($image['alt']); ?>" /></div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
-            <div class="detail-content">
-                <h3><?php the_title()?></h3>
-                <h5>€ <?php echo $vehicle_price; ?></h5>
-                <input type="hidden" id="v_price"   value="<?php echo $vehicle_price?>" />            
-                <input type="hidden" id="v_downpay"  value="<?php echo $down_payment?>" />
-                <div class="d-flex _border align-items-center gap-2 mt-3">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="pin" width="21"
-                        height="21">
-                    <span class="pin"><?php echo $vehicle_location; ?>..</span>
-                </div>
-                <h6 class="price">€ <span id="pro_price"><?php echo $payment_24; ?></span> per month</h6>
-                <p class="vat"> per month excl. VAT</p>
-                <div class="info">
-                    <div class="d-md-flex justify-content-between">
-                        <button>More rent price details</button>
-                        <p>
-                            <span>Only available as a long term rent</span>
-                            <img src="<?php bloginfo('template_directory'); ?>/assets/icons/info.svg" alt="">
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-between mt-3 mb-2">
-                        <p>Down payment:</p>
-                        <p>€ <?php echo $down_payment?></p>
-                    </div>
-                    <div class="d-flex justify-content-between mt-3 mb-3">
-                        <p>Contract term:</p>
-                        <p>mileage per year</p>
-                    </div>
-                    <form class="d-flex gap-2">
-                        <div>
-                            <select class="select" id="type">
-                                <option value="24">24 Month</option>
-                                <option value="36">36 Month</option>
-                            </select>
-                        </div>
-                        <div>
-                            <select class="select"  >
-                                <option>15,000 km</option>
-                                <option>30,000 km</option>
-                                <option>45,000 km</option>
-                                <option>60,000 km</option>
-                            </select>
-                        </div>
-                    </form>
-                    <div class="d-flex mt-3 justify-content-between mt-1 ">
-                        <p class="gard"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/gard.svg"
-                                alt="gard" />
-                            <span>Insurance</span>
-                        <p>
-                        <p>Monthly insurance included in price</p>
-                    </div>
-                    <input type="submit" class="mt-2 requestButton" value="Request Long Term Rental">
-                        <div ></div>
-                    </input>
-                    
-                </div>
+                <?php endif; ?>
             </div>
         </div>
-    </section>
-    <?php get_template_part( 'partials/single', 'common' ); ?>
+        <div class="detail-content">
+            <h3><?php the_title()?></h3>
+            <h5>€ <?php echo $vehicle_price; ?></h5>
+            <input type="hidden" id="v_price" value="<?php echo $vehicle_price?>" />
+            <input type="hidden" id="v_downpay" value="<?php echo $down_payment?>" />
+            <div class="d-flex _border align-items-center gap-2 mt-3">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="pin" width="21"
+                    height="21">
+                <span class="pin"><?php echo $vehicle_location; ?>..</span>
+            </div>
+            <h6 class="price">€ <span id="pro_price"><?php echo $payment_24; ?></span> per month</h6>
+            <p class="vat"> per month excl. VAT</p>
+            <div class="info">
+                <div class="d-md-flex justify-content-between">
+                    <button>More rent price details</button>
+                    <p>
+                        <span>Only available as a long term rent</span>
+                        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/info.svg" alt="">
+                    </p>
+                </div>
+                <div class="d-flex justify-content-between mt-3 mb-2">
+                    <p>Down payment:</p>
+                    <p>€ <?php echo $down_payment?></p>
+                </div>
+                <div class="d-flex justify-content-between mt-3 mb-3">
+                    <p>Contract term:</p>
+                    <p>mileage per year</p>
+                </div>
+                <form class="d-flex gap-2" >
+                    <div>
+                        <select class="select" id="type">
+                            <option value="24">24 Month</option>
+                            <option value="36">36 Month</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select class="select">
+                            <option>15,000 km</option>
+                            <option>30,000 km</option>
+                            <option>45,000 km</option>
+                            <option>60,000 km</option>
+                        </select>
+                    </div>
+                    </form>
+                <div class="d-flex mt-3 justify-content-between mt-1 ">
+                    <p class="gard"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/gard.svg"
+                            alt="gard" />
+                        <span>Insurance</span>
+                    <p>
+                    <p>Monthly insurance included in price</p>
+                </div>
+                <!-- <input type="submit" class="mt-2 requestButton" value="Request Long Term Rental" /> -->
+                <a href="<?php echo home_url('rental-request'); ?>">
+                        <div class="mt-2 requestButton">Request Long Term Rental</div>
+                    </a>
+           
+             
+               
 
-    <script>
-        const typeSelect = document.getElementById("type");
-        typeSelect.onchange = function() {
-        const selected_type = typeSelect.value;
-        //const pro_Price = null;
-       // const pro_Price =  document.getElementById("pro_Price");
-       const v_price = document.getElementById("v_price").value;
-        const v_downpay = document.getElementById("v_downpay").value;
-        let rent_price = (v_price - v_downpay)/ selected_type;
+            </div>
+        </div>
+    </div>
+</section>
+<?php get_template_part( 'partials/single', 'common' ); ?>
 
-        const pro_Price = document.getElementById("pro_price");
-        pro_Price.innerHTML = rent_price.toFixed(2);
+<script>
+const typeSelect = document.getElementById("type");
+typeSelect.onchange = function() {
+    const selected_type = typeSelect.value;
+    //const pro_Price = null;
+    // const pro_Price =  document.getElementById("pro_Price");
+    const v_price = document.getElementById("v_price").value;
+    const v_downpay = document.getElementById("v_downpay").value;
+    let rent_price = (v_price - v_downpay) / selected_type;
 
-    
- 
-        }
-        
-    </script>
+    const pro_Price = document.getElementById("pro_price");
+    pro_Price.innerHTML = rent_price.toFixed(2);
+
+
+
+}
+</script>
