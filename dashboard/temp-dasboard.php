@@ -23,41 +23,50 @@
                                     <div class="row">
                                         <div class="col-md-12 mx-0">
 
-                                            <form class="add_vehicle" id="add_vehicle" action="#" enctype="multipart/form-data">
+                                            <form class="add_vehicle" id="add_vehicle" action="#"
+                                                enctype="multipart/form-data">
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
                                                     <li class="active" id="account"><strong>Step 1</strong></li>
                                                     <li id="personal"><strong>Step 2</strong></li>
                                                     <li id="payment"><strong>Step 3</strong></li>
-                                                 
+
                                                 </ul>
                                                 <!-- fieldsets -->
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" value="" id="name" name="name" placeholder="Vehicle Name"  required/>
-                                                        <input type="text" value="" id="location" name="location" placeholder="Location" />
-                                                        <input type="text" value="" id="price" name="price" placeholder="Price" />
-                                                        <input type="text" value="" id="registered_in" name="registered_in"
-                                                            placeholder="Registered In" />
-                                                        <input type="text" value="" id="engine_capacity" name="engine_capacity"
-                                                            placeholder="Engine Capacity" />
-                                                        <input type="text" value="" id="assembly" name="assembly" placeholder="Assembly" />
-                                                        <input type="text" value="" id="interior_color" name="interior_color"
-                                                            placeholder="Interior color" />
-                                                        <input type="text" value="" id="interior_material" name="interior_material"
-                                                            placeholder="Interior material" />
+                                                        <input type="text" value="" id="name" name="name"
+                                                            placeholder="Vehicle Name" required />
+                                                        <input type="text" value="" id="location" name="location"
+                                                            placeholder="Location" />
+                                                        <input type="text" value="" id="price" name="price"
+                                                            placeholder="Price" />
+                                                        <input type="text" value="" id="registered_in"
+                                                            name="registered_in" placeholder="Registered In" />
+                                                        <input type="text" value="" id="engine_capacity"
+                                                            name="engine_capacity" placeholder="Engine Capacity" />
+                                                        <input type="text" value="" id="assembly" name="assembly"
+                                                            placeholder="Assembly" />
+                                                        <input type="text" value="" id="interior_color"
+                                                            name="interior_color" placeholder="Interior color" />
+                                                        <input type="text" value="" id="interior_material"
+                                                            name="interior_material" placeholder="Interior material" />
                                                     </div>
-                                                    <input type="button" value="" id="" name="next" class="next action-button"
-                                                        value="Next Step" />
+                                                    <input type="button" value="" id="" name="next"
+                                                        class="next action-button" value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" value="" id="ref_no" name="ref_no" placeholder="Ref #" />
-                                                        <input type="text" value="" id="seats" name="seats" placeholder="Seats" />
-                                                        <input type="text" value="" id="model" name="model" placeholder="Model" />
-                                                        <input type="text" value="" id="emission_class" name="emission_class"
-                                                            placeholder="Emission class" />
-                                                        <input type="text" value="" id="mileage" name="mileage" placeholder="Mileage" />
+                                                        <input type="text" value="" id="ref_no" name="ref_no"
+                                                            placeholder="Ref #" />
+                                                        <input type="text" value="" id="seats" name="seats"
+                                                            placeholder="Seats" />
+                                                        <input type="text" value="" id="model" name="model"
+                                                            placeholder="Model" />
+                                                        <input type="text" value="" id="emission_class"
+                                                            name="emission_class" placeholder="Emission class" />
+                                                        <input type="text" value="" id="mileage" name="mileage"
+                                                            placeholder="Mileage" />
                                                         <div class="row">
                                                             <div class="col-3">
                                                                 <label class="pay">Brand *</label>
@@ -325,7 +334,7 @@ jQuery(document).ready(function($) {
         $(".hideme").css("display", "none");
     });
 
-    $("#add_vehicle").submit(function(e) {       
+    $("#add_vehicle").submit(function(e) {
         e.preventDefault();
         var name = jQuery('#name').val();
         var location = jQuery('#location').val();
