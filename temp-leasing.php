@@ -108,14 +108,14 @@ if (!empty($transmission)) {
             endwhile;
             wp_reset_query();
         else: ?>
-            <div class="result-notfound">
-           
+        <div class="result-notfound">
+
             <h2>
                 <?php _e('Unfortunately!, there were no results for this filter combination. Try it without the marked filter.
                 ', 'lbt_translate'); ?>
             </h2>
-            </div>
-            
+        </div>
+
 
         <?php endif; ?>
     </div>

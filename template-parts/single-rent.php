@@ -75,7 +75,7 @@
                     <form class="d-flex gap-2">
                         <div>
                             <select class="select">
-                                <option>36 Monate</option>
+                                <option>24 Monate</option>
                                 <option>36 Monate</option>
                             </select>
                         </div>
@@ -94,7 +94,7 @@
                         <p>from €6.85 monthly assure</p>
                     </div>
                     <a href="#">
-                        <div class="mt-2 requestButton">Request leasing</div>
+                        <div class="mt-2 requestButton">Request Long Term Rental</div>
                     </a>
                     <div class="brand">
                         <img src="<?php bloginfo('template_directory'); ?>/assets/images/brand.png" alt="brand" />
