@@ -13,6 +13,8 @@
         $vehicle_emission_class =  get_post_meta( get_the_ID(), 'vehicle_emission_class', true );
         $vehicle_model =  get_post_meta( get_the_ID(), 'vehicle_model', true );
         $vehicle_mileage =  get_post_meta( get_the_ID(), 'vehicle_mileage', true );
+        $down_payment = $vehicle_price*30/100;
+        $payment_24 = number_format(($vehicle_price-$down_payment)/24,2, '.', '');
         
     ?>
     <section class="slug">
@@ -49,13 +51,15 @@
             <div class="detail-content">
                 <h3><?php the_title()?></h3>
                 <h5>€ <?php echo $vehicle_price; ?></h5>
+                <input type="hidden" id="v_price" value="<?php echo $vehicle_price?>" />
+                <input type="hidden" id="v_downpay" value="<?php echo $down_payment?>" />
                 <div class="d-flex _border align-items-center gap-2 mt-3">
                     <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="pin" width="21"
                         height="21">
                     <span class="pin"><?php echo $vehicle_location; ?>..</span>
                 </div>
-                <h6 class="price">€ <?php echo $vehicle_price; ?> per month</h6>
-                <p class="vat">€ <?php echo $vehicle_price; ?> per month excl. VAT</p>
+                <h6 class="price">€ <span id="pro_price"><?php echo $payment_24; ?></span> per month</h6>
+                <p class="vat"> per month excl. VAT</p>
                 <div class="info">
                     <div class="d-md-flex justify-content-between">
                         <button>More leasing details</button>
@@ -66,7 +70,7 @@
                     </div>
                     <div class="d-flex justify-content-between mt-3 mb-2">
                         <p>Down payment:</p>
-                        <p>€ 12</p>
+                        <p>€ <?php echo $down_payment?></p>
                     </div>
                     <div class="d-flex justify-content-between mt-3 mb-3">
                         <p>Contract term:</p>
@@ -74,15 +78,21 @@
                     </div>
                     <form class="d-flex gap-2">
                         <div>
-                            <select class="select">
-                                <option>24 Monate</option>
-                                <option>36 Monate</option>
+                            <select class="select" id="type">
+                                <option value="24">24 Month</option>
+                                <option value="36">36 Month</option>
+                                <option value="48">48 Month</option>
                             </select>
                         </div>
                         <div>
                             <select class="select">
-                                <option>15.000 km</option>
-                                <option>15.000 km</option>
+                                <option>15,000 km</option>
+                                <option>30,000 km</option>
+                                <option>45,000 km</option>
+                                <option>60,000 km</option>
+                                <option>80,000 km</option>
+                                <option>100,000 km</option>
+                                <option>120,000 km</option>
                             </select>
                         </div>
                     </form>
@@ -91,9 +101,9 @@
                                 alt="gard" />
                             <span>Insurance</span>
                         <p>
-                        <p>from €6.85 monthly assure</p>
+                        <p>Monthly insurance included in price</p>
                     </div>
-                    <a href="#">
+                    <a href="<?php echo home_url('lease-request'); ?>">
                         <div class="mt-2 requestButton">Request Leasing</div>
                     </a>
                     <div class="brand">
@@ -104,3 +114,21 @@
         </div>
     </section>
     <?php get_template_part( 'partials/single', 'common' ); ?>
+
+    <script>
+const typeSelect = document.getElementById("type");
+typeSelect.onchange = function() {
+    const selected_type = typeSelect.value;
+    //const pro_Price = null;
+    // const pro_Price =  document.getElementById("pro_Price");
+    const v_price = document.getElementById("v_price").value;
+    const v_downpay = document.getElementById("v_downpay").value;
+    let rent_price = (v_price - v_downpay) / selected_type;
+
+    const pro_Price = document.getElementById("pro_price");
+    pro_Price.innerHTML = rent_price.toFixed(2);
+
+
+
+}
+    </script>
