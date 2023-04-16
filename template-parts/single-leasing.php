@@ -103,7 +103,7 @@
                         <p>
                         <p>Monthly insurance included in price</p>
                     </div>
-                    <a href="<?php echo home_url('lease-request'); ?>">
+                    <a href="<?php echo home_url('leasing-request'); ?>">
                         <div class="mt-2 requestButton">Request Leasing</div>
                     </a>
                     <div class="brand">
