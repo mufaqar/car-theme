@@ -25,7 +25,7 @@ if(isset($_POST['register'])){
    
    <section class="contact-us">
       <h2 class="sub-heading"><?php the_title()?> </h2>
-      <p>Sign up for lsting</p>
+      <p>Sign up for Vehicle Listing</p>
    </section>
 
    <section class="contact-us-form">
