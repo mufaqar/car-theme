@@ -62,37 +62,33 @@ if (!empty($transmission)) {
 }
 
 
-
+   
 
 
 ?>
 
 <section class="search_header container mx-auto">
     <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg"
-            alt="logo" /></a>
-</section>
+            alt="logo" /></a></section>
 <section class="container row mx-auto search">
     <?php get_sidebar() ?>
     <div class="col-md-8 col-lg-9 listing">
         <div class="row _p">
             <div class="col filter-responce">
-                <h2>0 offers for Vehicles </h2>
+                <h2>offers for Vehicles </h2>
                 <div class="filer_area">
                     <div class="filters">
-                        <p class="tag">
-                            <?php echo $brand ?>
-                        </p>
-                        <p class="tag">
-                            <?php echo $color ?>
-                        </p>
-                        <p class="tag">
-                            <?php echo $transmission ?>
-                        </p>
+                        <?php  if (!empty($brand)) { echo "<p class='tag'>". $brand ."</p>";} ;?>
+                        <?php  if (!empty($body_type)) { echo "<p class='tag'>". $body_type ."</p>";} ;?>
+                        <?php  if (!empty($color)) { echo "<p class='tag'>". $color ."</p>";} ;?>
+                        <?php  if (!empty($transmission)) { echo "<p class='tag'>". $transmission ."</p>";} ;?>
+                        <?php  if (!empty($engine_type)) { echo "<p class='tag'>". $engine_type ."</p>";} ;?>
                     </div>
                 </div>
             </div>
         </div>
-        <?php query_posts(
+        <?php 
+         query_posts(
             array(
                 'post_type' => 'vehicle',
                 'posts_per_page' => -1,
@@ -108,14 +104,14 @@ if (!empty($transmission)) {
             endwhile;
             wp_reset_query();
         else: ?>
-            <div class="result-notfound">
-           
+        <div class="result-notfound">
+
             <h2>
                 <?php _e('Unfortunately!, there were no results for this filter combination. Try it without the marked filter.
                 ', 'lbt_translate'); ?>
             </h2>
-            </div>
-            
+        </div>
+
 
         <?php endif; ?>
     </div>
