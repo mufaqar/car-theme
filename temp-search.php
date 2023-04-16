@@ -75,7 +75,7 @@ if (!empty($transmission)) {
     <div class="col-md-8 col-lg-9 listing">
         <div class="row _p">
             <div class="col filter-responce">
-                <h2>offers for Vehicles </h2>
+                <h2>Offers for Vehicles </h2>
                 <div class="filer_area">
                     <div class="filters">
                         <?php  if (!empty($brand)) { echo "<p class='tag'>". $brand ."</p>";} ;?>
