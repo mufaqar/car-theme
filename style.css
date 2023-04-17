@@ -365,7 +365,7 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img {
   padding: 0 !important;
 }
 
-.slider-card img {
+.vehicle_listing .slider-card img {
   min-height: 278px;
 }
 .requestButton {
