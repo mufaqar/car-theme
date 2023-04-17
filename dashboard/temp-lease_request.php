@@ -1,9 +1,13 @@
-<?php  /*  Template Name:  Lease-Request   */
-   get_header(); ?>
+<?php  /*  Template Name:  Leasing-Request   */
+   get_header(); 
+   $v_id = $_REQUEST['v_id'];
+   $v_miles = $_REQUEST['miles'];
+   ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 <section class="contact-us">
     <h2 class="sub-heading"><?php the_title()?> </h2>
     <p>Sign up for Vehicle Listing</p>
+   
 </section>
 <section class="contact-us-form">
     <div class="form" style="padding:0px">
@@ -16,7 +20,7 @@
                                 <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
                                     <h2><strong>Lease your Vehicle Today</strong></h2>
                                     <div class="row">
-                                        <div class="col-md-12 mx-0">
+                                        <div class="col-md-12 mx-0">                                           
 
                                             <form class="add_vehicle" id="add_vehicle" action="#"
                                                 enctype="multipart/form-data">

@@ -381,6 +381,28 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img {
   border: none;
 }
 
+.search .listing .single-card .card-body h4 a {
+  color: var(--main);
+}
+
+section.slug .detail-content form > div {
+  width: 100%;
+}
+
+section.slug .detail-content .vform > div {
+  width: 50%;
+}
+
+section.slug .detail-content .vform .select {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--border-clr);
+  outline: none;
+  border-radius: 6px;
+  color: var(--darkgray) !important;
+  font-size: 14px !important;
+}
+
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
