@@ -22,7 +22,7 @@
                                     <div class="row">
                                         <div class="col-md-12 mx-0">                                           
 
-                                            <form class="add_vehicle" id="add_vehicle" action="#"
+                                            <form class="vehicle_form" id="vehicle_form" action="#"
                                                 enctype="multipart/form-data">
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
@@ -211,7 +211,7 @@ jQuery(document).ready(function($) {
         $(".hideme").css("display", "none");
     });
 
-    $("#add_vehicle").submit(function(e) {
+    $("#vehicle_form").submit(function(e) {
         e.preventDefault();
         var name = jQuery('#name').val();
         var location = jQuery('#location').val();
@@ -236,7 +236,7 @@ jQuery(document).ready(function($) {
         var file_data = jQuery('#file').prop('files')[0];
         file_data = jQuery('#file').prop('files')[0];
         form_data = new FormData();
-        form_data.append('action', 'add_vehicle');
+        form_data.append('action', 'req_lease');
         form_data.append('name', name);
         form_data.append('location', location);
         form_data.append('price', price);
@@ -257,7 +257,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert();
+        alert("REquest");
 
 
         $.ajax({
@@ -273,12 +273,7 @@ jQuery(document).ready(function($) {
                 $("#spinner-div").hide();
             },
             success: function(data) {
-                if (data.code == 0) {
-                    alert(data.message);
-                } else {
-                    $(".sucess_message").css("display", "flex");
-
-                }
+                alert(data.message);
             }
         });
     });
