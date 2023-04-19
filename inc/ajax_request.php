@@ -186,7 +186,7 @@ function req_lease()
 		 $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
 		wp_update_attachment_metadata( $attach_id, $attach_data );
 		set_post_thumbnail( $inserted_post_id, $attach_id );
-		echo wp_send_json(array('code' => 200, 'message' => __('Vehicle Created Sucessfully')));
+		echo wp_send_json(array('code' => 200, 'message' => __('Vehicle Order Created Sucessfully')));
 		die();
 	} else {
 		echo wp_send_json(array('code' => 0, 'message' => __('Error Occured please fill up form carefully.')));
