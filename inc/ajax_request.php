@@ -189,7 +189,7 @@ function req_lease()
 		echo wp_send_json(array('code' => 200, 'message' => __('Vehicle Order Created Sucessfully')));
 		die();
 	} else {
-		echo wp_send_json(array('code' => 0, 'message' => __('Error Occured please fill up form carefully.')));
+		echo wp_send_json(array('code' => 0, 'message' => __('Error Occured please fill up Booking form carefully.')));
 		die();
 	}
 
