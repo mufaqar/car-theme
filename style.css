@@ -411,6 +411,6 @@ section.slug .detail-content .vform .select {
     margin: 5rem 0;
   }
   main {
-    background-image: url('../assets/images/main-mobile.jpg');
+    background-image: url('./assets/images/main-mobile.jpg');
   }
 }
