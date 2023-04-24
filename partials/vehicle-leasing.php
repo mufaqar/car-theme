@@ -20,9 +20,6 @@
 								} else { ?>
 							<img src="<?php bloginfo('template_directory'); ?>/assets/images/leasing-car.png"  alt="car"   style="width: 100%"  />
 							<?php } ?></a>
-
-
-
               <div class="card-body">
                 <h4 class="heading">  <a href="<?php the_permalink()?>"><?php the_title()?>... </a></h4>
                 <div class="properties">
