@@ -7,10 +7,9 @@
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">Add Vehicle</span>
                     </a>
-                </li>
+                </li>              
                
-               
-                <li class="">
+                <li class="" id="orders">
                 <a href="<?php echo home_url('dashboard/orders'); ?>">
                         <i class='bx bx-log-out icon' ></i>
                         <span class="text nav-text">My Orders</span>
