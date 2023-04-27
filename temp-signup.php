@@ -15,7 +15,7 @@ if(isset($_POST['register'])){
    );
    $user_id = wp_insert_user( $userdata );
    if( ! is_wp_error( $user_id ) ) {
-      echo 'Registration complete. Please check your email to activate your account.';
+      echo 'Registration completed. Please check your email to activate your account.';
    }
 }
 ?>
