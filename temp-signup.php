@@ -10,7 +10,7 @@ if(isset($_POST['register'])){
    $userdata = array(
       'user_login' => $username,
       'user_email' => $email,
-      'user_pass' => $password,
+      'user_pass' => $password, // Password
       'role' => 'custom_role' // Your custom role slug
    );
    $user_id = wp_insert_user( $userdata );
