@@ -416,7 +416,7 @@ section.slug .detail-content .vform .select {
   main ._content {
     background-image: url('./assets/images/main-mobile.jpg');
     position: relative;
-    padding: 8rem 1.5rem;
+    padding: 3.2rem;
     background-repeat: no-repeat;
     background-size: cover;
   }
