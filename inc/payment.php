@@ -1,0 +1,5 @@
+<?php
+
+$payment = new Payment ();
+
+?>
