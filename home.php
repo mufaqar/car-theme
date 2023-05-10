@@ -75,14 +75,8 @@ get_header(); ?>
 <section class="home-banner">
     <div class="container  mx-auto row wrapper items-center">
         <div class="col-lg-6">
-            <h2 class="mb-5">Long Term Rental Cars available in a few minutes</h2>
-            <div>
-                <h6>
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon" />
-                    <span>Non-binding preapproval</span>
-                </h6>
-                <p>Get your credit limit within 15 minutes. Then you're ready to pick your car.</p>
-            </div>
+            <h2 class="mb-5">Long Term Rental Cars available in Short time</h2>
+           
             <div>
                 <h6>
                     <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon" />
@@ -95,7 +89,7 @@ get_header(); ?>
                     <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon" />
                     <span>Whether you're an individual, freelancer or entrepreneur</span>
                 </h6>
-                <p>We've thought of everything - whether you're buying for yourself or for a company.</p>
+                <p>We've thought of everything - whether you're renting for yourself or for a company.</p>
             </div>
             <div>
                 <h6>
