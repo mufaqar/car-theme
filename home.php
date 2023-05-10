@@ -93,7 +93,7 @@ get_header(); ?>
             </div>
             <div>
                 <h6>
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon" />
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="Online" />
                     <span>Online and transparent</span>
                 </h6>
                 <p>From the comfort of your home, without any hidden fine print or dirty tricks.</p>
