@@ -410,6 +410,11 @@ section.slug .detail-content .vform .select {
   padding-left: 1rem;
 }
 
+.call-to-action {
+  margin-top: 0;
+  border-top: 1px solid var(--border-clr);
+}
+
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
