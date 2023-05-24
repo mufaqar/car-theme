@@ -189,8 +189,8 @@
 <section class="car-features">
     <div class="container mx-auto">
         <h2 class="sub-heading">Car features</h2>
-        <div class="car-feature-wrapper">
-            <ul class="features_list">
+        <div class="">
+            <ul class="car-feature-wrapper ">
                 <?php  get_features_type();          ?>
             </ul>
 

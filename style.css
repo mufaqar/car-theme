@@ -403,6 +403,9 @@ section.slug .detail-content .vform .select {
   font-size: 14px !important;
 }
 
+.features_list {
+}
+
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
