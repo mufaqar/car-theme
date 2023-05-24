@@ -412,6 +412,9 @@ section.slug .detail-content .vform .select {
 }
 .car-feature-wrapper li span {
   padding-left: 1rem;
+  font-family: var(--oswald);
+  font-weight: 600;
+  color: var(--main);
 }
 
 .call-to-action {
