@@ -402,6 +402,10 @@ section.slug .detail-content .vform .select {
   color: var(--darkgray) !important;
   font-size: 14px !important;
 }
+.car-features {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
 
 .car-feature-wrapper {
   padding: 0;
