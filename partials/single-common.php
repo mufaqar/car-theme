@@ -201,7 +201,7 @@
 <?php   if (! has_term( 'rental', 'vehicle_type' ) ) { ?>
 
 <!-- Leasing prices -->
-<section class="leasing-price container mx-auto">
+<!-- <section class="leasing-price container mx-auto">
     <div class="left">
         <h2 class="sub-heading">Leasing prices</h2>
         <p>Exclusive leasing offer from Autohaus Christian Ertl AG</p>
@@ -309,6 +309,6 @@
             </ul>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php } ?>
