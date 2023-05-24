@@ -193,7 +193,6 @@
             <ul class="car-feature-wrapper ">
                 <?php  get_features_type();          ?>
             </ul>
-
         </div>
     </div>
 </section>

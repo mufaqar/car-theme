@@ -403,7 +403,11 @@ section.slug .detail-content .vform .select {
   font-size: 14px !important;
 }
 
-.features_list {
+.car-feature-wrapper {
+  padding: 0;
+}
+.car-feature-wrapper li span {
+  padding-left: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
