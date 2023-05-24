@@ -421,3 +421,9 @@ section.slug .detail-content .vform .select {
     background-size: cover;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .contact-us {
+    padding: 3rem;
+  }
+}
