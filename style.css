@@ -348,7 +348,7 @@ header nav {
   padding-right: 10px !important;
 }
 section .__slider .full-slider .slider-card-wrapper .slider-card img {
-  height: 240px !important;
+  height: 240px;
   object-fit: cover;
 }
 .listing_banner h2 {
@@ -367,6 +367,11 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img {
 
 .vehicle_listing .slider-card img {
   min-height: 278px;
+}
+
+.icon_cal {
+  height: 20px !important;
+  width: 20px !important;
 }
 .requestButton {
   background: var(--secondary);
