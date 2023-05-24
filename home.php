@@ -14,7 +14,7 @@ get_header(); ?>
         <div class="container mx-auto">
             <div class="row">
                 <div class="col-md-9">
-                    <h6>Pre-qualify with no impact to your credit</h6>
+                    <h6>Pre-qualify with no impact </h6>
                     <!-- slider -->
                     <div class="d-flex main-slider-wrapper item-center">
                         <button class="prev">
@@ -76,7 +76,7 @@ get_header(); ?>
     <div class="container  mx-auto row wrapper items-center">
         <div class="col-lg-6">
             <h2 class="mb-5">Long Term Rental Cars available in Short time</h2>
-           
+
             <div>
                 <h6>
                     <img src="<?php bloginfo('template_directory'); ?>/assets/icons/banner-list-ico.svg" alt="icon" />
