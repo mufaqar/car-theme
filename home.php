@@ -39,10 +39,7 @@ get_header(); ?>
             </div>
             <form class="row" method="POST" action="<?php echo home_url('search-listing'); ?>">
                 <div class="col-md-9">
-                    <div class="input">
-                        <label class="d-block">Monthly Downpayment</label>
-                        <input type="text" name="monthly-down-payment" id="" placeholder="$400" />
-                    </div>
+
                     <div class="input">
                         <label class="d-block">Down Payment</label>
                         <input type="text" name="monthly-down-payment" id="" placeholder="$2000" />
