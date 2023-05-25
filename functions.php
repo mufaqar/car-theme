@@ -132,3 +132,12 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
+
+
+function redirect_non_admin_users() {
+    if (!current_user_can('administrator') && !is_admin()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+add_action('init', 'redirect_non_admin_users');
