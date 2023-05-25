@@ -73,15 +73,21 @@ if (function_exists('register_nav_menus')) {
 }
 
 function fallbackmenu1(){ ?>
-			<div id="menu">
-				<ul><li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus to work.</li></ul>
-			</div>
+<div id="menu">
+    <ul>
+        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus
+            to work.</li>
+    </ul>
+</div>
 <?php }
 
 function fallbackmenu2(){ ?>
-			<div id="menu">
-				<ul><li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus to work.</li></ul>
-			</div>
+<div id="menu">
+    <ul>
+        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus
+            to work.</li>
+    </ul>
+</div>
 <?php }
 
 function add_more_buttons($buttons) {
@@ -118,3 +124,11 @@ wp_enqueue_script( 'car_slick_slider', get_template_directory_uri() . '/assets/s
 
 }
 add_action( 'wp_enqueue_scripts', 'add_car_theme_scripts' );
+
+
+add_action('after_setup_theme', 'remove_admin_bar');
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
