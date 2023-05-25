@@ -427,6 +427,8 @@ section.slug .detail-content .vform .select {
   border-top: 1px solid var(--border-clr);
 }
 
+
+.glink img {width:32px !important;}
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
