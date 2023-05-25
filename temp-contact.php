@@ -72,7 +72,7 @@ get_header(); ?>
             </figure>
             <h3>Support</h3>
             <p>Check out helpful resources, FAQs and developer tools.</p>
-            <a href="contact-us" class="button">Support Center</a>
+            <a href="<?php echo home_url('/contact-us'); ?>" class="button">Support Center</a>
         </div>
     </div>
 </section>
