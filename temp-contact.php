@@ -26,17 +26,12 @@ get_header(); ?>
 
         <div class="d-flex gap-4 mt-3">
             <div class="mb-3 _input">
-                <label for="exampleFormControlInput1" class="form-label">Car Model</label>
+                <label for="exampleFormControlInput1" class="form-label">Mobile No</label>
                 <input type="text" class="" id="exampleFormControlInput1" placeholder="Car Model">
             </div>
             <div class="mb-3 _input">
-                <label for="exampleFormControlInput1" class="form-label">Address</label>
-                <select class="" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+                <label for="exampleFormControlInput1" class="form-label">Car Model</label>
+                <input type="text" class="" id="exampleFormControlInput1" placeholder="Car Model">
             </div>
         </div>
 
