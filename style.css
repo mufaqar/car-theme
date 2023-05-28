@@ -426,9 +426,10 @@ section.slug .detail-content .vform .select {
   margin-top: 0;
   border-top: 1px solid var(--border-clr);
 }
+.glink img {
+  width: 32px !important;
+}
 
-
-.glink img {width:32px !important;}
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
