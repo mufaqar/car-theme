@@ -1,4 +1,4 @@
-<?php /*  Template Name:  Search */
+<?php /*  Template Name:  Search Buy */
 
 get_header();
 
@@ -69,7 +69,8 @@ if (!empty($transmission)) {
 
 <section class="search_header container mx-auto">
     <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg"
-            alt="logo" /></a></section>
+            alt="logo" /></a>
+</section>
 <section class="container row mx-auto search">
     <?php get_sidebar() ?>
     <div class="col-md-8 col-lg-9 listing">
