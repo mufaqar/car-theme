@@ -2,8 +2,6 @@
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 140, 140, true );
 	add_image_size( 'vehicle-thumbnail', 370, 9999 );
-
-
 	// Clean up the <head>
 	function removeHeadLinks() {
     	remove_action('wp_head', 'rsd_link');
@@ -111,10 +109,7 @@ function add_first_and_last($items) {
 }
  
 add_filter('wp_nav_menu_objects', 'add_first_and_last');
-
 include get_template_directory() . '/inc/extra_functions.php';
-
-
 
 function add_car_theme_scripts() {
 wp_enqueue_script( 'car_bootstrap', get_template_directory_uri() . '/assets/scripts/bootstrap.min.js', array( 'jquery' ), 1.1, true);
@@ -132,7 +127,6 @@ if (!current_user_can('administrator') && !is_admin()) {
   show_admin_bar(false);
 }
 }
-
 
 function redirect_non_admin_users() {
     if (!current_user_can('administrator') && !is_admin()) {
