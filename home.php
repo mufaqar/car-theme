@@ -65,7 +65,11 @@ get_header(); ?>
 <!-- leasing  / -->
 <?php //get_template_part( 'template-parts/parts', 'leasing' ); ?>
 <!-- leasing  Under 100 / -->
+
+<?php get_template_part( 'template-parts/home', 'gallery' ); ?>
 <?php get_template_part( 'template-parts/parts', 'rent' ); ?>
+
+
 
 
 <!-- banner  / -->
@@ -102,6 +106,12 @@ get_header(); ?>
         </figure>
     </div>
 </section>
+
+
+
+
+
+
 
 <!-- Body Types -->
 

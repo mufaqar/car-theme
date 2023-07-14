@@ -429,6 +429,15 @@ section.slug .detail-content .vform .select {
   width: 32px !important;
 }
 
+
+/* Gallery Page */
+
+.gallery_sec { background:  var(--light-gray);}
+
+
+/* Gallery Section End */
+
+
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
     display: grid;
