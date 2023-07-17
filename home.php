@@ -64,14 +64,10 @@ get_header(); ?>
 </main>
 <!-- leasing  / -->
 <?php //get_template_part( 'template-parts/parts', 'leasing' ); ?>
-<!-- leasing  Under 100 / -->
+<!-- leasing  Under 100 0 / -->
 
 <?php get_template_part( 'template-parts/home', 'gallery' ); ?>
 <?php get_template_part( 'template-parts/parts', 'rent' ); ?>
-
-
-
-
 <!-- banner  / -->
 <section class="home-banner">
     <div class="container  mx-auto row wrapper items-center">
