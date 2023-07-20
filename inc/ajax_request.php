@@ -1,7 +1,4 @@
 <?php
-
-
-
 add_action('wp_ajax_add_vehicle', 'add_vehicle', 0);
 add_action('wp_ajax_nopriv_add_vehicle', 'add_vehicle');
 
@@ -112,42 +109,45 @@ add_action('wp_ajax_nopriv_req_lease', 'req_lease');
 function req_lease()
 {
 	global $wpdb;
-	$name = $_POST['name'];
-	$location = $_POST['location'];
-	$price = $_POST['price'];
-	$registered_in = $_POST['registered_in'];
-	$engine_capacity = $_POST['engine_capacity'];
-	$assembly = $_POST['assembly'];
-	$interior_color = $_POST['interior_color'];
-	$interior_material = $_POST['interior_material'];
-	$ref_no = $_POST['ref_no'];
-	$seats = $_POST['seats'];
-	$emission_class = $_POST['emission_class'];
-	$model = $_POST['model'];
-	$mileage = $_POST['mileage'];
-	$brand = $_POST['brand'];
-	$body_type = $_POST['body_type'];
-	$color = $_POST['color'];
-	$engine_type = $_POST['engine_type'];
-	$transmission = $_POST['transmission'];
-	$vehicle_type = $_POST['vehicle_type'];
-	$uid = $_POST['uid'];
+
+	// Vehicle info
+	$v_id = $_POST['v_id'];
+	$v_price = $_POST['v_price'];
+	$v_downpay = $_POST['v_downpay'];
+	$v_miles = $_POST['miles'];
+	// Buyer Info  
+	$buy_name = $_POST['name'];
+	$buy_location = $_POST['location'];
+	$buy_mobile = $_POST['mobile'];
+	// Certification Details
 	$file_name = $_FILES["file"]["name"];
 	$file_url        = $_FILES["file"]["tmp_name"]; 
+	// Card Details
+	$card_title = $_POST['card_title'];
+	$card_no = $_POST['card_no'];
+	$card_csv = $_POST['card_csv'];
+	$card_expiry = $_POST['card_expiry'];
+		
+	$uid = $_POST['uid'];
+	
 	$post = array(
-		'post_title'    => $name,
+		'post_title'    => $v_id,
 		'post_status'   => 'publish',
 		'post_content'   => $name,
 		'post_type'     => 'orders',
 		'meta_input'   => array(
-			'location' => $location,
-			'price' => $price,
+			'location' => $buy_location,
+			'price' => $v_price,
+			'downpayment' => $v_downpay,
+			'milestone' => $v_miles,			
 			'order_uid' => $uid,
+			'card_title' => $card_title,
+			'card_no' => $card_no,
+			'card_csv' => $card_csv,
+			'card_expiry' => $card_expiry
 		),
 		'tax_input'    => array(
-			'brand' => array($brand),			
-			'body_type' => array($body_type)
-			
+			'type' => '36'		
 		),
 
 	);
@@ -186,10 +186,10 @@ function req_lease()
 		 $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
 		wp_update_attachment_metadata( $attach_id, $attach_data );
 		set_post_thumbnail( $inserted_post_id, $attach_id );
-		echo wp_send_json(array('code' => 200, 'message' => __('Vehicle Order Created Sucessfully')));
+		echo wp_send_json(array('code' => 200, 'message' => __('Leasing Request Sucessfully Created')));
 		die();
 	} else {
-		echo wp_send_json(array('code' => 0, 'message' => __('Error Occured please fill up Booking form carefully.')));
+		echo wp_send_json(array('code' => 0, 'message' => __('Error Occured please fill up Leasing form carefully.')));
 		die();
 	}
 

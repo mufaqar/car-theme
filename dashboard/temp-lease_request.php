@@ -1,6 +1,8 @@
 <?php  /*  Template Name:  Leasing-Request   */
    get_header(); 
    $v_id = $_REQUEST['v_id'];
+   $v_price = $_REQUEST['v_price'];
+   $v_downpay = $_REQUEST['v_downpay'];
    $v_miles = $_REQUEST['miles'];
    ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
@@ -24,6 +26,10 @@
 
                                             <form class="vehicle_form" id="vehicle_form" action="#"
                                                 enctype="multipart/form-data">
+                                                <input type="text" value="<?php echo $v_id ?>" id="v_id" name="v_id"  />
+                                                <input type="text" value="<?php echo $v_price ?>" id="v_price" name="v_price"  />
+                                                <input type="text" value="<?php echo $v_downpay ?>" id="v_downpay" name="v_downpay"  />
+                                                <input type="text" value="<?php echo $v_miles ?>" id="v_miles" name="v_miles"  />
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
                                                     <li class="active" id="account"><strong>Bio</strong></li>
@@ -65,14 +71,13 @@
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" value="" id="" name="ref_no"
+                                                        <input type="text" value="" id="card_title" name="card_title"
                                                             placeholder="Title" />
-                                                        <input type="text" value="" id="seats" name="seats"
+                                                        <input type="text" value="" id="card_no" name="card_no"
                                                             placeholder="Card Info" />
-                                                        <input type="text" value="" id="model" name="model"
+                                                        <input type="text" value="" id="card_csv" name="card_csv"
                                                             placeholder="CSV" />
-                                                        <input type="text" value="" id="emission_class"
-                                                            name="emission_class" placeholder="Exprity Date" />
+                                                        <input type="text" value="" id="card_expiry"  name="card_expiry" placeholder="Exprity Date" />
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
@@ -213,42 +218,33 @@ jQuery(document).ready(function($) {
 
     $("#vehicle_form").submit(function(e) {
         e.preventDefault();
-        var name = jQuery('#name').val();
-        var location = jQuery('#location').val();
-        var price = jQuery('#price').val();
-        var registered_in = jQuery('#registered_in').val();
-        var engine_capacity = jQuery('#engine_capacity').val();
-        var assembly = jQuery('#assembly').val();
-        var interior_color = jQuery('#interior_color').val();
-        var interior_material = jQuery('#interior_material').val();
-        var ref_no = jQuery('#ref_no').val();
-        var seats = jQuery('#seats').val();
-        var emission_class = jQuery('#emission_class').val();
-        var model = jQuery('#model').val();
-        var mileage = jQuery('#mileage').val();
-        var brand = jQuery('#brand').val();
-        var body_type = jQuery('#body_type').val();
-        var color = jQuery('#color').val();
-        var engine_type = jQuery('#engine_type').val();
-        var transmission = jQuery('#transmission').val();
-        var vehicle_type = jQuery('#vehicle_type').val();
+        // Vehicle info
+        var v_id = jQuery('#v_id').val();
+        var v_price = jQuery('#v_price').val();
+        var v_downpay = jQuery('#v_downpay').val();
+        var v_miles = jQuery('#v_miles').val();
+        // Buyer Info 
+        var buy_name = jQuery('#buy_name').val();
+        var buy_location = jQuery('#buy_location').val();
+        var buy_mobile = jQuery('#buy_mobile').val();
+        // Card Details
+        var card_title = jQuery('#card_title').val();
+        var card_no = jQuery('#card_no').val();
+        var card_csv = jQuery('#card_csv').val();
+        var card_expiry = jQuery('#card_expiry').val();
+       
         var uid = jQuery('#uid').val();
+
+	    // Certification Details
         var file_data = jQuery('#file').prop('files')[0];
         file_data = jQuery('#file').prop('files')[0];
+
         form_data = new FormData();
         form_data.append('action', 'req_lease');
         form_data.append('name', name);
         form_data.append('location', location);
         form_data.append('price', price);
-        form_data.append('registered_in', registered_in);
-        form_data.append('engine_capacity', engine_capacity);
-        form_data.append('assembly', assembly);
-        form_data.append('interior_color', interior_color);
-        form_data.append('interior_material', interior_material);
-        form_data.append('ref_no', ref_no);
-        form_data.append('emission_class', emission_class);
-        form_data.append('model', model);
-        form_data.append('mileage', mileage);
+       
 
         form_data.append('brand', brand);
         form_data.append('body_type', body_type);
@@ -257,7 +253,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert("REquest");
+       
 
 
         $.ajax({

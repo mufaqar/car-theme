@@ -18,7 +18,7 @@
                                     <div class="row">
                                         <div class="col-md-12 mx-0">
 
-                                            <form class="add_vehicle" id="add_vehicle" action="#"
+                                            <form class="vehicle_form" id="vehicle_form" action="#"
                                                 enctype="multipart/form-data">
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
@@ -38,8 +38,8 @@
                                                             placeholder="Mobile No" />
 
                                                     </div>
-                                                    <input type="button" id="" name="next"
-                                                        class="next action-button" value="Next Step" />
+                                                    <input type="button" id="" name="next" class="next action-button"
+                                                        value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -52,12 +52,12 @@
                                                                     class="dropify">
                                                             </div>
                                                         </div>
-                                                        </div>
-                                                        <input type="button" name="previous"
-                                                            class="previous action-button-previous" value="Previous" />
-                                                        <input type="button" name="next" class="next action-button"
-                                                            value="Next Step" />
-                                                   
+                                                    </div>
+                                                    <input type="button" name="previous"
+                                                        class="previous action-button-previous" value="Previous" />
+                                                    <input type="button" name="next" class="next action-button"
+                                                        value="Next Step" />
+
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -72,7 +72,8 @@
                                                     </div>
                                                     <input type="button" name="previous"
                                                         class="previous action-button-previous" value="Previous" />
-                                                    <input type="submit" name="make_payment" class="next action-button"    value="Confirm" />
+                                                    <input type="submit" name="make_payment" class="next action-button"
+                                                        value="Confirm" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -244,7 +245,6 @@ jQuery(document).ready(function($) {
         form_data.append('emission_class', emission_class);
         form_data.append('model', model);
         form_data.append('mileage', mileage);
-
         form_data.append('brand', brand);
         form_data.append('body_type', body_type);
         form_data.append('color', color);
@@ -252,7 +252,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert();
+        alert("Test");
 
 
         $.ajax({

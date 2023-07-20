@@ -60,11 +60,6 @@ if (!empty($transmission)) {
         'terms' => $transmission
     );
 }
-
-
-
-
-
 ?>
 
 <section class="search_header container mx-auto">

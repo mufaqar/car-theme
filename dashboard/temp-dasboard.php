@@ -23,7 +23,7 @@
                                     <div class="row">
                                         <div class="col-md-12 mx-0">
 
-                                            <form class="add_vehicle" id="add_vehicle" action="#"
+                                            <form class="vehicle_form" id="vehicle_form" action="#"
                                                 enctype="multipart/form-data">
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
