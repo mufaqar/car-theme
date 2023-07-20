@@ -241,17 +241,18 @@ jQuery(document).ready(function($) {
 
         form_data = new FormData();
         form_data.append('action', 'req_lease');
-        form_data.append('name', name);
-        form_data.append('location', location);
-        form_data.append('price', price);
+        form_data.append('v_id', v_id);
+        form_data.append('v_price', v_price);
+        form_data.append('v_miles', v_miles);
        
 
-        form_data.append('brand', brand);
-        form_data.append('body_type', body_type);
-        form_data.append('color', color);
-        form_data.append('engine_type', engine_type);
-        form_data.append('transmission', transmission);
-        form_data.append('vehicle_type', vehicle_type);
+        form_data.append('buy_name', buy_name);
+        form_data.append('buy_location', buy_location);
+        form_data.append('buy_mobile', buy_mobile);
+
+        form_data.append('card_title', card_title);
+        form_data.append('card_no', card_no);
+        form_data.append('card_csv', card_csv);
         form_data.append('uid', uid);
        
 
