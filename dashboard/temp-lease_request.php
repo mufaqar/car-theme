@@ -4,6 +4,7 @@
    $v_price = $_REQUEST['v_price'];
    $v_downpay = $_REQUEST['v_downpay'];
    $v_miles = $_REQUEST['miles'];
+   $uid = get_current_user_id();
    ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 <section class="contact-us">
@@ -30,6 +31,7 @@
                                                 <input type="text" value="<?php echo $v_price ?>" id="v_price" name="v_price"  />
                                                 <input type="text" value="<?php echo $v_downpay ?>" id="v_downpay" name="v_downpay"  />
                                                 <input type="text" value="<?php echo $v_miles ?>" id="v_miles" name="v_miles"  />
+                                                <input type="text" value="<?php echo $uid ?>" id="uid" name="uid"  />
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
                                                     <li class="active" id="account"><strong>Bio</strong></li>
