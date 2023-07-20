@@ -27,11 +27,11 @@
 
                                             <form class="vehicle_form" id="vehicle_form" action="#"
                                                 enctype="multipart/form-data">
-                                                <input type="text" value="<?php echo $v_id ?>" id="v_id" name="v_id"  />
-                                                <input type="text" value="<?php echo $v_price ?>" id="v_price" name="v_price"  />
-                                                <input type="text" value="<?php echo $v_downpay ?>" id="v_downpay" name="v_downpay"  />
-                                                <input type="text" value="<?php echo $v_miles ?>" id="v_miles" name="v_miles"  />
-                                                <input type="text" value="<?php echo $uid ?>" id="uid" name="uid"  />
+                                                <input type="hidden" value="<?php echo $v_id ?>" id="v_id" name="v_id"  />
+                                                <input type="hidden" value="<?php echo $v_price ?>" id="v_price" name="v_price"  />
+                                                <input type="hidden" value="<?php echo $v_downpay ?>" id="v_downpay" name="v_downpay"  />
+                                                <input type="hidden" value="<?php echo $v_miles ?>" id="v_miles" name="v_miles"  />
+                                                <input type="hidden" value="<?php echo $uid ?>" id="uid" name="uid"  />
                                                 <!-- progressbar -->
                                                 <ul id="progressbar">
                                                     <li class="active" id="account"><strong>Bio</strong></li>

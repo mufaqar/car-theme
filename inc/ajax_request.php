@@ -129,9 +129,11 @@ function req_lease()
 	$card_expiry = $_POST['card_expiry'];
 		
 	$uid = $_POST['uid'];
+
+	$title = get_the_title($v_id);
 	
 	$post = array(
-		'post_title'    => $v_id,
+		'post_title'    => $title,
 		'post_status'   => 'publish',
 		'post_content'   => $name,
 		'post_type'     => 'orders',
