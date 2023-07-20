@@ -114,11 +114,11 @@ function req_lease()
 	$v_id = $_POST['v_id'];
 	$v_price = $_POST['v_price'];
 	$v_downpay = $_POST['v_downpay'];
-	$v_miles = $_POST['miles'];
+	$v_miles = $_POST['v_miles'];
 	// Buyer Info  
-	$buy_name = $_POST['name'];
-	$buy_location = $_POST['location'];
-	$buy_mobile = $_POST['mobile'];
+	$buy_name = $_POST['buy_name'];
+	$buy_location = $_POST['buy_location'];
+	$buy_mobile = $_POST['buy_mobile'];
 	// Certification Details
 	$file_name = $_FILES["file"]["name"];
 	$file_url        = $_FILES["file"]["tmp_name"]; 

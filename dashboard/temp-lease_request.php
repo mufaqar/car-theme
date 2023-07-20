@@ -40,11 +40,11 @@
                                                 <!-- fieldsets -->
                                                 <fieldset>
                                                     <div class="form-card">
-                                                        <input type="text" value="" id="name" name="name"
+                                                        <input type="text" value="" id="buy_name" name="buy_name"
                                                             placeholder="Your Name" required />
-                                                        <input type="text" value="" id="location" name="location"
+                                                        <input type="text" value="" id="buy_location" name="buy_location"
                                                             placeholder="Location" />
-                                                        <input type="text" value="" id="mobile" name="mobile"
+                                                        <input type="text" value="" id="buy_mobile" name="buy_mobile"
                                                             placeholder="Mobile No" />
 
                                                     </div>
@@ -244,6 +244,9 @@ jQuery(document).ready(function($) {
         form_data.append('v_id', v_id);
         form_data.append('v_price', v_price);
         form_data.append('v_miles', v_miles);
+        form_data.append('v_downpay', v_downpay);
+        
+        form_data.append('uid', uid);
        
 
         form_data.append('buy_name', buy_name);
@@ -253,7 +256,9 @@ jQuery(document).ready(function($) {
         form_data.append('card_title', card_title);
         form_data.append('card_no', card_no);
         form_data.append('card_csv', card_csv);
-        form_data.append('uid', uid);
+        form_data.append('card_expiry', card_expiry);
+        
+        
        
 
 
