@@ -30,35 +30,12 @@ get_header(); ?>
                         </button>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <h6 class="text-center">Est. vehcle price</h6>
-                    <h2 class="main-heding mt-4 mb-4 text-center">
-                        $<span>20,780</span>
-                    </h2>
+                <div class="col-md-3 mt-5">
+                    
+                    <a class="more-search d-block submit button border border-0 text-capitalize" href="<?php echo home_url('/search-listing'); ?>">more search </a>
                 </div>
             </div>
-            <form class="row" method="POST" action="<?php echo home_url('search-listing'); ?>">
-                <div class="col-md-9">
-
-                    <div class="input">
-                        <label class="d-block">Down Payment</label>
-                        <input type="text" name="monthly-down-payment" id="" placeholder="$2000" />
-                    </div>
-                    <div class="input">
-                        <label class="d-block">Credit Score</label>
-                        <input type="text" name="monthly-down-payment" id="" placeholder="Good" />
-                    </div>
-                    <div class="input">
-                        <label class="d-block">Category</label>
-                        <input type="text" name="monthly-down-payment" id="" placeholder="Leasing" />
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex flex-column">
-                    <input type="submit" class="d-block submit button border border-0 text-capitalize"
-                        value="get pre-Qualified" />
-                    <button class="more-search">more search option</button>
-                </div>
-            </form>
+            
         </div>
     </div>
 </main>
