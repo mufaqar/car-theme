@@ -37,7 +37,7 @@
                                                     <div class="form-card">
                                                         <input type="hidden" value="<?php echo $uid ?>" id="uid" name="uid"  />
                                                       
-                                                        <input type="text" value="" id="name" name="name"
+                                                        <input type="text" value="" id="vehicle_name" name="vehicle_name"
                                                             placeholder="Vehicle Name" required />
                                                         <input type="text" value="" id="location" name="location"
                                                             placeholder="Location" />
@@ -193,7 +193,7 @@
                                                         <div class="upload_file">
                                                             <div class="upload_icon"><i class="fa-solid fa-camera"></i>
                                                             </div>
-                                                            <input type="file" id="vehicle-thumbnail" name="thumbnail" accept="image/*">
+                                                            <input type="file" id="book-thumbnail" name="thumbnail" accept="image/*">
                                                         </div>
                                                     </div>
                                                     <input type="button" name="previous"
@@ -315,7 +315,7 @@ jQuery(document).ready(function($) {
 
     $("#vehicle_form").submit(function(e) {
         e.preventDefault();
-        var name = jQuery('#name').val();
+        var vehicle_name = jQuery('#vehicle_name').val();
         var location = jQuery('#location').val();
         var price = jQuery('#price').val();
         var registered_in = jQuery('#registered_in').val();
@@ -335,12 +335,12 @@ jQuery(document).ready(function($) {
         var transmission = jQuery('#transmission').val();
         var vehicle_type = jQuery('#vehicle_type').val();
         var uid = jQuery('#uid').val();
-        var file_data = jQuery('#file').prop('files')[0];
-        file_data = jQuery('#file').prop('files')[0];
-        form_data = new FormData();       
+    
+        form_data = new FormData();
+
+        form_data.append('thumbnail', $('#book-thumbnail')[0].files[0]);
         form_data.append('action', 'add_vehicle');
-        form_data.append('thumbnail', $('#vehicle-thumbnail')[0].files[0]);
-        form_data.append('name', name);
+        form_data.append('name', vehicle_name);
         form_data.append('location', location);
         form_data.append('price', price);
         form_data.append('registered_in', registered_in);
@@ -361,7 +361,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert(vehicle_type);
+        alert(brand);
 
 
         $.ajax({

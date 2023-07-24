@@ -84,10 +84,10 @@ function add_vehicle()
 	);
 		$post_id = wp_insert_post($post);
 		//echo wp_send_json(array('phase' => __('Vihicle Added in Database')));	
-		$user = get_user_by( 'id', $uid );
-		$agent_email = $user->user_email;
-		sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
-		sendmail_admin($agent_email);	
+	//	$user = get_user_by( 'id', $uid );
+		//$agent_email = $user->user_email;
+		//sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
+		//sendmail_admin($agent_email);	
 
 		// Handle the thumbnail
 		if (!empty($_FILES['thumbnail'])) {
@@ -95,7 +95,7 @@ function add_vehicle()
 			set_post_thumbnail($post_id, $attachment_id);
 		}
 	
-		wp_send_json_success('Vihcle Added in Database!');
+		wp_send_json_success('Book saved successfully!');
 
 	die;
 }
