@@ -1,21 +1,6 @@
 <?php
 
-	// Agent  Ticket Update  Email 
-	function sendmail($agent_email,$message,$postid) {		
-		$subject = "001 Cars  |  $message ";
-		$headers[] = 'From: lp@001cars.com" . "\r\n';
-		//$headers[] = 'Bcc: lp@001cars.com';
-		$headers[] = 'Bcc: mufaqar@gmail.co';
 	
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
-		$body  .= "<p><strong> $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
-		wp_mail( $agent_email, $subject, $body, $headers );
-		$get_notifcation = get_post_meta( $postid, 'notification', true); 
-		$count = $get_notifcation;
-		update_post_meta( $postid, 'notification', $count+1); 
-		}
-
 
 	// Agent Activation Email 
 

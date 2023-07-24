@@ -1,9 +1,39 @@
 <?php
+
+
+// Agent  Ticket Update  Email 
+function sendmail($agent_email,$message,$postid) {	
+	die("Email Sent");	
+	$subject = "001 Cars  |  $message ";
+	$headers[] = 'From: lp@001cars.com" . "\r\n';
+	//$headers[] = 'Bcc: lp@001cars.com';
+	$headers[] = 'Bcc: mufaqar@gmail.co';
+
+	$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
+	$body  .= "<p><strong> $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
+	wp_mail( $agent_email, $subject, $body, $headers );
+	$get_notifcation = get_post_meta( $postid, 'notification', true); 
+	$count = $get_notifcation;
+	update_post_meta( $postid, 'notification', $count+1); 
+
+	}
+
+
+
 add_action('wp_ajax_add_vehicle', 'add_vehicle', 0);
 add_action('wp_ajax_nopriv_add_vehicle', 'add_vehicle');
 
 function add_vehicle()
 {
+	$uid = $_POST['uid'];
+	$user = get_user_by( 'id', $uid );
+		$agent_email = $user->user_email;
+		sendmail($agent_email,"New Vehicle Created by $agent_email ", 123);
+
+	//sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
+
+	die("Die");
 	global $wpdb;
 	$name = $_POST['name'];
 	$location = $_POST['location'];
@@ -24,7 +54,7 @@ function add_vehicle()
 	$engine_type = $_POST['engine_type'];
 	$transmission = $_POST['transmission'];
 	$vehicle_type = $_POST['vehicle_type'];
-	$uid = $_POST['uid'];
+
 	$file_name = $_FILES["file"]["name"];
 	$file_url        = $_FILES["file"]["tmp_name"]; 
 	$post = array(
@@ -58,9 +88,7 @@ function add_vehicle()
 
 	);
 		$inserted_post_id = wp_insert_post($post);
-		$user = get_user_by( 'id', $uid );
-		$agent_email = $user->user_email;
-		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
+		
 
 	    $image_url        = $file_url; // Define the image URL here
 		$image_name       = $file_name;
