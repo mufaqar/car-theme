@@ -33,18 +33,18 @@ function add_vehicle()
 		'post_content'   => $name,
 		'post_type'     => 'vehicle',
 		'meta_input'   => array(
-			'location' => $location,
-			'price' => $price,
-			'registered_in' => $registered_in,
-			'engine_capacity' => $engine_capacity,
-			'assembly' => $assembly,
-			'interior_color' => $interior_color,
-			'interior_material' => $interior_material,
-			'ref_no' => $ref_no,
-			'seats' => $seats,
-			'emission_class' => $emission_class,
-			'model' => $model,
-			'mileage' => $mileage,			
+			'vehicle_location' => $location,
+			'vehicle_price' => $price,
+			'vehicle_register' => $registered_in,
+			'vehicle_engine_capacity' => $engine_capacity,
+			'vehicle_assembly' => $assembly,
+			'vehicle_interior_color' => $interior_color,
+			'vehicle_interior_material' => $interior_material,
+			'vehicle_ref_no' => $ref_no,
+			'vehicle_seats' => $seats,
+			'vehicle_emission_class' => $emission_class,
+			'vehicle_model' => $model,
+			'vehicle_mileage' => $mileage,			
 			'order_uid' => $uid,
 		),
 		'tax_input'    => array(
@@ -58,9 +58,9 @@ function add_vehicle()
 
 	);
 		$inserted_post_id = wp_insert_post($post);
-		//$user = get_user_by( 'id', $uid );
-		//$agent_email = $user->user_email;
-		//sendmail($agent_email,"New Ticket Created by $agent_email ", $inserted_post_id);
+		$user = get_user_by( 'id', $uid );
+		$agent_email = $user->user_email;
+		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
 
 	    $image_url        = $file_url; // Define the image URL here
 		$image_name       = $file_name;

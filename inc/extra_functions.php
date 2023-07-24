@@ -3,6 +3,7 @@ include get_template_directory() . '/inc/cpts.php';
 include get_template_directory() . '/inc/cf.php';
 include get_template_directory() . '/inc/wp-bootstrap-navlist-walker.php';
 include get_template_directory() . '/inc/ajax_request.php';
+include get_template_directory() . '/inc/emails.php';
 
     function get_all_body_type () {
                 $terms = get_terms( array(
