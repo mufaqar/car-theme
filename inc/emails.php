@@ -2,13 +2,13 @@
 
 	// Agent  Ticket Update  Email 
 	function sendmail($agent_email,$message,$postid) {		
-		$subject = "Budget Computer & Kiwi Mobiles  |  $message ";
-		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
-		$headers[] = 'Bcc: choudhry.asif@gmail.com';
-		$headers[] = 'Bcc: budgetcomputer2013@gmail.co';
-		$headers[] = 'Bcc: uziasif06@gmail.com';
+		$subject = "001 Cars  |  $message ";
+		$headers[] = 'From: lp@001cars.com" . "\r\n';
+		//$headers[] = 'Bcc: lp@001cars.com';
+		$headers[] = 'Bcc: mufaqar@gmail.co';
+	
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-		$body   = "<p><img src='https://kiwimobiles.co.nz/jobform/wp-content/themes/nzstore/reources//images/logo.png' width='320px'></img></p><hr/> ";
+		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
 		wp_mail( $agent_email, $subject, $body, $headers );
 		$get_notifcation = get_post_meta( $postid, 'notification', true); 
@@ -23,7 +23,7 @@
 		$subject = 'Budget Computer & Kiwi Mobiles | User Account Activation';	
 		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-		$body   = "<p><img src='https://kiwimobiles.co.nz/jobform/wp-content/themes/nzstore/reources//images/logo.png' width='320px'></img></p><hr/> ";
+		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Account Activation Link: </strong><a href='$activation_link' >Activate your Account</a> </p> ";
 		$body  .= "<p><strong> DID:   </strong> 09 9508717 </p> ";
 		$body  .= "<p><strong> Email:   </strong>budgetcomputer@kiwimobiles.co.nz</p> ";
@@ -36,7 +36,7 @@
 		$subject = 'Budget Computer & Kiwi Mobiles | User Account Activation';	
 		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-		$body   = "<p><img src='https://kiwimobiles.co.nz/jobform/wp-content/themes/nzstore/reources//images/logo.png' width='320px'></img></p><hr/> ";
+		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Username : </strong>$username </p> ";
 		$body  .= "<p><strong> Password : </strong>$password </p> ";
 		wp_mail( $to, $subject, $body, $headers );
@@ -47,7 +47,7 @@
 	function sendmail_agent($to,$password) {
 		$subject = 'Budget Computer & Kiwi Mobiles | User Login Details';
 		$body  = "<h1>Budget Computer & Kiwi Mobiles </h1> ";
-		$body  .= "<p><img src='https://kiwimobiles.co.nz/jobform/wp-content/themes/nzstore/reources//images/logo.png' width='320px'></img></p><hr/> ";
+		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Username: </strong> $to </p> ";
 		$body  .= "<p><strong> Password:   </strong> $password </p> ";
 		$body  .= "<h1 style='color:#5fb227;margin:20px 0;'> YOUR ONLINE REPAIR PARTNER </h1>";
@@ -70,7 +70,7 @@
 		$admin = 'choudhry.asif@gmail.com';
 		$subject = 'Budget Computer & Kiwi Mobiles | New User Registerd  ';
 		$body  = "<h1>Budget Computer & Kiwi Mobiles </h1> ";
-		$body  .= "<p><img src='https://kiwimobiles.co.nz/jobform/wp-content/themes/nzstore/reources//images/logo.png' width='320px'></img></p><hr/> ";
+		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Email Address: </strong> $user_email </p> ";
 		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
 		$headers[] = 'Cc: choudhry.asif@gmail.com';
