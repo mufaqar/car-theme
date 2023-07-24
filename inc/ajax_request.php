@@ -2,17 +2,19 @@
 
 
 // Agent  Ticket Update  Email 
-function sendmail($agent_email,$message,$postid) {	
+function sendmail() {	
 	
-	$subject = "001 Cars  |  $message ";
-	$headers[] = 'From: lp@001cars.com" . "\r\n';
-	//$headers[] = 'Bcc: lp@001cars.com';
-	$headers[] = 'Bcc: mufaqar@gmail.co';
-	$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
-	$body  .= "<p><strong>$agent_email . $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
-	update_post_meta( $postid, 'email_body',$body); 
-	wp_mail( $agent_email, $subject, $body, $headers );
+	$admin = 'mufaqar@gmail.com';
+		$subject = '001 Cars | Admin Notification ';
+		$body  = "<h1>New Ads added on website </h1> ";
+		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
+		$body  .= "<p><strong> Email Address: </strong> test </p> ";
+		$headers[] = 'From: mufaqar@gmail.com" . "\r\n';
+		$headers[] = 'Cc: mufaqar2@gmail.com';	
+		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+	
+		update_post_meta( $postid, 'email_body',$body); 
+		wp_mail( $admin, $subject, $body, $headers );
 
 	
 
