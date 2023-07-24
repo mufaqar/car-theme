@@ -95,7 +95,7 @@ function add_vehicle()
 			set_post_thumbnail($post_id, $attachment_id);
 		}
 	
-		wp_send_json_success('Book saved successfully!');
+		wp_send_json_success('Vihcle Added in Database!');
 
 	die;
 }
