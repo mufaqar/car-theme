@@ -149,7 +149,7 @@ function req_lease()
 			'card_expiry' => $card_expiry
 		),
 		'tax_input'    => array(
-			'type' => '36'		
+			'order_type' => '20'		
 		),
 
 	);
@@ -197,5 +197,3 @@ function req_lease()
 
 	die;
 }
-
-
