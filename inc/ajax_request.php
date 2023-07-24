@@ -28,9 +28,6 @@ function add_vehicle()
 {
 	
 
-
-
-	die("Die");
 	global $wpdb;
 	$name = $_POST['name'];
 	$location = $_POST['location'];
@@ -51,7 +48,7 @@ function add_vehicle()
 	$engine_type = $_POST['engine_type'];
 	$transmission = $_POST['transmission'];
 	$vehicle_type = $_POST['vehicle_type'];
-
+	$uid = $_POST['uid'];
 	$file_name = $_FILES["file"]["name"];
 	$file_url        = $_FILES["file"]["tmp_name"]; 
 	$post = array(
@@ -86,10 +83,11 @@ function add_vehicle()
 	);
 		$inserted_post_id = wp_insert_post($post);
 
-		$uid = $_POST['uid'];
+	
 		$user = get_user_by( 'id', $uid );
 		$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
+		
 		
 
 	    $image_url        = $file_url; // Define the image URL here
