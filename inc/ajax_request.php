@@ -86,7 +86,7 @@ function add_vehicle()
 		//echo wp_send_json(array('phase' => __('Vihicle Added in Database')));	
 	//	$user = get_user_by( 'id', $uid );
 		//$agent_email = $user->user_email;
-		//sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
+		sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
 		//sendmail_admin($agent_email);	
 
 		// Handle the thumbnail
@@ -94,6 +94,10 @@ function add_vehicle()
 			$attachment_id = media_handle_upload('thumbnail', $post_id);
 			set_post_thumbnail($post_id, $attachment_id);
 		}
+
+		
+		
+		add_post_meta( $post_id, 'vehicle_gallery', $attachment_id, true );
 	
 		wp_send_json_success('Book saved successfully!');
 

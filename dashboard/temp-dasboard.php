@@ -379,8 +379,7 @@ jQuery(document).ready(function($) {
             success: function(data) {
                
                 if (data.code == 200) {
-                    alert(data.message);
-               
+                 //   alert(data.message);               
                   //  $(".sucess_message").css("display", "flex");
                 } else {
                     alert(data.message);
