@@ -230,28 +230,6 @@
         </div>
 </section>
 
-<section class="hideme zindex-modal overlay hide">
-    <div class="popup">
-        <div class="popup_wrapper">
-            <div
-                class="order_confirm d-flex position-relative justify-content-center flex-column align-items-center p-4">
-                <a href="<?php bloginfo('url'); ?>"><img
-                        src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
-
-                <div class="step_wrapper d-flex justify-content-center flex-column align-items-center text-center">
-                    <div class="content mt-5">
-                        <div class="right"><img src="<?php bloginfo('template_directory');?>/reources/images/img 3.png"
-                                alt=""></div>
-                        <h1 class="finished">Finished!</h1>
-                        <h2 class="mb-5 mt-5">Your Vehicle Added Sucessfully !</h2>
-                    </div>
-                </div>
-
-            </div>
-            <img src="<?php bloginfo('template_directory');?>/reources//images/red cross.png" alt="" class="_cross">
-        </div>
-    </div>
-</section>
 
 <?php get_footer(); ?>
 <script>
@@ -397,10 +375,13 @@ jQuery(document).ready(function($) {
                 $("#spinner-div").hide();
             },
             success: function(data) {
-                if (data.code == 0) {
+               
+                if (data.code == 200) {
                     alert(data.message);
+               
+                  //  $(".sucess_message").css("display", "flex");
                 } else {
-                    $(".sucess_message").css("display", "flex");
+                    alert(data.message);
 
                 }
             }
