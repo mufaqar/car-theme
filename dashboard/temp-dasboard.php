@@ -1,4 +1,4 @@
-<?php  /*  Template Name:  Dashboard  */
+<?php  /*  Template Name:  Dash-AddVehicle  */
    get_header();   $uid = get_current_user_id(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 <section class="contact-us">
@@ -303,7 +303,6 @@ $(document).ready(function() {
             step: function(now) {
                 // for making fielset appear animation
                 opacity = 1 - now;
-
                 current_fs.css({
                     'display': 'none',
                     'position': 'relative'

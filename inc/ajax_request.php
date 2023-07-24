@@ -3,7 +3,7 @@
 
 // Agent  Ticket Update  Email 
 function sendmail($agent_email,$message,$postid) {	
-	die("Email Sent");	
+	
 	$subject = "001 Cars  |  $message ";
 	$headers[] = 'From: lp@001cars.com" . "\r\n';
 	//$headers[] = 'Bcc: lp@001cars.com';
@@ -26,12 +26,9 @@ add_action('wp_ajax_nopriv_add_vehicle', 'add_vehicle');
 
 function add_vehicle()
 {
-	$uid = $_POST['uid'];
-	$user = get_user_by( 'id', $uid );
-		$agent_email = $user->user_email;
-		sendmail($agent_email,"New Vehicle Created by $agent_email ", 123);
+	
 
-	//sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
+
 
 	die("Die");
 	global $wpdb;
@@ -88,6 +85,11 @@ function add_vehicle()
 
 	);
 		$inserted_post_id = wp_insert_post($post);
+
+		$uid = $_POST['uid'];
+		$user = get_user_by( 'id', $uid );
+		$agent_email = $user->user_email;
+		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
 		
 
 	    $image_url        = $file_url; // Define the image URL here
