@@ -8,14 +8,13 @@ function sendmail($agent_email,$message,$postid) {
 	$headers[] = 'From: lp@001cars.com" . "\r\n';
 	//$headers[] = 'Bcc: lp@001cars.com';
 	$headers[] = 'Bcc: mufaqar@gmail.co';
-
 	$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 	$body  .= "<p><strong>$agent_email . $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
+	update_post_meta( $postid, 'email_body',$body); 
 	wp_mail( $agent_email, $subject, $body, $headers );
-	$get_notifcation = get_post_meta( $postid, 'notification', true); 
-	$count = $get_notifcation;
-	update_post_meta( $postid, 'notification',$body); 
+
+	
 
 	}
 
