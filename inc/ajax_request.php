@@ -87,7 +87,7 @@ function add_vehicle()
 		$user = get_user_by( 'id', $uid );
 		$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
-		sendmail_admin($agent_email);	
+		//sendmail_admin($agent_email);	
 
 	    $image_url        = $file_url; // Define the image URL here
 		$image_name       = $file_name;
