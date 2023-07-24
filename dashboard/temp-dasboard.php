@@ -36,7 +36,7 @@
                                                 <fieldset>
                                                     <div class="form-card">
                                                         <input type="hidden" value="<?php echo $uid ?>" id="uid" name="uid"  />
-                                                        <input type="file" id="book-thumbnail" name="thumbnail" accept="image/*">
+                                                      
                                                         <input type="text" value="" id="name" name="name"
                                                             placeholder="Vehicle Name" required />
                                                         <input type="text" value="" id="location" name="location"
@@ -193,7 +193,7 @@
                                                         <div class="upload_file">
                                                             <div class="upload_icon"><i class="fa-solid fa-camera"></i>
                                                             </div>
-                                                            <input type="file" name="file" id="file" class="dropify">
+                                                            <input type="file" id="vehicle-thumbnail" name="thumbnail" accept="image/*">
                                                         </div>
                                                     </div>
                                                     <input type="button" name="previous"
@@ -337,10 +337,9 @@ jQuery(document).ready(function($) {
         var uid = jQuery('#uid').val();
         var file_data = jQuery('#file').prop('files')[0];
         file_data = jQuery('#file').prop('files')[0];
-        form_data = new FormData();
-
-        form_data.append('thumbnail', $('#book-thumbnail')[0].files[0]);
+        form_data = new FormData();       
         form_data.append('action', 'add_vehicle');
+        form_data.append('thumbnail', $('#vehicle-thumbnail')[0].files[0]);
         form_data.append('name', name);
         form_data.append('location', location);
         form_data.append('price', price);
