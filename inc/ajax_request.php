@@ -142,7 +142,7 @@ function req_lease()
 			'price' => $v_price,
 			'downpayment' => $v_downpay,
 			'milestone' => $v_miles,			
-			'order_uid' => $uid,
+			'dealer_uid' => $uid,
 			'card_title' => $card_title,
 			'card_no' => $card_no,
 			'card_csv' => $card_csv,

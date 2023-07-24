@@ -1,9 +1,9 @@
 <?php  /*  Template Name:  Dashboard  */
-   get_header(); ?>
+   get_header();   $uid = get_current_user_id(); ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 <section class="contact-us">
     <h2 class="sub-heading"><?php the_title()?> </h2>
-    <p>Sign up for Vehicle Listing</p>
+    <p>Add your Vehicle Today</p>
 </section>
 <section class="contact-us-form">
     <div class="form" style="padding:0px">
@@ -35,6 +35,7 @@
                                                 <!-- fieldsets -->
                                                 <fieldset>
                                                     <div class="form-card">
+                                                        <input type="hidden" value="<?php echo $uid ?>" id="uid" name="uid"  />
                                                         <input type="text" value="" id="name" name="name"
                                                             placeholder="Vehicle Name" required />
                                                         <input type="text" value="" id="location" name="location"
@@ -52,8 +53,8 @@
                                                         <input type="text" value="" id="interior_material"
                                                             name="interior_material" placeholder="Interior material" />
                                                     </div>
-                                                    <input type="button" id="" name="next"
-                                                        class="next action-button" value="Next Step" />
+                                                    <input type="button" id="" name="next" class="next action-button"
+                                                        value="Next Step" />
                                                 </fieldset>
                                                 <fieldset>
                                                     <div class="form-card">
@@ -212,7 +213,7 @@
                                                         <br><br>
                                                         <div class="row justify-content-center">
                                                             <div class="col-7 text-center">
-                                                                <h5>You Add Successfully Added</h5>
+                                                                <h5>You Vehicle Added Successfully</h5>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -334,7 +335,7 @@ jQuery(document).ready(function($) {
         $(".hideme").css("display", "none");
     });
 
-    $("#add_vehicle").submit(function(e) {
+    $("#vehicle_form").submit(function(e) {
         e.preventDefault();
         var name = jQuery('#name').val();
         var location = jQuery('#location').val();
@@ -372,6 +373,7 @@ jQuery(document).ready(function($) {
         form_data.append('emission_class', emission_class);
         form_data.append('model', model);
         form_data.append('mileage', mileage);
+        form_data.append('seats', seats);
 
         form_data.append('brand', brand);
         form_data.append('body_type', body_type);
@@ -380,7 +382,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert();
+        alert(vehicle_type);
 
 
         $.ajax({
