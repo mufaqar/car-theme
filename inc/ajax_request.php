@@ -11,11 +11,11 @@ function sendmail($agent_email,$message,$postid) {
 
 	$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
-	$body  .= "<p><strong> $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
+	$body  .= "<p><strong>$agent_email . $message  </strong> <br/> Ticket   :  ".get_permalink($postid)."  </p>";	
 	wp_mail( $agent_email, $subject, $body, $headers );
 	$get_notifcation = get_post_meta( $postid, 'notification', true); 
 	$count = $get_notifcation;
-	update_post_meta( $postid, 'notification', $count+1); 
+	update_post_meta( $postid, 'notification',$body); 
 
 	}
 
@@ -87,8 +87,7 @@ function add_vehicle()
 		$user = get_user_by( 'id', $uid );
 		$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $inserted_post_id);
-		
-		
+		sendmail_admin($agent_email);	
 
 	    $image_url        = $file_url; // Define the image URL here
 		$image_name       = $file_name;

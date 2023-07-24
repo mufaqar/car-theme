@@ -52,15 +52,13 @@
 
 
 	function sendmail_admin($user_email) {
-		$admin = 'choudhry.asif@gmail.com';
-		$subject = 'Budget Computer & Kiwi Mobiles | New User Registerd  ';
-		$body  = "<h1>Budget Computer & Kiwi Mobiles </h1> ";
+		$admin = 'mufaqar@gmail.com';
+		$subject = '001 Cars | Admin Notification ';
+		$body  = "<h1>New Ads added on website </h1> ";
 		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Email Address: </strong> $user_email </p> ";
-		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
-		$headers[] = 'Cc: choudhry.asif@gmail.com';
-		$headers[] = 'Cc: budgetcomputer2013@gmail.co';
-		$headers[] = 'Cc: uziasif06@gmail.com';
+		$headers[] = 'From: mufaqar@gmail.com" . "\r\n';
+		$headers[] = 'Cc: mufaqar2@gmail.com';	
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
 		wp_mail( $admin, $subject, $body, $headers );
 	}
