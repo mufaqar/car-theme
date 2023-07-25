@@ -84,7 +84,7 @@ function add_vehicle()
 	);
 		$post_id = wp_insert_post($post);
 		//echo wp_send_json(array('phase' => __('Vihicle Added in Database')));	
-	//	$user = get_user_by( 'id', $uid );
+    	//	$user = get_user_by( 'id', $uid );
 		//$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
 		//sendmail_admin($agent_email);	
