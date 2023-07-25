@@ -88,17 +88,13 @@ function add_vehicle()
 		//$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
 		//sendmail_admin($agent_email);	
-
 		// Handle the thumbnail
 		if (!empty($_FILES['thumbnail'])) {
 			$attachment_id = media_handle_upload('thumbnail', $post_id);
 			set_post_thumbnail($post_id, $attachment_id);
 		}
-
-		
 		
 		add_post_meta( $post_id, 'vehicle_gallery', $attachment_id, true );
-	
 		wp_send_json_success('Book saved successfully!');
 
 	die;
