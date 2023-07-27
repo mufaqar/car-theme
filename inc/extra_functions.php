@@ -50,11 +50,11 @@ include get_template_directory() . '/inc/emails.php';
 }
 
 function add_tag_manager_role() {
-    if (get_role('agent') === null) {
-        $role_name = 'agent';
+    if (get_role('vehicle_agent') === null) {
+        $role_name = 'vehicle_agent';
         $display_name = 'Vehicle Agent';
         $capabilities = array(
-            'read' => true, // You can adjust other capabilities as needed
+            'read' => true,      // You can adjust other capabilities as needed
             'manage_categories' => true, // Capability to manage taxonomies (categories)
             'edit_categories' => true,   // Capability to edit taxonomies (categories)
             'delete_categories' => true, // Capability to delete taxonomies (categories)
