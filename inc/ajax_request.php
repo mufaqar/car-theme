@@ -72,8 +72,7 @@ function add_vehicle()
 		// Handle the thumbnail
 		if (!empty($_FILES['thumbnail'])) {
 			$attachment_id = media_handle_upload('thumbnail', $post_id);
-			set_post_thumbnail($post_id, $attachment_id);
-		}
+			set_post_thumbnail($post_id, $attachment_id);		}
 		
 		add_post_meta( $post_id, 'vehicle_gallery', $attachment_id, true );
 		wp_send_json_success('Book saved successfully!');

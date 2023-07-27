@@ -54,7 +54,7 @@ $result = add_role(
     'Agent', // Role display name
     array(
        'read' => true, // Allow role to read content
-       'level_0' => true // Allow role to create posts
+       'level_7' => true // Allow role to create posts
     )
  );
 
