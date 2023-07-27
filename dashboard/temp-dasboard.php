@@ -361,7 +361,7 @@ jQuery(document).ready(function($) {
         form_data.append('transmission', transmission);
         form_data.append('vehicle_type', vehicle_type);
         form_data.append('uid', uid);
-        alert(brand);
+        //alert(brand);
 
 
         $.ajax({
@@ -382,7 +382,7 @@ jQuery(document).ready(function($) {
                  //   alert(data.message);               
                   //  $(".sucess_message").css("display", "flex");
                 } else {
-                    alert(data.message);
+                  //  alert(data.message);
 
                 }
             }
