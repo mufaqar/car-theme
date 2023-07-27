@@ -6,8 +6,9 @@
 
 	function activation_mail($to,$activation_link) {
 		$subject = 'Budget Computer & Kiwi Mobiles | User Account Activation';	
-		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+		$headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
 		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Account Activation Link: </strong><a href='$activation_link' >Activate your Account</a> </p> ";
 		$body  .= "<p><strong> DID:   </strong> 09 9508717 </p> ";
@@ -19,8 +20,9 @@
 
 	function send_reset_password($username,$password) {
 		$subject = 'Budget Computer & Kiwi Mobiles | User Account Activation';	
-		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+		$headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
 		$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Username : </strong>$username </p> ";
 		$body  .= "<p><strong> Password : </strong>$password </p> ";
@@ -43,8 +45,9 @@
 		$body  .= "<p> <a href='http://icsservices.nz' target='_blank'>www.icsservices.nz </a>   &nbsp;&nbsp;&nbsp;  <a href='http://smartphonesrepair.co.nz' target='_blank'> www.smartphonesrepair.co.nz</a> </p> ";
 		$body  .= "<p>Follow Us</p>";
 		$body  .= "<p> <a href='https://www.facebook.com/smartphonesrepair.co.nz' target='_blank'>Facebook</a> &nbsp;&nbsp;&nbsp; <a href='https://www.youtube.com/channel/UC9DOgY5L5oAudmVE8V5D66g' target='_blank'>Youtube</a><p> ";
-		$headers[] = 'From: budgetcomputer@kiwimobiles.co.nz" . "\r\n';
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+		$headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
 		wp_mail( $to, $subject, $body, $headers );
 	}
 
@@ -57,8 +60,8 @@
 		$body  = "<h1>New Ads added on website </h1> ";
 		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Email Address: </strong> $user_email </p> ";
-		$headers[] = 'From: mufaqar@gmail.com" . "\r\n';
-		$headers[] = 'Cc: mufaqar2@gmail.com';	
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
+		$headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
 		wp_mail( $admin, $subject, $body, $headers );
 	}

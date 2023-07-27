@@ -2,22 +2,18 @@
 
 
 // Agent  Ticket Update  Email 
-function sendmail() {	
-	
-	$admin = 'mufaqar@gmail.com';
+function sendmail() {		
+	    $admin = 'mufaqar@gmail.com';
 		$subject = '001 Cars | Admin Notification ';
 		$body  = "<h1>New Ads added on website </h1> ";
 		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Email Address: </strong> test </p> ";
-		$headers[] = 'From: mufaqar@gmail.com" . "\r\n';
-		$headers[] = 'Cc: mufaqar2@gmail.com';	
-		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
-	
+		$headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";	
 		update_post_meta( $postid, 'email_body',$body); 
-		wp_mail( $admin, $subject, $body, $headers );
-
-	
-
+		mail( $admin, $subject, $body, $headers );
+		
 	}
 
 
