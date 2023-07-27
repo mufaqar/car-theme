@@ -36,7 +36,7 @@ function add_vehicle()
 	$file_url        = $_FILES["file"]["tmp_name"]; 
 	$post = array(
 		'post_title'    => $name,
-		'post_status'   => 'publish',
+		'post_status'   => 'draft',
 		'post_content'   => $name,
 		'post_type'     => 'vehicle',
 		'meta_input'   => array(
