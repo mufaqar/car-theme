@@ -49,13 +49,8 @@ include get_template_directory() . '/inc/emails.php';
           }
 }
 
-
-
-
 function add_tag_manager_role() {
-    // Check if the role doesn't already exist
     if (get_role('agent') === null) {
-        // Create a new role with the display name "Tag Manager"
         $role_name = 'agent';
         $display_name = 'Vehicle Agent';
         $capabilities = array(
@@ -70,8 +65,6 @@ function add_tag_manager_role() {
             'assign_post_tags' => true,  // Capability to assign tags (terms) to posts
    
         );
-
-        // Add the new role with the defined capabilities
         add_role($role_name, $display_name, $capabilities);
     }
 }
