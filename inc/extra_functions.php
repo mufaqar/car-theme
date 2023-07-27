@@ -57,13 +57,18 @@ function add_tag_manager_role() {
     if (get_role('agent') === null) {
         // Create a new role with the display name "Tag Manager"
         $role_name = 'agent';
-        $display_name = 'Agent';
+        $display_name = 'Vehicle Agent';
         $capabilities = array(
             'read' => true, // You can adjust other capabilities as needed
-            'manage_post_tags' => true, // Capability to manage tags (terms)
-            'edit_post_tags' => true,   // Capability to edit tags (terms)
-            'delete_post_tags' => true, // Capability to delete tags (terms)
-            'assign_post_tags' => true, // Capability to assign tags (terms) to posts
+            'manage_categories' => true, // Capability to manage taxonomies (categories)
+            'edit_categories' => true,   // Capability to edit taxonomies (categories)
+            'delete_categories' => true, // Capability to delete taxonomies (categories)
+            'assign_categories' => true, // Capability to assign taxonomies (categories) to posts
+            'manage_post_tags' => true,  // Capability to manage tags (terms)
+            'edit_post_tags' => true,    // Capability to edit tags (terms)
+            'delete_post_tags' => true,  // Capability to delete tags (terms)
+            'assign_post_tags' => true,  // Capability to assign tags (terms) to posts
+   
         );
 
         // Add the new role with the defined capabilities
