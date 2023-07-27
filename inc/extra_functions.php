@@ -49,14 +49,32 @@ include get_template_directory() . '/inc/emails.php';
           }
 }
 
-$result = add_role(
-    'agent', // Role slug
-    'Agent', // Role display name
-    array(
-       'read' => true, // Allow role to read content
-       'level_7' => true // Allow role to create posts
-    )
- );
+
+
+
+function add_tag_manager_role() {
+    // Check if the role doesn't already exist
+    if (get_role('agent') === null) {
+        // Create a new role with the display name "Tag Manager"
+        $role_name = 'agent';
+        $display_name = 'Agent';
+        $capabilities = array(
+            'read' => true, // You can adjust other capabilities as needed
+            'manage_post_tags' => true, // Capability to manage tags (terms)
+            'edit_post_tags' => true,   // Capability to edit tags (terms)
+            'delete_post_tags' => true, // Capability to delete tags (terms)
+            'assign_post_tags' => true, // Capability to assign tags (terms) to posts
+        );
+
+        // Add the new role with the defined capabilities
+        add_role($role_name, $display_name, $capabilities);
+    }
+}
+
+// Hook the function to theme activation or plugin activation
+add_action('after_setup_theme', 'add_tag_manager_role');
+
+
 
 
 
