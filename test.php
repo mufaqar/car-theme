@@ -15,7 +15,7 @@ get_header(); ?>
 		$headers[] = 'Cc: mufaqar2@gmail.com';	
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
 		wp_mail( $admin, $subject, $body, $headers );
-        echo "Email sent Sucessfully"
+        echo "Email sent Sucessfully";
 	}
 
     
