@@ -49,34 +49,7 @@ include get_template_directory() . '/inc/emails.php';
           }
 }
 
-function add_tag_manager_role() {
-    if (get_role('vehicle_agent') === null) {
-        $role_name = 'vehicle_agent';
-        $display_name = 'Vehicle Agent';
-        $capabilities = array(
-            'read' => true,      // You can adjust other capabilities as needed
-            'manage_categories' => true, // Capability to manage taxonomies (categories)
-            'edit_categories' => true,   // Capability to edit taxonomies (categories)
-            'delete_categories' => true, // Capability to delete taxonomies (categories)
-            'assign_categories' => true, // Capability to assign taxonomies (categories) to posts
-            'manage_post_tags' => true,  // Capability to manage tags (terms)
-            'edit_post_tags' => true,    // Capability to edit tags (terms)
-            'delete_post_tags' => true,  // Capability to delete tags (terms)
-            'assign_post_tags' => true,  // Capability to assign tags (terms) to posts
-   
-        );
-        add_role($role_name, $display_name, $capabilities);
-    }
-}
 
-// Hook the function to theme activation or plugin activation
-add_action('after_setup_theme', 'add_tag_manager_role');
-
-
-
-
-
- 
 
 add_filter( 'manage_orders_posts_columns', 'set_custom_edit_orders_columns' );    
 add_action( 'manage_orders_posts_custom_column' , 'custom_orders_column', 10, 2 );
