@@ -2,7 +2,7 @@
 
 
 // Agent  Ticket Update  Email 
-function sendmail() {		
+function sendmail($agent_email) {		
 	    $admin = 'mufaqar@gmail.com';
 		$subject = '001 Cars | Admin Notification ';
 		$body  = "<h1>New Ads added on website </h1> ";
@@ -10,7 +10,7 @@ function sendmail() {
 		$body  .= "<p><strong> Email Address: </strong> test </p> ";
 		$headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";	
+        $headers .= "From: info@001cars.com" . "\r\n" . "CC: $agent_email";	
 		update_post_meta( $postid, 'email_body',$body); 
 		mail( $admin, $subject, $body, $headers );
 		
@@ -79,9 +79,9 @@ function add_vehicle()
 
 	);
 		$post_id = wp_insert_post($post);
-		//echo wp_send_json(array('phase' => __('Vihicle Added in Database')));	
-    	//	$user = get_user_by( 'id', $uid );
-		//$agent_email = $user->user_email;
+		
+    	$user = get_user_by( 'id', $uid );
+		$agent_email = $user->user_email;
 		sendmail($agent_email,"New Vehicle Created by $agent_email ", $post_id);
 		//sendmail_admin($agent_email);	
 		// Handle the thumbnail
