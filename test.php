@@ -16,6 +16,14 @@ get_header(); ?>
 		$headers[] = "Content-Type: text/html; charset=UTF-8\r\n";
 		wp_mail( $admin, $subject, $body, $headers );
         echo "Email sent Sucessfully 01";
+
+        $msg = "First line of text\nSecond line of text";
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg,70);
+
+        // send email
+        mail($admin,"My subject",$msg);
 	}
 
     
