@@ -45,30 +45,44 @@ if(isset($_POST['register'])){
                     <section class="dash_content">
                         <div class="form">
                             <div class="gap-4">
-                                <h2>My Ads</h2>
+                                <h2>My Listing</h2>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Vehicle Name</th>
                                             <th scope="col">Location</th>
-                                            <th scope="col">Handle</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+
+                                        <?php query_posts(array(
+                                                'post_type' => 'vehicle',
+                                                'posts_per_page' => -1,
+                                                'order' => 'desc',
+                                               'post_status' => 'any'                                             
+                                            )); 
+                                            $a = 0;
+                                            if (have_posts()) :  while (have_posts()) : the_post();  $a++;?>
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <th scope="row"><?php echo $a ?></th>
+                                            <td><?php the_title()?></td>
+                                            <td><?php echo get_post_meta( get_the_ID(), 'vehicle_location', true ); ?>
+                                            <td><?php echo get_post_meta( get_the_ID(), 'vehicle_price', true ); ?></td>
+                                            <td><?php echo get_post_status ( get_the_ID() ); ?>
+                                            </td>
+                                            </td>
                                         </tr>
                                         <tr>
 
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td colspan="2">Larry the Bird</td>
-                                            <td>@twitter</td>
-                                        </tr>
+
+                                            <?php endwhile; wp_reset_query(); else : ?>
+                                            <h2><?php _e('Nothing Found','lbt_translate'); ?></h2>
+                                            <?php endif; ?>
+
+
                                     </tbody>
                                 </table>
                             </div>
