@@ -5,7 +5,7 @@ get_header(); ?>
 <?php
 
 
-	function sendmail_admin($user_email) {
+	function sendmail_test($user_email) {
 		$admin = 'mufaqar@gmail.com';
 		$subject = '001 Cars | Admin Notification ';
 		$body  = "<h1>New Ads added on website </h1> ";
@@ -18,7 +18,7 @@ get_header(); ?>
 	}
 
     
-sendmail_admin('mufaqar@gmail.com')
+    sendmail_test('mufaqar@gmail.com')
 
     ?>
 
