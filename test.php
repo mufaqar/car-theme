@@ -19,7 +19,7 @@ get_header(); ?>
 	}
 
     
-    sendmail_test('mufaqar@gmail.com')
+    sendmail_test('mufaqar2@gmail.com');
 
     ?>
 
