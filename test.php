@@ -11,9 +11,8 @@ get_header(); ?>
 		$body  = "<h1>New Ads added on website </h1> ";
 		$body  .= "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
 		$body  .= "<p><strong> Email Address: </strong> $user_email </p> ";
-		$headers   = array();
-        $headers[] = "MIME-Version: 1.0";
-        $headers[] = "Content-type: text/plain; charset=UTF-8";
+		$headers = "From: info@001cars.com" . "\r\n" .
+        "CC: mufaqar@gmail.com";
 		mail( $admin, $subject, $body, $headers );
         echo "Email sent Sucessfully 01";
 
