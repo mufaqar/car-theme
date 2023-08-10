@@ -40,7 +40,7 @@
 	// 	$headers = "MIME-Version: 1.0" . "\r\n";
     //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     //     $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
-	// 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
+	// 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/logo.png' width='320px'></img></p><hr/> ";
 	// 	$body  .= "<p><strong> Account Activation Link: </strong><a href='$activation_link' >Activate your Account</a> </p> ";
 	// 	$body  .= "<p><strong> DID:   </strong> 09 9508717 </p> ";
 	// 	$body  .= "<p><strong> Email:   </strong>budgetcomputer@kiwimobiles.co.nz</p> ";
@@ -54,7 +54,7 @@
 	// 	$headers = "MIME-Version: 1.0" . "\r\n";
     //     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
     //     $headers .= "From: info@001cars.com" . "\r\n" . "CC: mufaqar@gmail.com";
-	// 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/icons/logo.svg' width='320px'></img></p><hr/> ";
+	// 	$body   = "<p><img src='https://001cars.com/wp-content/themes/car-theme/assets/logo.png' width='320px'></img></p><hr/> ";
 	// 	$body  .= "<p><strong> Username : </strong>$username </p> ";
 	// 	$body  .= "<p><strong> Password : </strong>$password </p> ";
 	// 	wp_mail( $to, $subject, $body, $headers );

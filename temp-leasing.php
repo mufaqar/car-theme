@@ -63,7 +63,7 @@ if (!empty($transmission)) {
 ?>
 
 <section class="search_header container mx-auto">
-    <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg"
+    <a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/assets/logo.png"
             alt="logo" /></a>
 </section>
 <section class="container row mx-auto search">

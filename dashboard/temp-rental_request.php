@@ -111,7 +111,7 @@
             <div
                 class="order_confirm d-flex position-relative justify-content-center flex-column align-items-center p-4">
                 <a href="<?php bloginfo('url'); ?>"><img
-                        src="<?php bloginfo('template_directory'); ?>/assets/icons/logo.svg" alt="logo" /></a>
+                        src="<?php bloginfo('template_directory'); ?>/assets/logo.png" alt="logo" /></a>
 
                 <div class="step_wrapper d-flex justify-content-center flex-column align-items-center text-center">
                     <div class="content mt-5">
