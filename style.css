@@ -375,7 +375,8 @@ section .__slider .full-slider .slider-card-wrapper .slider-card img {
   margin: 5rem 0;
 }
 
-.slick-list .slick-track .slick-slide img {
+.car-thumbnail img {
+  max-height: 104px !important;
 }
 
 ._p {

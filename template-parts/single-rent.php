@@ -38,7 +38,7 @@
                 <?php 
                 $images = get_field('vehicle_gallery');
                 if( $images ): ?>
-                <div class="slider slider-nav">
+                <div class="slider slider-nav car-thumbnail">
                     <?php foreach( $images as $image ): 
                       //  print "<pre>";
                       //  print_r($image); ?>
