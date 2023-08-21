@@ -55,7 +55,7 @@
                </div>
            </section>
            <section class="copyright d-flex justify-content-between">
-               <p>Copyrights © 2023 All Rights Reserved. Design by Mottek</p>
+               <p>Copyrights © 2023 All Rights Reserved. Design by Lion Nathaniel Papcke</p>
 
                <?php wp_nav_menu( array( 'theme_location' => 'footer-4','menu_class'=> 'extra-links d-flex',      'container'         => 'false' ) ); ?>
            </section>
