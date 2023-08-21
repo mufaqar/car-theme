@@ -11,9 +11,9 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 /***** Reset CSS *****/
 
-
-.logo { max-width: 100px;}
-
+.logo {
+  max-width: 100px;
+}
 
 /* ===== Sidebar ===== */
 .sidebar {
@@ -350,7 +350,17 @@ select.list-dt:focus {
 header nav {
   padding-left: 10px !important;
   padding-right: 10px !important;
+  background: var(--secondary) !important;
 }
+
+header .button {
+  background: var(--main) !important;
+  color: #ffffff !important;
+}
+header .button a {
+  color: #ffffff !important;
+}
+
 section .__slider .full-slider .slider-card-wrapper .slider-card img {
   height: 240px;
   object-fit: cover;
@@ -433,14 +443,13 @@ section.slug .detail-content .vform .select {
   width: 32px !important;
 }
 
-
 /* Gallery Page */
 
-.gallery_sec { background:  var(--light-gray);}
-
+.gallery_sec {
+  background: var(--light-gray);
+}
 
 /* Gallery Section End */
-
 
 @media screen and (max-width: 1024px) {
   .listing_page_wrapper {
