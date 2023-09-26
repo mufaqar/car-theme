@@ -52,7 +52,10 @@
                     </svg>
                     <span>Price:</span>
                 </p>
-                <p class="text-end">€ <?php echo $vehicle_price ?>,- per month</p>
+                <!-- <p class="text-end">€ <?php echo $vehicle_price ?>,- per month</p> -->
+                <p class="text-end">on request please</p>
+
+                
             </div>
             <div>
                 <p>
