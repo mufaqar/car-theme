@@ -93,7 +93,7 @@
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/env.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/leasing-ico.svg" alt="">
             </figure>
             <div class="content">
                 <h6>Interior Color</h6>
