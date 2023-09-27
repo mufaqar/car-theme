@@ -25,7 +25,25 @@
             </figure>
             <div class="content">
                 <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <p><?php echo $vehicle_mileage ?></p>
+            </div>
+        </div>
+        <div class="d-flex feature align-items-center gap-2">
+            <figure>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/in.svg" alt="">
+            </figure>
+            <div class="content">
+                <h6>Register</h6>
+                <p><?php echo $vehicle_register ?></p>
+            </div>
+        </div>
+        <div class="d-flex feature align-items-center gap-2">
+            <figure>
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/meter.svg" alt="">
+            </figure>
+            <div class="content">
+                <h6>Vin</h6>
+                <p><?php echo $vehicle_vin ?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
@@ -33,91 +51,65 @@
                 <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Seats</h6>
+                <p><?php echo $vehicle_seats ?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/abs.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Assembly </h6>
+                <p><?php echo $vehicle_assembly ?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin_2.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Emission Class</h6>
+                <p><?php echo $vehicle_emission_class ?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/meter.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Interior Color</h6>
+                <p><?php echo $vehicle_interior_color?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/dollar.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Interior Material</h6>
+                <p><?php echo $vehicle_interior_material?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/env.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Interior Color</h6>
+                <p><?php echo $vehicle_interior_color?></p>
             </div>
         </div>
         <div class="d-flex feature align-items-center gap-2">
             <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
+                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/gard.svg" alt="">
             </figure>
             <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
+                <h6>Fuel</h6>
+                <p>Hybrid</p>
             </div>
         </div>
-        <div class="d-flex feature align-items-center gap-2">
-            <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
-            </figure>
-            <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
-            </div>
-        </div>
-        <div class="d-flex feature align-items-center gap-2">
-            <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
-            </figure>
-            <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
-            </div>
-        </div>
-        <div class="d-flex feature align-items-center gap-2">
-            <figure>
-                <img src="<?php bloginfo('template_directory'); ?>/assets/icons/kms.svg" alt="">
-            </figure>
-            <div class="content">
-                <h6>Kms driven</h6>
-                <p>27,000 km</p>
-            </div>
-        </div>
+       
 
     </div>
 </section>
