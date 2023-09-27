@@ -61,7 +61,7 @@ get_header(); ?>
                   </svg>
                   <span>Price:</span>
                 </p>
-                <p class="text-end">€ <?php echo $price; ?>,- per month</p>
+                <p class="text-end">On Request Please</p>
               </div>
               <div>
                 <p>
