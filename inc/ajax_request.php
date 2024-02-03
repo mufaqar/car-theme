@@ -1,9 +1,6 @@
 <?php
 
 
-
-
-
 add_action('wp_ajax_add_vehicle', 'add_vehicle', 0);
 add_action('wp_ajax_nopriv_add_vehicle', 'add_vehicle');
 
