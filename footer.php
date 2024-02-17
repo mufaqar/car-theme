@@ -43,7 +43,7 @@
                        <img src="<?php bloginfo('template_directory'); ?>/assets/icons/pin.svg" alt="pin" />
                    </div>
                    <div class="social mt-5">
-                       <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/fb.svg"
+                       <a href=""><img src="<?php bloginfo('template_directory'); ?>/assets/icons/fb.svg"
                                alt="facebook" /></a>
                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/assets/icons/in.svg"
                                alt="instagram" /></a>
