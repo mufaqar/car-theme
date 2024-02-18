@@ -1,5 +1,4 @@
 <?php get_header(); ?>	
-
 	<section class="contact-us">
    	   <h2 class="sub-heading"><?php echo get_the_archive_title() ?></h2>
     </section>
