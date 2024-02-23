@@ -10,23 +10,22 @@
     add_action('init', 'removeHeadLinks');
     remove_action('wp_head', 'wp_generator');
     
-		// Declare sidebar widget zone
+// Declare sidebar widget zone
 	if (function_exists('register_sidebar')) {
-    	register_sidebar(array(
-    		'name' => 'Sidebar Widgets',
-    		'id'   => 'sidebar-widgets',
-    		'description'   => 'These are widgets for the sidebar.',
-    		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    		'after_widget'  => '</div>',
-    		'before_title'  => '<h4>',
-    		'after_title'   => '</h4>'
-    	));
+	register_sidebar(array(
+	'name' => 'Sidebar Widgets',
+	'id'   => 'sidebar-widgets',
+	'description'   => 'These are widgets for the sidebar.',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget'  => '</div>',
+	'before_title'  => '<h4>',
+	'after_title'   => '</h4>'
+	));
     }
 
 function pagination($pages = '', $range = 4)
 {
-     $showitems = ($range * 2)+1;  
- 
+     $showitems = ($range * 2)+1;   
      global $paged;
      if(empty($paged)) $paged = 1;
  
@@ -73,8 +72,7 @@ if (function_exists('register_nav_menus')) {
 function fallbackmenu1(){ ?>
 <div id="menu">
     <ul>
-        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus
-            to work.</li>
+        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus  to work.</li>
     </ul>
 </div>
 <?php }
@@ -82,8 +80,7 @@ function fallbackmenu1(){ ?>
 function fallbackmenu2(){ ?>
 <div id="menu">
     <ul>
-        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus
-            to work.</li>
+        <li> Go to Adminpanel > Appearance > Menus to create your menu. You should have WP 3.0+ version for custom menus  to work.</li>
     </ul>
 </div>
 <?php }
