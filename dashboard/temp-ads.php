@@ -1,7 +1,6 @@
 <?php  /*  Template Name:  Dashboard-Ads  */
 
 get_header(); ?>
-
 <?php
 if(isset($_POST['register'])){
    $username = $_POST['username'];
