@@ -8,8 +8,7 @@
     	remove_action('wp_head', 'wlwmanifest_link');
     }
     add_action('init', 'removeHeadLinks');
-    remove_action('wp_head', 'wp_generator');
-    
+    remove_action('wp_head', 'wp_generator');    
 // Declare sidebar widget zone
 	if (function_exists('register_sidebar')) {
 	register_sidebar(array(
