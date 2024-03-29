@@ -17,6 +17,7 @@
                 <h4 class="heading"><?php the_title()?>..</h4>
                 <div class="properties">
                   <div>
+			  
                     <p>
                       <svg
                         id="Group_3663"
