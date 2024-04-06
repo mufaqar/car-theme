@@ -13,6 +13,7 @@
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/assets/icons/right-arrow-dark.svg"
                             width="12" />
+                    
                     </div>
                 </button>
             </div>
