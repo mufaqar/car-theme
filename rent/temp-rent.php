@@ -2,9 +2,6 @@
 
 get_header();
 
-
-
-
 if (isset($_REQUEST['brand'])) {
     $brand = $_REQUEST['brand'];
 }
