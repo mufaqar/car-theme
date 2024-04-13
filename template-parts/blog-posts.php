@@ -6,7 +6,7 @@
                 <button class="prev">
                     <div>
                         <img src="<?php bloginfo('template_directory'); ?>/assets/icons/left-arrow-dark.svg"
-                            width="12" />
+                         alt="feature"  width="12" />
                     </div>
                 </button>
                 <button class="next">
