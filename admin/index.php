@@ -1,6 +1,6 @@
 <?php
 /*
-Title		: SMOF
+Title		: SMOF plugin 
 Description	: Slightly Modified Options Framework
 Version		: 1.6.0
 Author		: Syamil MJ
