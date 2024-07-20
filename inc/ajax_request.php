@@ -84,7 +84,6 @@ add_action('wp_ajax_nopriv_req_lease', 'req_lease');
 function req_lease()
 {
 	global $wpdb;
-
 	// Vehicle info
 	$v_id = $_POST['v_id'];
 	$v_price = $_POST['v_price'];
