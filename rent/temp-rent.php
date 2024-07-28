@@ -13,7 +13,6 @@ if (isset($_REQUEST['engine_type'])) {
     $brand = $_REQUEST['engine_type'];
 }
 
-
 if (isset($_REQUEST['transmission'])) {
     $brand = $_REQUEST['transmission'];
 }
