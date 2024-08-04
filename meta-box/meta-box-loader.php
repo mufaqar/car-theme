@@ -1,6 +1,4 @@
 <?php
-
-
 class RWMB_Loader
 {
 	static function load( $url, $dir )
