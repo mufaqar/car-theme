@@ -23,7 +23,6 @@ if(isset($_POST['register'])){
     <h2 class="sub-heading"><?php the_title()?> </h2>
     <p>Sign up for Vehicle Listing</p>
 </section>
-
 <section class="contact-us-form">
     <div class="form" style="padding:0px">
 
