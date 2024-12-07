@@ -1,5 +1,4 @@
 <?php  /*  Template Name:  Signup */
-
 get_header(); ?>
 
 <?php
