@@ -22,7 +22,6 @@ if(isset($_POST['register'])){
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-   
    <section class="contact-us">
       <h2 class="sub-heading"><?php the_title()?> </h2>
       <p>Sign up for Vehicle Listing</p>
